@@ -26,6 +26,10 @@ from adfmd import ADFMD
         "bullet_list_simple",
         "bullet_list_nested",
         "bullet_list_complex",
+
+        "ordered_list_simple",
+        "ordered_list_nested",
+        "ordered_list_complex",
     ],
 )
 def test_adf_to_md(test_name):

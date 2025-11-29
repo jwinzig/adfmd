@@ -141,6 +141,7 @@ class ADF2MDRegistry:
         registry.register("text", TextConverter())
         registry.register("paragraph", ParagraphConverter())
         registry.register("bulletList", BulletListConverter())
+        registry.register("orderedList", OrderedListConverter())
 
         return registry
 
@@ -229,6 +230,48 @@ class BulletListConverter(ADF2MDBaseConverter):
             # Add nested list if present
             if nested_list:
                 nested_lines = self._convert(nested_list, indent_level + 1)
+                if nested_lines:
+                    lines.append(nested_lines)
+
+        return "\n".join(lines)
+
+
+class OrderedListConverter(ADF2MDBaseConverter):
+    """Converter for ordered list nodes."""
+
+    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+        """Convert an ordered list node to Markdown."""
+        from adfmd.nodes import OrderedListNode, ListItemNode, ParagraphNode, BulletListNode
+
+        if not isinstance(node, OrderedListNode):
+            raise ValueError(f"Expected OrderedListNode, got {type(node)}")
+
+        lines = []
+        indent = "  " * indent_level
+        item_number = 1
+
+        for list_item in node.children:
+            if not isinstance(list_item, ListItemNode):
+                continue
+
+            # Process the list item content
+            item_text = ""
+            nested_list = None
+
+            for child_node in list_item.children:
+                if isinstance(child_node, ParagraphNode):
+                    item_text = self.convert_node(child_node, indent_level)
+                elif isinstance(child_node, (OrderedListNode, BulletListNode)):
+                    nested_list = child_node
+
+            # Add the main list item
+            if item_text:
+                lines.append(f"{indent}{item_number}. {item_text}")
+                item_number += 1
+
+            # Add nested list if present
+            if nested_list:
+                nested_lines = self.convert_node(nested_list, indent_level + 1)
                 if nested_lines:
                     lines.append(nested_lines)
 

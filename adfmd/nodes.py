@@ -34,6 +34,8 @@ class ADFNode:
             return ParagraphNode.from_dict(data)
         elif node_type == "bulletList":
             return BulletListNode.from_dict(data)
+        elif node_type == "orderedList":
+            return OrderedListNode.from_dict(data)
         elif node_type == "listItem":
             return ListItemNode.from_dict(data)
         else:
@@ -80,6 +82,22 @@ class BulletListNode(ADFNode):
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "BulletListNode":
         """Create a BulletListNode from a dictionary, preserving all child nodes."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(children=children)
+
+
+@dataclass
+class OrderedListNode(ADFNode):
+    """Represents an ordered list node in ADF."""
+
+    type: str = field(default="orderedList", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "OrderedListNode":
+        """Create an OrderedListNode from a dictionary, preserving all child nodes."""
         children = []
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
