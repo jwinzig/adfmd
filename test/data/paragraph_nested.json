@@ -1,0 +1,31 @@
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "This paragraph has ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "bold",
+      "marks": [{"type": "strong"}]
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "italic",
+      "marks": [{"type": "em"}]
+    },
+    {
+      "type": "text",
+      "text": " text mixed together.",
+      "marks": []
+    }
+  ]
+}
+

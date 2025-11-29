@@ -1,0 +1,61 @@
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "Bold text",
+      "marks": [{"type": "strong"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "italic text",
+      "marks": [{"type": "em"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "code text",
+      "marks": [{"type": "code"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "strikethrough text",
+      "marks": [{"type": "strike"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "bold italic",
+      "marks": [{"type": "strong"}, {"type": "em"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "bold code",
+      "marks": [{"type": "strong"}, {"type": "code"}]
+    }
+  ]
+}
+
