@@ -35,6 +35,8 @@ from adfmd import ADFMD
         "heading_marks",
         "heading_marks_complex",
         "heading_levels",
+
+        "hard_break_simple",
     ],
 )
 def test_adf_to_md(test_name):

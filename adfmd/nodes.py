@@ -40,6 +40,8 @@ class ADFNode:
             return ListItemNode.from_dict(data)
         elif node_type == "heading":
             return HeadingNode.from_dict(data)
+        elif node_type == "hardBreak":
+            return HardBreakNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -141,3 +143,15 @@ class ListItemNode(ADFNode):
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
         return cls(children=children)
+
+
+@dataclass
+class HardBreakNode(ADFNode):
+    """Represents a hard break node in ADF."""
+
+    type: str = field(default="hardBreak", init=False)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "HardBreakNode":
+        """Create a HardBreakNode from a dictionary."""
+        return cls()

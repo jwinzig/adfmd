@@ -143,6 +143,7 @@ class ADF2MDRegistry:
         registry.register("heading", HeadingConverter())
         registry.register("bulletList", BulletListConverter())
         registry.register("orderedList", OrderedListConverter())
+        registry.register("hardBreak", HardBreakConverter())
 
         return registry
 
@@ -304,3 +305,18 @@ class OrderedListConverter(ADF2MDBaseConverter):
                     lines.append(nested_lines)
 
         return "\n".join(lines)
+
+
+class HardBreakConverter(ADF2MDBaseConverter):
+    """Converter for hard break nodes."""
+
+    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+        """Convert a hard break node to Markdown."""
+        from adfmd.nodes import HardBreakNode
+
+        if not isinstance(node, HardBreakNode):
+            raise ValueError(f"Expected HardBreakNode, got {type(node)}")
+
+        # In Markdown, a hard break within a paragraph is represented as two spaces
+        # followed by a newline. This creates a line break without starting a new paragraph.
+        return "  \n"
