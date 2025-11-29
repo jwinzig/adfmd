@@ -7,7 +7,16 @@ from typing import Dict, Optional, Any
 
 from abc import ABC, abstractmethod
 
-from adfmd.nodes import ADFNode
+from adfmd.nodes import (
+    ADFNode,
+    BulletListNode,
+    ListItemNode,
+    ParagraphNode,
+    OrderedListNode,
+    HardBreakNode,
+    HeadingNode,
+    TextNode,
+)
 
 
 class ADF2MDBaseConverter(ABC):
@@ -152,8 +161,6 @@ class TextConverter(ADF2MDBaseConverter):
 
     def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a text node to its string representation with markdown annotations."""
-        from adfmd.nodes import TextNode
-
         if not isinstance(node, TextNode):
             raise ValueError(f"Expected TextNode, got {type(node)}")
 
@@ -185,8 +192,6 @@ class ParagraphConverter(ADF2MDBaseConverter):
 
     def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a paragraph node to Markdown."""
-        from adfmd.nodes import ParagraphNode
-
         if not isinstance(node, ParagraphNode):
             raise ValueError(f"Expected ParagraphNode, got {type(node)}")
 
@@ -205,8 +210,6 @@ class HeadingConverter(ADF2MDBaseConverter):
 
     def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a heading node to Markdown."""
-        from adfmd.nodes import HeadingNode
-
         if not isinstance(node, HeadingNode):
             raise ValueError(f"Expected HeadingNode, got {type(node)}")
 
@@ -232,8 +235,6 @@ class BulletListConverter(ADF2MDBaseConverter):
 
     def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a bullet list node to Markdown."""
-        from adfmd.nodes import BulletListNode, ListItemNode, ParagraphNode
-
         if not isinstance(node, BulletListNode):
             raise ValueError(f"Expected BulletListNode, got {type(node)}")
 
@@ -273,8 +274,6 @@ class OrderedListConverter(ADF2MDBaseConverter):
 
     def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert an ordered list node to Markdown."""
-        from adfmd.nodes import OrderedListNode, ListItemNode, ParagraphNode, BulletListNode
-
         if not isinstance(node, OrderedListNode):
             raise ValueError(f"Expected OrderedListNode, got {type(node)}")
 
@@ -316,8 +315,6 @@ class HardBreakConverter(ADF2MDBaseConverter):
 
     def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a hard break node to Markdown."""
-        from adfmd.nodes import HardBreakNode
-
         if not isinstance(node, HardBreakNode):
             raise ValueError(f"Expected HardBreakNode, got {type(node)}")
 
