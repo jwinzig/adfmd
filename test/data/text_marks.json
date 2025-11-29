@@ -55,6 +55,56 @@
       "type": "text",
       "text": "bold code",
       "marks": [{"type": "strong"}, {"type": "code"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "italic code",
+      "marks": [{"type": "em"}, {"type": "code"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "bold strikethrough",
+      "marks": [{"type": "strong"}, {"type": "strike"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "italic strikethrough",
+      "marks": [{"type": "em"}, {"type": "strike"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "bold italic code",
+      "marks": [{"type": "strong"}, {"type": "em"}, {"type": "code"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "underline",
+      "marks": [{"type": "underline"}]
     }
   ]
 }
