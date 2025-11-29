@@ -140,6 +140,7 @@ class ADF2MDRegistry:
         # Register converters
         registry.register("text", TextConverter())
         registry.register("paragraph", ParagraphConverter())
+        registry.register("heading", HeadingConverter())
         registry.register("bulletList", BulletListConverter())
         registry.register("orderedList", OrderedListConverter())
 
@@ -194,6 +195,33 @@ class ParagraphConverter(ADF2MDBaseConverter):
             text_parts.append(self.convert_node(child_node, indent_level))
 
         return "".join(text_parts)
+
+
+class HeadingConverter(ADF2MDBaseConverter):
+    """Converter for heading nodes."""
+
+    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+        """Convert a heading node to Markdown."""
+        from adfmd.nodes import HeadingNode
+
+        if not isinstance(node, HeadingNode):
+            raise ValueError(f"Expected HeadingNode, got {type(node)}")
+
+        # Convert children to text
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self.convert_node(child_node, indent_level))
+
+        heading_text = "".join(text_parts)
+
+        # Create markdown heading with appropriate number of # symbols
+        level = node.level
+        if level < 1:
+            level = 1
+        elif level > 6:
+            level = 6
+
+        return f"{'#' * level} {heading_text}"
 
 
 class BulletListConverter(ADF2MDBaseConverter):

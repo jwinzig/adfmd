@@ -1,0 +1,75 @@
+[
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 1
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 1 Heading"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 2
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 2 Heading"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 3
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 3 Heading"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 4
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 4 Heading"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 5
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 5 Heading"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 6
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 6 Heading"
+      }
+    ]
+  }
+]
+

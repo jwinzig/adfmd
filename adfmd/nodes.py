@@ -38,6 +38,8 @@ class ADFNode:
             return OrderedListNode.from_dict(data)
         elif node_type == "listItem":
             return ListItemNode.from_dict(data)
+        elif node_type == "heading":
+            return HeadingNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -102,6 +104,27 @@ class OrderedListNode(ADFNode):
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
         return cls(children=children)
+
+
+@dataclass
+class HeadingNode(ADFNode):
+    """Represents a heading node in ADF."""
+
+    type: str = field(default="heading", init=False)
+    level: int = field(default=int)
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "HeadingNode":
+        """Create a HeadingNode from a dictionary, preserving all child nodes."""
+        level = data.get("attrs", {}).get("level", None)
+        if level is None:
+            raise ValueError("Level is required for heading nodes")
+
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(level=level, children=children)
 
 
 @dataclass

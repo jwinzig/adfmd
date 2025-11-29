@@ -1,0 +1,70 @@
+{
+  "type": "heading",
+  "attrs": {
+    "level": 2
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "Bold and ",
+      "marks": [ ]
+    },
+    {
+      "type": "text",
+      "text": "Italic",
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "em"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "text": ", ",
+      "marks": [ ]
+    },
+    {
+      "type": "text",
+      "text": "Code",
+      "marks": [ { "type": "code" } ]
+    },
+    {
+      "type": "text",
+      "text": ", ",
+      "marks": [ ]
+    },
+    {
+      "type": "text",
+      "text": "Bold Code",
+      "marks": [ { "type": "strong" }, { "type": "code" } ]
+    },
+    {
+      "type": "text",
+      "text": ", ",
+      "marks": [ ]
+    },
+    {
+      "type": "text",
+      "text": "Italic Code",
+      "marks": [ { "type": "em" }, { "type": "code" } ]
+    },
+    {
+      "type": "text",
+      "text": ", ",
+      "marks": [ ]
+    },
+    {
+      "type": "text",
+      "text": "Strikethrough",
+      "marks": [ { "type": "strike" } ]
+    },
+    {
+      "type": "text",
+      "text": " Heading"
+    }
+  ]
+}
+

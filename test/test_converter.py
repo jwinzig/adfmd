@@ -30,6 +30,11 @@ from adfmd import ADFMD
         "ordered_list_simple",
         "ordered_list_nested",
         "ordered_list_complex",
+
+        "heading_simple",
+        "heading_marks",
+        "heading_marks_complex",
+        "heading_levels",
     ],
 )
 def test_adf_to_md(test_name):
