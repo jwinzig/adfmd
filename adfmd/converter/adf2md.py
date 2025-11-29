@@ -3,7 +3,7 @@ ADF to Markdown converters for adfmd.
 Contains base class, registry, and all converters for converting ADF nodes to Markdown format.
 """
 
-from typing import Dict, Optional
+from typing import Dict, Optional, Any
 
 from abc import ABC, abstractmethod
 
@@ -24,28 +24,28 @@ class ADF2MDBaseConverter(ABC):
         self.registry = registry
 
     @abstractmethod
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """
         Convert a node to Markdown. To be implemented by subclasses.
 
         Args:
             node: The ADF node dataclass instance
-            indent_level: Current indentation level
+            **kwargs: Additional arguments for special cases (indent_level defaults to 0)
 
         Returns:
             Markdown string representation
         """
         pass
 
-    def convert_node(self, node: ADFNode, indent_level: int = 0) -> str:
+    def _convert_child(self, node: ADFNode, **kwargs: Any) -> str:
         """
-        Convert a node using the registry.
+        Convert a child node using the registry.
 
         This method performs input validation and delegates to the appropriate converter.
 
         Args:
             node: The ADF node dataclass instance
-            indent_level: Current indentation level
+            **kwargs: Additional arguments to pass to converters for special cases (indent_level defaults to 0)
 
         Returns:
             Markdown string representation
@@ -60,7 +60,7 @@ class ADF2MDBaseConverter(ABC):
         if not converter:
             raise ValueError(f"Unsupported node type: {node.type}")
 
-        return converter._convert(node, indent_level)
+        return converter.convert(node, **kwargs)
 
 
 class ADF2MDRegistry:
@@ -68,7 +68,7 @@ class ADF2MDRegistry:
 
     def __init__(self):
         """Initialize an empty registry."""
-        self._converters: Dict[str, ADF2MDBaseConverter] = {}
+        self.converters: Dict[str, ADF2MDBaseConverter] = {}
 
     def register(self, node_type: str, converter: ADF2MDBaseConverter):
         """
@@ -80,7 +80,7 @@ class ADF2MDRegistry:
         """
         # Set the registry on the converter so it can convert child nodes
         converter.registry = self
-        self._converters[node_type] = converter
+        self.converters[node_type] = converter
 
     def get_converter(self, node_type: str) -> Optional[ADF2MDBaseConverter]:
         """
@@ -92,7 +92,7 @@ class ADF2MDRegistry:
         Returns:
             Converter instance or None if not found
         """
-        return self._converters.get(node_type)
+        return self.converters.get(node_type)
 
     def has_converter(self, node_type: str) -> bool:
         """
@@ -104,15 +104,14 @@ class ADF2MDRegistry:
         Returns:
             True if converter exists, False otherwise
         """
-        return node_type in self._converters
+        return node_type in self.converters
 
-    def convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode) -> str:
         """
         Convert an ADF node to Markdown using the appropriate converter.
 
         Args:
             node: The ADF node dataclass instance
-            indent_level: Current indentation level
 
         Returns:
             Markdown string representation
@@ -124,7 +123,7 @@ class ADF2MDRegistry:
             raise ValueError(f"Unsupported node type: {node.type}")
 
         converter = self.get_converter(node.type)
-        return converter._convert(node, indent_level)
+        return converter.convert(node)
 
     @classmethod
     def create_default(cls) -> "ADF2MDRegistry":
@@ -151,7 +150,7 @@ class ADF2MDRegistry:
 class TextConverter(ADF2MDBaseConverter):
     """Converter for text nodes."""
 
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a text node to its string representation with markdown annotations."""
         from adfmd.nodes import TextNode
 
@@ -184,24 +183,27 @@ class TextConverter(ADF2MDBaseConverter):
 class ParagraphConverter(ADF2MDBaseConverter):
     """Converter for paragraph nodes."""
 
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a paragraph node to Markdown."""
         from adfmd.nodes import ParagraphNode
 
         if not isinstance(node, ParagraphNode):
             raise ValueError(f"Expected ParagraphNode, got {type(node)}")
 
+        no_newlines = kwargs.get("no_newlines", False)
         text_parts = []
         for child_node in node.children:
-            text_parts.append(self.convert_node(child_node, indent_level))
+            text_parts.append(self._convert_child(child_node))
 
-        return "".join(text_parts)
+        text = "".join(text_parts)
+        text += "\n\n" if not no_newlines else ""
+        return text
 
 
 class HeadingConverter(ADF2MDBaseConverter):
     """Converter for heading nodes."""
 
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a heading node to Markdown."""
         from adfmd.nodes import HeadingNode
 
@@ -211,7 +213,7 @@ class HeadingConverter(ADF2MDBaseConverter):
         # Convert children to text
         text_parts = []
         for child_node in node.children:
-            text_parts.append(self.convert_node(child_node, indent_level))
+            text_parts.append(self._convert_child(child_node))
 
         heading_text = "".join(text_parts)
 
@@ -222,19 +224,20 @@ class HeadingConverter(ADF2MDBaseConverter):
         elif level > 6:
             level = 6
 
-        return f"{'#' * level} {heading_text}"
+        return f"{'#' * level} {heading_text}" + "\n\n"
 
 
 class BulletListConverter(ADF2MDBaseConverter):
     """Converter for bullet list nodes."""
 
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a bullet list node to Markdown."""
         from adfmd.nodes import BulletListNode, ListItemNode, ParagraphNode
 
         if not isinstance(node, BulletListNode):
             raise ValueError(f"Expected BulletListNode, got {type(node)}")
 
+        indent_level = kwargs.get("indent_level", 0)
         lines = []
         indent = "  " * indent_level
 
@@ -248,7 +251,7 @@ class BulletListConverter(ADF2MDBaseConverter):
 
             for child_node in list_item.children:
                 if isinstance(child_node, ParagraphNode):
-                    item_text = self.convert_node(child_node, indent_level)
+                    item_text = self._convert_child(child_node, no_newlines=True)
                 elif isinstance(child_node, BulletListNode):
                     nested_list = child_node
 
@@ -258,7 +261,7 @@ class BulletListConverter(ADF2MDBaseConverter):
 
             # Add nested list if present
             if nested_list:
-                nested_lines = self._convert(nested_list, indent_level + 1)
+                nested_lines = self.convert(nested_list, indent_level=indent_level + 1)
                 if nested_lines:
                     lines.append(nested_lines)
 
@@ -268,13 +271,14 @@ class BulletListConverter(ADF2MDBaseConverter):
 class OrderedListConverter(ADF2MDBaseConverter):
     """Converter for ordered list nodes."""
 
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert an ordered list node to Markdown."""
         from adfmd.nodes import OrderedListNode, ListItemNode, ParagraphNode, BulletListNode
 
         if not isinstance(node, OrderedListNode):
             raise ValueError(f"Expected OrderedListNode, got {type(node)}")
 
+        indent_level = kwargs.get("indent_level", 0)
         lines = []
         indent = "  " * indent_level
         item_number = 1
@@ -289,7 +293,7 @@ class OrderedListConverter(ADF2MDBaseConverter):
 
             for child_node in list_item.children:
                 if isinstance(child_node, ParagraphNode):
-                    item_text = self.convert_node(child_node, indent_level)
+                    item_text = self._convert_child(child_node, no_newlines=True)
                 elif isinstance(child_node, (OrderedListNode, BulletListNode)):
                     nested_list = child_node
 
@@ -300,7 +304,7 @@ class OrderedListConverter(ADF2MDBaseConverter):
 
             # Add nested list if present
             if nested_list:
-                nested_lines = self.convert_node(nested_list, indent_level + 1)
+                nested_lines = self._convert_child(nested_list, indent_level=indent_level + 1)
                 if nested_lines:
                     lines.append(nested_lines)
 
@@ -310,7 +314,7 @@ class OrderedListConverter(ADF2MDBaseConverter):
 class HardBreakConverter(ADF2MDBaseConverter):
     """Converter for hard break nodes."""
 
-    def _convert(self, node: ADFNode, indent_level: int = 0) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """Convert a hard break node to Markdown."""
         from adfmd.nodes import HardBreakNode
 

@@ -25,10 +25,7 @@ class ADFMD:
         """
         self.registry_adf2md = registry_adf2md or ADF2MDRegistry.create_default()
 
-    def convert_adf2md(
-        self,
-        adf_json: Union[Dict[str, Any], List[Dict[str, Any]]],
-    ) -> str:
+    def convert_adf2md(self, adf_json: Union[Dict[str, Any], List[Dict[str, Any]]]) -> str:
         """
         Convert ADF JSON to Markdown string.
 
@@ -47,11 +44,11 @@ class ADFMD:
         else:
             nodes = [ADFNode.from_dict(adf_json)]
 
-        # Convert node representation to markdown
+        # Convert nodes to markdown
         markdown_parts = [self.registry_adf2md.convert(node) for node in nodes]
 
-        # Join markdown parts with newlines
-        return "\n".join(markdown_parts)
+        # Join markdown parts. Newlines are added by the converters. Remove trailing newlines.
+        return "".join(markdown_parts).rstrip("\n")
 
     def convert_adf2md_file(self, input_path: str, output_path: Optional[str] = None) -> str:
         """

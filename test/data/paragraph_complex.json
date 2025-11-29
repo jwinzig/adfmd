@@ -1,61 +1,83 @@
-{
-  "type": "paragraph",
-  "content": [
-    {
-      "type": "text",
-      "text": "Complex paragraph with ",
-      "marks": []
-    },
-    {
-      "type": "text",
-      "text": "bold",
-      "marks": [{"type": "strong"}]
-    },
-    {
-      "type": "text",
-      "text": ", ",
-      "marks": []
-    },
-    {
-      "type": "text",
-      "text": "italic",
-      "marks": [{"type": "em"}]
-    },
-    {
-      "type": "text",
-      "text": ", ",
-      "marks": []
-    },
-    {
-      "type": "text",
-      "text": "code",
-      "marks": [{"type": "code"}]
-    },
-    {
-      "type": "text",
-      "text": ", ",
-      "marks": []
-    },
-    {
-      "type": "text",
-      "text": "strikethrough",
-      "marks": [{"type": "strike"}]
-    },
-    {
-      "type": "text",
-      "text": ", and ",
-      "marks": []
-    },
-    {
-      "type": "text",
-      "text": "bold italic",
-      "marks": [{"type": "strong"}, {"type": "em"}]
-    },
-    {
-      "type": "text",
-      "text": " combined.",
-      "marks": []
-    }
-  ]
-}
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Complex paragraph with ",
+        "marks": [ ]
+      },
+      {
+        "type": "text",
+        "text": "bold",
+        "marks": [ { "type": "strong" } ]
+      },
+      {
+        "type": "text",
+        "text": ", ",
+        "marks": [ ]
+      },
+      {
+        "type": "text",
+        "text": "italic",
+        "marks": [ { "type": "em" } ]
+      },
+      {
+        "type": "text",
+        "text": ", ",
+        "marks": [ ]
+      },
+      {
+        "type": "text",
+        "text": "code",
+        "marks": [ { "type": "code" } ]
+      },
+      {
+        "type": "text",
+        "text": ", ",
+        "marks": [ ]
+      },
+      {
+        "type": "text",
+        "text": "strikethrough",
+        "marks": [ { "type": "strike" } ]
+      },
+      {
+        "type": "text",
+        "text": ", and ",
+        "marks": [ ]
+      },
+      {
+        "type": "text",
+        "text": "bold italic",
+        "marks": [ { "type": "strong" }, { "type": "em" } ]
+      },
+      {
+        "type": "text",
+        "text": " combined.",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Second paragraph.",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Third paragraph.",
+        "marks": [ ]
+      }
+    ]
+  }
+]
 
