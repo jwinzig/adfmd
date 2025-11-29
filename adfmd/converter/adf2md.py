@@ -134,11 +134,6 @@ class ADF2MDRegistry:
         Returns:
             ADF2MDRegistry instance with all converters registered
         """
-        from adfmd.converters.adf2md import (
-            BulletListConverter,
-            ParagraphConverter,
-            TextConverter,
-        )
 
         registry = cls()
 

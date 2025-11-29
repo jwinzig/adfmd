@@ -5,7 +5,7 @@ adfmd - Convert between Atlassian Document Format (ADF) and Markdown.
 import json
 from typing import Any, Dict, List, Optional, Union
 
-from adfmd.converters import ADF2MDRegistry
+from adfmd.converter import ADF2MDRegistry
 from adfmd.nodes import ADFNode
 
 
