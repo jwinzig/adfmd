@@ -17,6 +17,7 @@ from adfmd.nodes import (
     HeadingNode,
     TextNode,
     InlineCardNode,
+    RuleNode,
 )
 
 
@@ -154,6 +155,7 @@ class ADF2MDRegistry:
         registry.register("orderedList", OrderedListConverter())
         registry.register("hardBreak", HardBreakConverter())
         registry.register("inlineCard", InlineCardConverter())
+        registry.register("rule", RuleConverter())
 
         return registry
 
@@ -340,3 +342,15 @@ class InlineCardConverter(ADF2MDBaseConverter):
 
         # Store as markdown link using the URL as text
         return f"[{node.url}]({node.url})"
+
+
+class RuleConverter(ADF2MDBaseConverter):
+    """Converter for rule (horizontal rule) nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a rule node to Markdown horizontal rule."""
+        if not isinstance(node, RuleNode):
+            raise ValueError(f"Expected RuleNode, got {type(node)}")
+
+        # In Markdown, a horizontal rule is represented as three or more dashes on their own line, # with blank lines before and after
+        return "---\n\n"

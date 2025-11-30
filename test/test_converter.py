@@ -43,6 +43,9 @@ from adfmd import ADFMD
 
         "inline_card_simple",
         "inline_card_complex",
+
+        "rule_simple",
+        "rule_with_content",
     ],
 )
 def test_adf_to_md(test_name):

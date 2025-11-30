@@ -1,0 +1,26 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Text before rule",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "rule"
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Text after rule",
+        "marks": [ ]
+      }
+    ]
+  }
+]
+

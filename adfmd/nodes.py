@@ -44,6 +44,8 @@ class ADFNode:
             return HardBreakNode.from_dict(data)
         elif node_type == "inlineCard":
             return InlineCardNode.from_dict(data)
+        elif node_type == "rule":
+            return RuleNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -190,3 +192,15 @@ class InlineCardNode(ADFNode):
             raise ValueError("URL is required for inlineCard nodes")
 
         return cls(url=url)
+
+
+@dataclass
+class RuleNode(ADFNode):
+    """Represents a rule (horizontal rule) node in ADF."""
+
+    type: str = field(default="rule", init=False)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "RuleNode":
+        """Create a RuleNode from a dictionary."""
+        return cls()
