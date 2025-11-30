@@ -37,6 +37,12 @@ from adfmd import ADFMD
         "heading_levels",
 
         "hard_break_simple",
+
+        "link_simple",
+        "link_complex",
+
+        "inline_card_simple",
+        "inline_card_complex",
     ],
 )
 def test_adf_to_md(test_name):

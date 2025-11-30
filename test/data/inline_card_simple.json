@@ -1,0 +1,22 @@
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "See ",
+      "marks": [ ]
+    },
+    {
+      "type": "inlineCard",
+      "attrs": {
+        "url": "https://example.com/card"
+      }
+    },
+    {
+      "type": "text",
+      "text": " for details.",
+      "marks": [ ]
+    }
+  ]
+}
+

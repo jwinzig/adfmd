@@ -1,0 +1,51 @@
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "Check out ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "this bold link",
+      "marks": [{"type": "strong"}, {"type": "link", "attrs": {"href": "https://example.com/bold"}}]
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "this italic link",
+      "marks": [{"type": "em"}, {"type": "link", "attrs": {"href": "https://example.com/italic"}}]
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "this code link",
+      "marks": [{"type": "code"}, {"type": "link", "attrs": {"href": "https://example.com/code"}}]
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "this bold italic link",
+      "marks": [{"type": "strong"}, {"type": "em"}, {"type": "link", "attrs": {"href": "https://example.com/bold-italic"}}]
+    },
+    {
+      "type": "text",
+      "text": ".",
+      "marks": []
+    }
+  ]
+}
+

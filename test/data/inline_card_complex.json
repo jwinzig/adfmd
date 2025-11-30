@@ -1,0 +1,55 @@
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "Check out ",
+      "marks": [ ]
+    },
+    {
+      "type": "inlineCard",
+      "attrs": {
+        "url": "https://example.com/link1"
+      }
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": [ ]
+    },
+    {
+      "type": "inlineCard",
+      "attrs": {
+        "url": "https://example.com/link2"
+      }
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": [ ]
+    },
+    {
+      "type": "inlineCard",
+      "attrs": {
+        "url": "https://example.com/link3"
+      }
+    },
+    {
+      "type": "text",
+      "text": " and ",
+      "marks": [ ]
+    },
+    {
+      "type": "inlineCard",
+      "attrs": {
+        "url": "https://example.com/link4"
+      }
+    },
+    {
+      "type": "text",
+      "text": ".",
+      "marks": [ ]
+    }
+  ]
+}
+

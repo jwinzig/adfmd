@@ -16,6 +16,7 @@ from adfmd.nodes import (
     HardBreakNode,
     HeadingNode,
     TextNode,
+    InlineCardNode,
 )
 
 
@@ -152,6 +153,7 @@ class ADF2MDRegistry:
         registry.register("bulletList", BulletListConverter())
         registry.register("orderedList", OrderedListConverter())
         registry.register("hardBreak", HardBreakConverter())
+        registry.register("inlineCard", InlineCardConverter())
 
         return registry
 
@@ -166,6 +168,7 @@ class TextConverter(ADF2MDBaseConverter):
 
         text = node.text
         marks = node.marks
+        url = node.url
 
         # Map ADF mark types to markdown formatting
         mark_formatters = {
@@ -183,6 +186,10 @@ class TextConverter(ADF2MDBaseConverter):
                 formatter = mark_formatters.get(mark_type)
                 if formatter:
                     text = formatter(text)
+
+        # Apply markdown URL formatting last (wraps all other formatting)
+        if url:
+            text = f"[{text}]({url})"
 
         return text
 
@@ -321,3 +328,15 @@ class HardBreakConverter(ADF2MDBaseConverter):
         # In Markdown, a hard break within a paragraph is represented as two spaces
         # followed by a newline. This creates a line break without starting a new paragraph.
         return "  \n"
+
+
+class InlineCardConverter(ADF2MDBaseConverter):
+    """Converter for inlineCard nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert an inlineCard node to Markdown link."""
+        if not isinstance(node, InlineCardNode):
+            raise ValueError(f"Expected InlineCardNode, got {type(node)}")
+
+        # Store as markdown link using the URL as text
+        return f"[{node.url}]({node.url})"

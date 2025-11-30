@@ -1,0 +1,21 @@
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "Visit ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "example.com",
+      "marks": [{"type": "link", "attrs": {"href": "https://example.com"}}]
+    },
+    {
+      "type": "text",
+      "text": " for more information.",
+      "marks": []
+    }
+  ]
+}
+

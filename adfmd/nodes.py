@@ -4,7 +4,7 @@ Provides type-safe internal representation of ADF nodes.
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 
 @dataclass
@@ -42,6 +42,8 @@ class ADFNode:
             return HeadingNode.from_dict(data)
         elif node_type == "hardBreak":
             return HardBreakNode.from_dict(data)
+        elif node_type == "inlineCard":
+            return InlineCardNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -53,11 +55,22 @@ class TextNode(ADFNode):
     type: str = field(default="text", init=False)
     text: str
     marks: List[str]
+    url: Optional[str]
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "TextNode":
         """Create a TextNode from a dictionary."""
-        return cls(text=data.get("text", ""), marks=[m["type"] for m in data.get("marks", [])])
+        # Get text marks (excluding link)
+        marks = [mark.get("type") for mark in data.get("marks", []) if mark.get("type") != "link"]
+
+        # Get URL from link mark
+        url = None
+        for mark in data.get("marks", []):
+            if mark.get("type") == "link":
+                url = mark.get("attrs", {}).get("href", None)
+                break
+
+        return cls(text=data.get("text", ""), marks=marks, url=url)
 
 
 @dataclass
@@ -155,3 +168,25 @@ class HardBreakNode(ADFNode):
     def from_dict(cls, data: Dict[str, Any]) -> "HardBreakNode":
         """Create a HardBreakNode from a dictionary."""
         return cls()
+
+
+@dataclass
+class InlineCardNode(ADFNode):
+    """Represents an inlineCard node in ADF."""
+
+    type: str = field(default="inlineCard", init=False)
+    url: Optional[str]
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "InlineCardNode":
+        """Create an InlineCardNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        # inlineCard can have url in attrs.url or attrs.data.url
+        url = attrs.get("url") or (attrs.get("data", {}) or {}).get("url", "")
+        if not url:
+            raise ValueError("URL is required for inlineCard nodes")
+
+        return cls(url=url)
