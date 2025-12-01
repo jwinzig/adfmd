@@ -2,21 +2,39 @@
 
 Bidirectional converter between Atlassian Document Format (ADF) and Markdown.
 
-## Atlassian Document Format (ADF) -> Markdown
+## ADF to Markdown Conversion
 
-Currently supported ADF nodes:
-- Paragraphs
-- Headings (levels 1–6)
-- Text with formatting:
-  - Bold (`strong`)
-  - Italic (`em`)
-  - Code
-  - Strikethrough
-  - Combined formatting (e.g. bold+italic)
-- Bullet lists (with nesting)
-- Ordered lists (with nesting)
-- Hard breaks
+Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 
-## Markdown -> Atlassian Document Format (ADF)
+### Node Types
+
+| ADF Node Type  | Markdown Output Type                                             |
+| -------------- | ---------------------------------------------------------------- |
+| text           | Text with formatting marks (see text marks)                      |
+| paragraph      | Paragraph text                                                   |
+| heading        | Headings (`#` through `######`) incl. trailing newlines (`\n\n`) |
+| bulletList     | Bullet list (`- ` prefix, with nesting)                         |
+| orderedList    | Ordered list (numbered items, with nesting)                      |
+| listItem       | List item (lines under `-`, `*`, or `1.`)                        |
+| hardBreak      | Line break (`  \n` at the end of line)                           |
+| rule           | Horizontal rule (`---`)                                          |
+| InlineCardNode | Link (`[URL](URL)`)                                              |
+
+### Text Marks
+
+| Mark Type | Markdown Output Type       |
+| --------- | -------------------------- |
+| code      | Inline code (`` `code` ``) |
+| em        | Italic (`*text*`)          |
+| strong    | Bold (`**text**`)          |
+| strike    | Strikethrough (`~~text~~`) |
+| link      | Link (`[text](URL)`)       |
+
+## Markdown to ADF Conversion
 
 To be implemented.
+
+## References
+
+- [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+- [Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/)
