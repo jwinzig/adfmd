@@ -15,5 +15,6 @@ authors = [
 Repository = "https://github.com/jwinzig/adfmd"
 Issues = "https://github.com/jwinzig/adfmd/issues"
 
-[tool.setuptools]
-packages = ["adfmd"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["adfmd*"]
