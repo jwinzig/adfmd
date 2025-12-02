@@ -1,0 +1,34 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1609511445000"
+        }
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "The meeting is scheduled for ",
+        "marks": []
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1686820522000"
+        }
+      },
+      {
+        "type": "text",
+        "text": " at 9:15 AM.",
+        "marks": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Project timeline: Start ",
+        "marks": [ ]
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1647765930000"
+        }
+      },
+      {
+        "type": "text",
+        "text": ", End ",
+        "marks": [ ]
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1735171199000"
+        }
+      },
+      {
+        "type": "text",
+        "text": ".",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Morning: ",
+        "marks": [ ]
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1647765930000"
+        }
+      },
+      {
+        "type": "text",
+        "text": ", Afternoon: ",
+        "marks": [ ]
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1751630400000"
+        }
+      },
+      {
+        "type": "text",
+        "text": ", Evening: ",
+        "marks": [ ]
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1735171199000"
+        }
+      },
+      {
+        "type": "text",
+        "text": ".",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Deadline:",
+        "marks": [
+          {
+            "type": "strong"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": " ",
+        "marks": [ ]
+      },
+      {
+        "type": "date",
+        "attrs": {
+          "timestamp": "1623774153000"
+        }
+      },
+      {
+        "type": "text",
+        "text": " (no extensions)",
+        "marks": [ ]
+      }
+    ]
+  }
+]

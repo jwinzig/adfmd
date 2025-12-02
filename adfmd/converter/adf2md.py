@@ -3,9 +3,10 @@ ADF to Markdown converters for adfmd.
 Contains base class, registry, and all converters for converting ADF nodes to Markdown format.
 """
 
-from typing import Dict, Optional, Any
-
 from abc import ABC, abstractmethod
+from datetime import datetime, timezone
+from typing import Any, Dict, Optional
+
 
 from adfmd.nodes import (
     ADFNode,
@@ -18,6 +19,7 @@ from adfmd.nodes import (
     TextNode,
     InlineCardNode,
     RuleNode,
+    DateNode,
 )
 
 
@@ -156,6 +158,7 @@ class ADF2MDRegistry:
         registry.register("hardBreak", HardBreakConverter())
         registry.register("inlineCard", InlineCardConverter())
         registry.register("rule", RuleConverter())
+        registry.register("date", DateConverter())
 
         return registry
 
@@ -354,3 +357,20 @@ class RuleConverter(ADF2MDBaseConverter):
 
         # In Markdown, a horizontal rule is represented as three or more dashes on their own line, # with blank lines before and after
         return "---\n\n"
+
+
+class DateConverter(ADF2MDBaseConverter):
+    """Converter for date nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """
+        Convert a date node to Markdown.
+
+        The timestamp is interpreted as milliseconds since Unix epoch.
+        The date is formatted as ISO 8601 UTC timestamp (e.g., 2025-12-02T20:51:13Z).
+        """
+        if not isinstance(node, DateNode):
+            raise ValueError(f"Expected DateNode, got {type(node)}")
+
+        dt = datetime.fromtimestamp(float(node.timestamp) / 1000, tz=timezone.utc)
+        return dt.strftime("%Y-%m-%dT%H:%M:%SZ")

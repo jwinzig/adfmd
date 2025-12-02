@@ -46,6 +46,9 @@ from adfmd import ADFMD
 
         "rule_simple",
         "rule_with_content",
+
+        "date_simple",
+        "date_complex",
     ],
 )
 def test_adf_to_md(test_name):

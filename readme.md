@@ -8,17 +8,18 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 
 ### Node Types
 
-| ADF Node Type  | Markdown Output Type                                             |
-| -------------- | ---------------------------------------------------------------- |
-| text           | Text with formatting marks (see text marks)                      |
-| paragraph      | Paragraph text                                                   |
-| heading        | Headings (`#` through `######`) incl. trailing newlines (`\n\n`) |
-| bulletList     | Bullet list (`- ` prefix, with nesting)                         |
-| orderedList    | Ordered list (numbered items, with nesting)                      |
-| listItem       | List item (lines under `-`, `*`, or `1.`)                        |
-| hardBreak      | Line break (`  \n` at the end of line)                           |
-| rule           | Horizontal rule (`---`)                                          |
-| InlineCardNode | Link (`[URL](URL)`)                                              |
+| ADF Node Type | Markdown Output Type                                             |
+| ------------- | ---------------------------------------------------------------- |
+| text          | Text with formatting marks (see text marks)                      |
+| paragraph     | Paragraph text                                                   |
+| heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`) |
+| bulletList    | Bullet list (`- ` prefix, with nesting)                          |
+| orderedList   | Ordered list (numbered items, with nesting)                      |
+| listItem      | List item (lines under `-`, `*`, or `1.`)                        |
+| hardBreak     | Line break (`  \n` at the end of line)                           |
+| rule          | Horizontal rule (`---`)                                          |
+| inlineCard    | Link (`[URL](URL)`)                                              |
+| date          | UTC timestamp (`YYYY-MM-DDTHH:MM:SSZ`)                           |
 
 ### Text Marks
 
@@ -29,6 +30,34 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 | strong    | Bold (`**text**`)          |
 | strike    | Strikethrough (`~~text~~`) |
 | link      | Link (`[text](URL)`)       |
+
+### Missing
+
+**Nodes**:
+
+- blockquote
+- codeBlock
+- doc
+- emoji
+- expand
+- media
+- mediaGroup
+- mediaSingle
+- mention
+- nestedExpand
+- panel
+- status
+- table
+- tableCell
+- tableHeader
+- tableRow
+
+**Marks**:
+
+- backgroundColor
+- subsup
+- textColor
+- underline
 
 ## Markdown to ADF Conversion
 

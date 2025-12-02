@@ -46,6 +46,8 @@ class ADFNode:
             return InlineCardNode.from_dict(data)
         elif node_type == "rule":
             return RuleNode.from_dict(data)
+        elif node_type == "date":
+            return DateNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -204,3 +206,25 @@ class RuleNode(ADFNode):
     def from_dict(cls, data: Dict[str, Any]) -> "RuleNode":
         """Create a RuleNode from a dictionary."""
         return cls()
+
+
+@dataclass
+class DateNode(ADFNode):
+    """Represents a date node in ADF."""
+
+    type: str = field(default="date", init=False)
+    timestamp: str
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "DateNode":
+        """Create a DateNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        # Timestamp is a string of milliseconds since epoch
+        timestamp = data.get("attrs", {}).get("timestamp")
+        if timestamp is None:
+            raise ValueError("Timestamp is required for date nodes")
+
+        return cls(timestamp=timestamp)
