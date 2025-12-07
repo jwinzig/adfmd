@@ -368,9 +368,14 @@ class DateConverter(ADF2MDBaseConverter):
 
         The timestamp is interpreted as milliseconds since Unix epoch.
         The date is formatted as ISO 8601 UTC timestamp (e.g., 2025-12-02T20:51:13Z).
+
+        Start and end markers are added as HTML comments to preserve the original date node for round-trip conversion.
         """
         if not isinstance(node, DateNode):
             raise ValueError(f"Expected DateNode, got {type(node)}")
 
         dt = datetime.fromtimestamp(float(node.timestamp) / 1000, tz=timezone.utc)
-        return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+        formatted_date = dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+        start_marker = f'<!-- ADF:date:timestamp="{node.timestamp}" -->'
+        end_marker = "<!-- /ADF:date -->"
+        return f"{start_marker}{formatted_date}{end_marker}"
