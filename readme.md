@@ -8,32 +8,57 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 
 ### Node Types
 
-| ADF Node Type | Markdown Output Type                                             |
-| ------------- | ---------------------------------------------------------------- |
-| text          | Text with formatting marks (see text marks)                      |
-| paragraph     | Paragraph text                                                   |
-| heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`) |
-| bulletList    | Bullet list (`- ` prefix, with nesting)                          |
-| orderedList   | Ordered list (numbered items, with nesting)                      |
-| listItem      | List item (lines under `-`, `*`, or `1.`)                        |
-| hardBreak     | Line break (`  \n` at the end of line)                           |
-| rule          | Horizontal rule (`---`)                                          |
-| inlineCard    | Link (`[URL](URL)`)                                              |
-| date          | UTC timestamp (`YYYY-MM-DDTHH:MM:SSZ`)                           |
+| ADF Node Type | Markdown Output Type                                                                       |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| text          | Text with formatting marks (see text marks)                                                |
+| paragraph     | Paragraph text                                                                             |
+| heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`)                           |
+| bulletList    | Bullet list (`- ` prefix, with nesting)                                                    |
+| orderedList   | Ordered list (numbered items, with nesting)                                                |
+| listItem      | List item (lines under `-`, `*`, or `1.`)                                                  |
+| hardBreak     | Line break (`  \n` at the end of line)                                                     |
+| rule          | Horizontal rule (`---`)                                                                    |
+| inlineCard    | Link (`[URL](URL)`)                                                                        |
+| date          | UTC timestamp (`YYYY-MM-DDTHH:MM:SSZ`) - Node type preserved via HTML comments (see below) |
 
 ### Text Marks
 
-| Mark Type | Markdown Output Type       |
-| --------- | -------------------------- |
-| code      | Inline code (`` `code` ``) |
-| em        | Italic (`*text*`)          |
-| strong    | Bold (`**text**`)          |
-| strike    | Strikethrough (`~~text~~`) |
-| link      | Link (`[text](URL)`)       |
+| Mark Type       | Markdown Output Type                    |
+| --------------- | --------------------------------------- |
+| code            | Inline code (`` `code` ``)              |
+| em              | Italic (`*text*`)                       |
+| strong          | Bold (`**text**`)                       |
+| strike          | Strikethrough (`~~text~~`)              |
+| link            | Link (`[text](URL)`)                    |
+| underline       | Preserved via HTML comments (see below) |
+| subsup          | Preserved via HTML comments (see below) |
+| textColor       | Preserved via HTML comments (see below) |
+| backgroundColor | Preserved via HTML comments (see below) |
 
-### Missing
+### HTML Comments for Unsupported ADF Elements
 
-**Nodes**:
+ADF elements (nodes and marks) that are not supported by Markdown are marked with HTML comments to enable lossless round-trip conversion.
+
+**Format:**
+
+```
+<!-- ADF:{node}:{attr}="{value}" -->{content}<!-- /ADF:{node} -->
+```
+
+**Examples:**
+
+- Date node:
+
+  ```
+  <!-- ADF:date:timestamp="1686820522000" -->2023-06-15T09:15:22Z<!-- /ADF:date -->
+  ```
+
+- Text with unsupported marks:
+  ```
+  <!-- ADF:text:marks="underline,textColor=#0000FF" -->underlined blue text<!-- /ADF:text -->
+  ```
+
+### Missing ADF Nodes
 
 - blockquote
 - codeBlock
@@ -51,13 +76,6 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 - tableCell
 - tableHeader
 - tableRow
-
-**Marks**:
-
-- backgroundColor
-- subsup
-- textColor
-- underline
 
 ## Markdown to ADF Conversion
 
