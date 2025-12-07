@@ -12,5 +12,5 @@
 
 # ***`Bold Italic Code`*** Text
 
-## Underline Text (no markdown)
+## Underline <!-- ADF:text:marks="underline" -->Text<!-- /ADF:text --> (no markdown)
 

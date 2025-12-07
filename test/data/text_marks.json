@@ -105,6 +105,66 @@
       "type": "text",
       "text": "underline",
       "marks": [{"type": "underline"}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "red text",
+      "marks": [{"type": "textColor", "attrs": {"color": "#FF0000"}}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "yellow background",
+      "marks": [{"type": "backgroundColor", "attrs": {"color": "#FFFF00"}}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "superscript",
+      "marks": [{"type": "subsup", "attrs": {"type": "sup"}}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "subscript",
+      "marks": [{"type": "subsup", "attrs": {"type": "sub"}}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "underline with color",
+      "marks": [{"type": "underline"}, {"type": "textColor", "attrs": {"color": "#0000FF"}}]
+    },
+    {
+      "type": "text",
+      "text": " ",
+      "marks": []
+    },
+    {
+      "type": "text",
+      "text": "bold with background",
+      "marks": [{"type": "strong"}, {"type": "backgroundColor", "attrs": {"color": "#00FF00"}}]
     }
   ]
 }

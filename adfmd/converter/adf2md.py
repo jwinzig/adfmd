@@ -181,11 +181,10 @@ class TextConverter(ADF2MDBaseConverter):
             "em": lambda t: f"*{t}*",
             "strong": lambda t: f"**{t}**",
             "strike": lambda t: f"~~{t}~~",
-            "underline": lambda t: t,  # Underline not supported in standard markdown
         }
 
         # Apply marks in order
-        mark_order = ["code", "em", "strong", "strike", "underline"]
+        mark_order = ["code", "em", "strong", "strike"]
         for mark_type in mark_order:
             if mark_type in marks:
                 formatter = mark_formatters.get(mark_type)
@@ -195,6 +194,26 @@ class TextConverter(ADF2MDBaseConverter):
         # Apply markdown URL formatting last (wraps all other formatting)
         if url:
             text = f"[{text}]({url})"
+
+        # Add start and end markers for unsupported marks for round-trip conversion
+        unsupported_marks = [
+            m for m in marks if m in ["underline", "subsup", "textColor", "backgroundColor"]
+        ]
+        if unsupported_marks:
+            if node.subsup:
+                unsupported_marks.remove("subsup")
+                unsupported_marks.append(f"subsup={node.subsup}")
+            if node.text_color:
+                unsupported_marks.remove("textColor")
+                unsupported_marks.append(f"textColor={node.text_color}")
+            if node.background_color:
+                unsupported_marks.remove("backgroundColor")
+                unsupported_marks.append(f"backgroundColor={node.background_color}")
+
+            marks_str = ",".join(unsupported_marks)
+            start_marker = f'<!-- ADF:text:marks="{marks_str}" -->'
+            end_marker = "<!-- /ADF:text -->"
+            return f"{start_marker}{text}{end_marker}"
 
         return text
 

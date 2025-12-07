@@ -60,6 +60,9 @@ class TextNode(ADFNode):
     text: str
     marks: List[str]
     url: Optional[str]
+    background_color: Optional[str]
+    text_color: Optional[str]
+    subsup: Optional[str]
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "TextNode":
@@ -67,14 +70,29 @@ class TextNode(ADFNode):
         # Get text marks (excluding link)
         marks = [mark.get("type") for mark in data.get("marks", []) if mark.get("type") != "link"]
 
-        # Get URL from link mark
+        # Get specific attributes from marks
         url = None
+        subsup = None
+        background_color = None
+        text_color = None
         for mark in data.get("marks", []):
             if mark.get("type") == "link":
                 url = mark.get("attrs", {}).get("href", None)
-                break
+            elif mark.get("type") == "subsup":
+                subsup = mark.get("attrs", {}).get("type", None)
+            elif mark.get("type") == "textColor":
+                text_color = mark.get("attrs", {}).get("color", None)
+            elif mark.get("type") == "backgroundColor":
+                background_color = mark.get("attrs", {}).get("color", None)
 
-        return cls(text=data.get("text", ""), marks=marks, url=url)
+        return cls(
+            text=data.get("text", ""),
+            marks=marks,
+            url=url,
+            subsup=subsup,
+            background_color=background_color,
+            text_color=text_color,
+        )
 
 
 @dataclass
