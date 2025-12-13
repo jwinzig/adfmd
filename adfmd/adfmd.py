@@ -3,6 +3,8 @@ adfmd - Convert between Atlassian Document Format (ADF) and Markdown.
 """
 
 import json
+import warnings
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 
 from adfmd.converter import ADF2MDRegistry
@@ -15,6 +17,7 @@ class ADFMD:
     def __init__(
         self,
         registry_adf2md: Optional[ADF2MDRegistry] = None,
+        # registry_md2adf: Optional[MD2ADFRegistry] = None,
     ):
         """
         Initialize adfmd.
@@ -24,13 +27,14 @@ class ADFMD:
             registry_md2adf: Optional Markdown to ADF registry. If None, uses default.
         """
         self.registry_adf2md = registry_adf2md or ADF2MDRegistry.create_default()
+        # self.registry_md2adf = registry_md2adf  or MD2ADFRegistry.create_default()
 
-    def convert_adf2md(self, adf_json: Union[Dict[str, Any], List[Dict[str, Any]]]) -> str:
+    def to_markdown(self, adf_data: Union[Dict[str, Any], List[Dict[str, Any]]]) -> str:
         """
         Convert ADF JSON to Markdown string.
 
         Args:
-            adf_json: ADF document as a dictionary or list of dictionaries
+            adf_data: ADF document as a dictionary or list of dictionaries
 
         Returns:
             Markdown string representation
@@ -38,36 +42,66 @@ class ADFMD:
         Raises:
             ValueError: If the document type is not supported
         """
-        # Build internal node representation
-        if isinstance(adf_json, list):
-            nodes = [ADFNode.from_dict(node_dict) for node_dict in adf_json]
+        if isinstance(adf_data, list):
+            nodes = [ADFNode.from_dict(node_dict) for node_dict in adf_data]
         else:
-            nodes = [ADFNode.from_dict(adf_json)]
+            nodes = [ADFNode.from_dict(adf_data)]
 
-        # Convert nodes to markdown
         markdown_parts = [self.registry_adf2md.convert(node) for node in nodes]
 
-        # Join markdown parts. Newlines are added by the converters. Remove trailing newlines.
         return "".join(markdown_parts).rstrip("\n")
 
-    def convert_adf2md_file(self, input_path: str, output_path: Optional[str] = None) -> str:
+    def to_markdown_file(
+        self, input_path: Union[str, Path], output_path: Optional[Union[str, Path]] = None
+    ) -> str:
         """
         Convert an ADF JSON file to Markdown.
 
         Args:
-            input_path: Path to input ADF JSON file
-            output_path: Optional path to output Markdown file. If None, returns the result.
+            input_path: Path to input ADF JSON file (str or Path)
+            output_path: Optional path to output Markdown file (str or Path). If None, returns the result.
 
         Returns:
             Markdown string representation
         """
-        with open(input_path, "r", encoding="utf-8") as f:
+        input_path = Path(input_path)
+        with input_path.open("r", encoding="utf-8") as f:
             adf_data = json.load(f)
 
-        markdown = self.convert_adf2md(adf_data)
+        markdown = self.to_markdown(adf_data)
 
         if output_path:
-            with open(output_path, "w", encoding="utf-8") as f:
-                f.write(markdown)
+            output_path = Path(output_path)
+            output_path.write_text(markdown, encoding="utf-8")
 
         return markdown
+
+    def from_markdown(self, markdown: str) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
+        raise NotImplementedError("Markdown to ADF conversion is not yet implemented")
+
+    def from_markdown_file(
+        self, input_path: Union[str, Path], output_path: Optional[Union[str, Path]] = None
+    ) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
+        raise NotImplementedError("Markdown to ADF conversion is not yet implemented")
+
+    ################################################################################################
+    # Deprecated methods for backward compatibility
+    # Will be removed in the next release.
+    ################################################################################################
+    def convert_adf2md(self, adf_json: Union[Dict[str, Any], List[Dict[str, Any]]]) -> str:
+        warnings.warn(
+            "convert_adf2md() is deprecated. Use to_markdown() instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return self.to_markdown(adf_json)
+
+    def convert_adf2md_file(
+        self, input_path: Union[str, Path], output_path: Optional[Union[str, Path]] = None
+    ) -> str:
+        warnings.warn(
+            "convert_adf2md_file() is deprecated. Use to_markdown_file() instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return self.to_markdown_file(input_path, output_path)

@@ -63,11 +63,11 @@ def test_adf_to_md(test_name):
 
     # Convert ADF to Markdown using adfmd
     converter = ADFMD()
-    result = converter.convert_adf2md_file(str(input_file))
+    result = converter.to_markdown_file(input_file)
+
 
     # Read expected output
-    with open(expected_file, "r", encoding="utf-8") as f:
-        expected = f.read().rstrip()
+    expected = expected_file.read_text(encoding="utf-8").rstrip()
 
     # Normalize line endings and compare
     result = result.rstrip()
