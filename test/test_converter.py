@@ -10,7 +10,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import pytest
-from adfmd import ADFMD
+import json
+from adfmd import ADFMD, to_markdown
 
 
 @pytest.mark.parametrize(
@@ -18,35 +19,26 @@ from adfmd import ADFMD
     [
         "text_simple",
         "text_marks",
-
         "paragraph_simple",
         "paragraph_nested",
         "paragraph_complex",
-
         "bullet_list_simple",
         "bullet_list_nested",
         "bullet_list_complex",
-
         "ordered_list_simple",
         "ordered_list_nested",
         "ordered_list_complex",
-
         "heading_simple",
         "heading_marks",
         "heading_marks_complex",
         "heading_levels",
-
         "hard_break_simple",
-
         "link_simple",
         "link_complex",
-
         "inline_card_simple",
         "inline_card_complex",
-
         "rule_simple",
         "rule_with_content",
-
         "date_simple",
         "date_complex",
     ],
@@ -65,16 +57,16 @@ def test_adf_to_md(test_name):
     converter = ADFMD()
     result = converter.to_markdown_file(input_file)
 
-
     # Read expected output
     expected = expected_file.read_text(encoding="utf-8").rstrip()
 
     # Normalize line endings and compare
     result = result.rstrip()
     expected = expected.rstrip()
-
     assert result == expected, (
-        f"Conversion mismatch for {test_name}:\n"
-        f"Expected:\n{repr(expected)}\n"
-        f"Got:\n{repr(result)}"
+        f"Conversion mismatch for {test_name}:\nExpected:\n{repr(expected)}\nGot:\n{repr(result)}"
     )
+
+    # Convert ADF to Markdown using to_markdown function
+    result2 = to_markdown(json.loads(input_file.read_text(encoding="utf-8")))
+    assert result == result2.rstrip(), "Conversion mismatch for to_markdown function"
