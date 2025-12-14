@@ -22,6 +22,7 @@ from adfmd.nodes import (
     DateNode,
     DocNode,
     StatusNode,
+    MentionNode,
 )
 
 
@@ -163,6 +164,7 @@ class ADF2MDRegistry:
         registry.register("rule", RuleConverter())
         registry.register("date", DateConverter())
         registry.register("status", StatusConverter())
+        registry.register("mention", MentionConverter())
 
         return registry
 
@@ -453,3 +455,33 @@ class StatusConverter(ADF2MDBaseConverter):
         end_marker = "<!-- /ADF:status -->"
 
         return f"{start_marker}{node.text}{end_marker}"
+
+
+class MentionConverter(ADF2MDBaseConverter):
+    """Converter for mention nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """
+        Convert a mention node to Markdown.
+
+        Start and end markers are added as HTML comments to preserve the original mention node for round-trip conversion.
+        """
+        if not isinstance(node, MentionNode):
+            raise ValueError(f"Expected MentionNode, got {type(node)}")
+
+        attrs_parts = [f'id="{node.id}"']
+        if node.text:
+            attrs_parts.append(f'text="{node.text}"')
+        if node.user_type:
+            attrs_parts.append(f'userType="{node.user_type}"')
+        if node.access_level:
+            attrs_parts.append(f'accessLevel="{node.access_level}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:mention:{attrs_str} -->"
+        end_marker = "<!-- /ADF:mention -->"
+
+        # Use text if available, otherwise use @mention with id
+        display_text = node.text if node.text else f"@mention({node.id})"
+
+        return f"{start_marker}{display_text}{end_marker}"

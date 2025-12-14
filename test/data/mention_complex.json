@@ -1,0 +1,85 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Hello ",
+        "marks": [ ]
+      },
+      {
+        "type": "mention",
+        "attrs": {
+          "id": "ABCDE-ABCDE-ABCDE-ABCDE",
+          "text": "@Bradley Ayers",
+          "userType": "DEFAULT"
+        }
+      },
+      {
+        "type": "text",
+        "text": " and ",
+        "marks": [ ]
+      },
+      {
+        "type": "mention",
+        "attrs": {
+          "id": "FGHIJ-FGHIJ-FGHIJ-FGHIJ",
+          "text": "@Jane Doe",
+          "userType": "APP",
+          "accessLevel": "SITE"
+        }
+      },
+      {
+        "type": "text",
+        "text": "!",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Mention without text: ",
+        "marks": [ ]
+      },
+      {
+        "type": "mention",
+        "attrs": {
+          "id": "KLMNO-KLMNO-KLMNO-KLMNO"
+        }
+      },
+      {
+        "type": "text",
+        "text": ".",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Special user: ",
+        "marks": [ ]
+      },
+      {
+        "type": "mention",
+        "attrs": {
+          "id": "PQRST-PQRST-PQRST-PQRST",
+          "text": "@System",
+          "userType": "SPECIAL",
+          "accessLevel": "APPLICATION"
+        }
+      },
+      {
+        "type": "text",
+        "text": ".",
+        "marks": [ ]
+      }
+    ]
+  }
+]
+

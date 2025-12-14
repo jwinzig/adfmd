@@ -21,7 +21,8 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 | rule          | Horizontal rule (`---`)                                                                    |
 | inlineCard    | Link (`[URL](URL)`)                                                                        |
 | date          | UTC timestamp (`YYYY-MM-DDTHH:MM:SSZ`) - Node type preserved via HTML comments (see below) |
-| status        | Status text - Node type preserved via HTML comments (see below)                           |
+| status        | Status text - Node type preserved via HTML comments (see below)                            |
+| mention       | User mention - Node type preserved via HTML comments (see below)                           |
 
 ### Text Marks
 
@@ -83,6 +84,18 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
   <!-- ADF:status:text="In Progress",color="blue" -->In Progress<!-- /ADF:status -->
   ```
 
+- Mention node:
+
+  ```
+  <!-- ADF:mention:id="ABCDE-ABCDE-ABCDE-ABCDE",text="@Bradley Ayers" -->@Bradley Ayers<!-- /ADF:mention -->
+  ```
+
+  With additional attributes:
+
+  ```
+  <!-- ADF:mention:id="FGHIJ-FGHIJ-FGHIJ-FGHIJ" -->@mention(FGHIJ-FGHIJ-FGHIJ-FGHIJ)<!-- /ADF:mention -->
+  ```
+
 ### Missing ADF Nodes
 
 - blockquote
@@ -92,7 +105,6 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
 - media
 - mediaGroup
 - mediaSingle
-- mention
 - nestedExpand
 - panel
 - table

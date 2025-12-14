@@ -52,6 +52,8 @@ class ADFNode:
             return DocNode.from_dict(data)
         elif node_type == "status":
             return StatusNode.from_dict(data)
+        elif node_type == "mention":
+            return MentionNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -295,3 +297,32 @@ class StatusNode(ADFNode):
             raise ValueError("Color is required for status nodes")
 
         return cls(text=text, color=color)
+
+
+@dataclass
+class MentionNode(ADFNode):
+    """Represents a mention node in ADF."""
+
+    type: str = field(default="mention", init=False)
+    id: str
+    text: Optional[str] = None
+    user_type: Optional[str] = None
+    access_level: Optional[str] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "MentionNode":
+        """Create a MentionNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        id = attrs.get("id")
+        if id is None:
+            raise ValueError("ID is required for mention nodes")
+
+        return cls(
+            id=id,
+            text=attrs.get("text"),
+            user_type=attrs.get("userType"),
+            access_level=attrs.get("accessLevel"),
+        )
