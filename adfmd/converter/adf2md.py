@@ -21,6 +21,7 @@ from adfmd.nodes import (
     RuleNode,
     DateNode,
     DocNode,
+    StatusNode,
 )
 
 
@@ -161,6 +162,7 @@ class ADF2MDRegistry:
         registry.register("inlineCard", InlineCardConverter())
         registry.register("rule", RuleConverter())
         registry.register("date", DateConverter())
+        registry.register("status", StatusConverter())
 
         return registry
 
@@ -429,3 +431,25 @@ class DocConverter(ADF2MDBaseConverter):
         end_marker = "<!-- /ADF:doc -->"
 
         return f"{start_marker}\n{content}\n{end_marker}"
+
+
+class StatusConverter(ADF2MDBaseConverter):
+    """Converter for status nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """
+        Convert a status node to Markdown.
+
+        Start and end markers are added as HTML comments to preserve the original status node for round-trip conversion.
+        """
+        if not isinstance(node, StatusNode):
+            raise ValueError(f"Expected StatusNode, got {type(node)}")
+
+        attrs_parts = [f'text="{node.text}"']
+        attrs_parts.append(f'color="{node.color}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:status:{attrs_str} -->"
+        end_marker = "<!-- /ADF:status -->"
+
+        return f"{start_marker}{node.text}{end_marker}"

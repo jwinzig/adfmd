@@ -50,6 +50,8 @@ class ADFNode:
             return DateNode.from_dict(data)
         elif node_type == "doc":
             return DocNode.from_dict(data)
+        elif node_type == "status":
+            return StatusNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -266,3 +268,30 @@ class DocNode(ADFNode):
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
         return cls(version=version, children=children)
+
+
+@dataclass
+class StatusNode(ADFNode):
+    """Represents a status node in ADF."""
+
+    type: str = field(default="status", init=False)
+    text: str
+    color: Optional[str] = None
+    local_id: Optional[str] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "StatusNode":
+        """Create a StatusNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        text = attrs.get("text")
+        if text is None:
+            raise ValueError("Text is required for status nodes")
+
+        color = attrs.get("color")
+        if color is None:
+            raise ValueError("Color is required for status nodes")
+
+        return cls(text=text, color=color)

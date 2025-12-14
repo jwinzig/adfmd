@@ -1,0 +1,82 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Task status: ",
+        "marks": [ ]
+      },
+      {
+        "type": "status",
+        "attrs": {
+          "text": "In Progress",
+          "color": "blue"
+        }
+      },
+      {
+        "type": "text",
+        "text": " → ",
+        "marks": [ ]
+      },
+      {
+        "type": "status",
+        "attrs": {
+          "text": "Done",
+          "color": "green"
+        }
+      },
+      {
+        "type": "text",
+        "text": ".",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Current status: ",
+        "marks": [ ]
+      },
+      {
+        "type": "status",
+        "attrs": {
+          "text": "Blocked",
+          "color": "red",
+          "localId": "status-123"
+        }
+      },
+      {
+        "type": "text",
+        "text": " (needs review)",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Status without color: ",
+        "marks": [ ]
+      },
+      {
+        "type": "status",
+        "attrs": {
+          "text": "Neutral",
+          "color": "neutral"
+        }
+      },
+      {
+        "type": "text",
+        "text": ".",
+        "marks": [ ]
+      }
+    ]
+  }
+]
+

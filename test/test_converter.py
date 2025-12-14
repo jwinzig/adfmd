@@ -44,6 +44,8 @@ from adfmd import ADFMD, to_markdown
         "doc_simple",
         "doc_no_version",
         "doc_complex",
+        "status_simple",
+        "status_complex",
     ],
 )
 def test_adf_to_md(test_name):
