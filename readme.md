@@ -10,6 +10,7 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 
 | ADF Node Type | Markdown Output Type                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------ |
+| doc           | Document root (converts children, version preserved via HTML comments if present)          |
 | text          | Text with formatting marks (see text marks)                                                |
 | paragraph     | Paragraph text                                                                             |
 | heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`)                           |
@@ -54,15 +55,31 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
   ```
 
 - Text with unsupported marks:
+
   ```
   <!-- ADF:text:marks="underline,textColor=#0000FF" -->underlined blue text<!-- /ADF:text -->
+  ```
+
+- Doc node with version:
+
+  ```
+  <!-- ADF:doc:version="1" -->
+  {content}
+  <!-- /ADF:doc -->
+  ```
+
+- Doc node without version:
+
+  ```
+  <!-- ADF:doc -->
+  {content}
+  <!-- /ADF:doc -->
   ```
 
 ### Missing ADF Nodes
 
 - blockquote
 - codeBlock
-- doc
 - emoji
 - expand
 - media

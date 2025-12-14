@@ -48,6 +48,8 @@ class ADFNode:
             return RuleNode.from_dict(data)
         elif node_type == "date":
             return DateNode.from_dict(data)
+        elif node_type == "doc":
+            return DocNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -246,3 +248,21 @@ class DateNode(ADFNode):
             raise ValueError("Timestamp is required for date nodes")
 
         return cls(timestamp=timestamp)
+
+
+@dataclass
+class DocNode(ADFNode):
+    """Represents a doc (document root) node in ADF."""
+
+    type: str = field(default="doc", init=False)
+    version: Optional[int] = None
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "DocNode":
+        """Create a DocNode from a dictionary."""
+        version = data.get("version")
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(version=version, children=children)

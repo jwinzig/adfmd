@@ -1,0 +1,16 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "This is a document without version.",
+          "marks": []
+        }
+      ]
+    }
+  ]
+}
+

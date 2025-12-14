@@ -41,6 +41,9 @@ from adfmd import ADFMD, to_markdown
         "rule_with_content",
         "date_simple",
         "date_complex",
+        "doc_simple",
+        "doc_no_version",
+        "doc_complex",
     ],
 )
 def test_adf_to_md(test_name):

@@ -20,6 +20,7 @@ from adfmd.nodes import (
     InlineCardNode,
     RuleNode,
     DateNode,
+    DocNode,
 )
 
 
@@ -150,6 +151,7 @@ class ADF2MDRegistry:
         registry = cls()
 
         # Register converters
+        registry.register("doc", DocConverter())
         registry.register("text", TextConverter())
         registry.register("paragraph", ParagraphConverter())
         registry.register("heading", HeadingConverter())
@@ -398,3 +400,32 @@ class DateConverter(ADF2MDBaseConverter):
         start_marker = f'<!-- ADF:date:timestamp="{node.timestamp}" -->'
         end_marker = "<!-- /ADF:date -->"
         return f"{start_marker}{formatted_date}{end_marker}"
+
+
+class DocConverter(ADF2MDBaseConverter):
+    """Converter for doc (document root) nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """
+        Convert a doc node to Markdown.
+
+        The doc node is the root node of an ADF document. It simply converts
+        all its children to Markdown.
+
+        Start and end markers are added as HTML comments to preserve the original doc node for round-trip conversion.
+        """
+        if not isinstance(node, DocNode):
+            raise ValueError(f"Expected DocNode, got {type(node)}")
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node))
+        content = "".join(text_parts)
+
+        if node.version is not None:
+            start_marker = f'<!-- ADF:doc:version="{node.version}" -->'
+        else:
+            start_marker = "<!-- ADF:doc -->"
+        end_marker = "<!-- /ADF:doc -->"
+
+        return f"{start_marker}\n{content}\n{end_marker}"
