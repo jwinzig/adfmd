@@ -54,6 +54,14 @@ class ADFNode:
             return StatusNode.from_dict(data)
         elif node_type == "mention":
             return MentionNode.from_dict(data)
+        elif node_type == "table":
+            return TableNode.from_dict(data)
+        elif node_type == "tableRow":
+            return TableRowNode.from_dict(data)
+        elif node_type == "tableCell":
+            return TableCellNode.from_dict(data)
+        elif node_type == "tableHeader":
+            return TableHeaderNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -325,4 +333,113 @@ class MentionNode(ADFNode):
             text=attrs.get("text"),
             user_type=attrs.get("userType"),
             access_level=attrs.get("accessLevel"),
+        )
+
+
+@dataclass
+class TableNode(ADFNode):
+    """Represents a table node in ADF."""
+
+    type: str = field(default="table", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+    is_number_column_enabled: Optional[bool] = None
+    width: Optional[int] = None
+    layout: Optional[str] = None
+    display_mode: Optional[str] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "TableNode":
+        """Create a TableNode from a dictionary, preserving all child nodes."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        return cls(
+            children=children,
+            is_number_column_enabled=attrs.get("isNumberColumnEnabled"),
+            width=attrs.get("width"),
+            layout=attrs.get("layout"),
+            display_mode=attrs.get("displayMode"),
+        )
+
+
+@dataclass
+class TableRowNode(ADFNode):
+    """Represents a table row node in ADF."""
+
+    type: str = field(default="tableRow", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "TableRowNode":
+        """Create a TableRowNode from a dictionary, preserving all child nodes."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(children=children)
+
+
+@dataclass
+class TableCellNode(ADFNode):
+    """Represents a table cell node in ADF."""
+
+    type: str = field(default="tableCell", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+    background: Optional[str] = None
+    colwidth: Optional[List[int]] = None
+    colspan: Optional[int] = None
+    rowspan: Optional[int] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "TableCellNode":
+        """Create a TableCellNode from a dictionary, preserving all child nodes."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        return cls(
+            children=children,
+            background=attrs.get("background"),
+            colwidth=attrs.get("colwidth"),
+            colspan=attrs.get("colspan"),
+            rowspan=attrs.get("rowspan"),
+        )
+
+
+@dataclass
+class TableHeaderNode(ADFNode):
+    """Represents a table header node in ADF."""
+
+    type: str = field(default="tableHeader", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+    background: Optional[str] = None
+    colwidth: Optional[List[int]] = None
+    colspan: Optional[int] = None
+    rowspan: Optional[int] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "TableHeaderNode":
+        """Create a TableHeaderNode from a dictionary, preserving all child nodes."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        return cls(
+            children=children,
+            background=attrs.get("background"),
+            colwidth=attrs.get("colwidth"),
+            colspan=attrs.get("colspan"),
+            rowspan=attrs.get("rowspan"),
         )

@@ -8,21 +8,25 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 
 ### Node Types
 
-| ADF Node Type | Markdown Output Type                                                                       |
-| ------------- | ------------------------------------------------------------------------------------------ |
-| doc           | Document root (converts children, version preserved via HTML comments if present)          |
-| text          | Text with formatting marks (see text marks)                                                |
-| paragraph     | Paragraph text                                                                             |
-| heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`)                           |
-| bulletList    | Bullet list (`- ` prefix, with nesting)                                                    |
-| orderedList   | Ordered list (numbered items, with nesting)                                                |
-| listItem      | List item (lines under `-`, `*`, or `1.`)                                                  |
-| hardBreak     | Line break (`  \n` at the end of line)                                                     |
-| rule          | Horizontal rule (`---`)                                                                    |
-| inlineCard    | Link (`[URL](URL)`)                                                                        |
-| date          | UTC timestamp (`YYYY-MM-DDTHH:MM:SSZ`) - Node type preserved via HTML comments (see below) |
-| status        | Status text - Node type preserved via HTML comments (see below)                            |
-| mention       | User mention - Node type preserved via HTML comments (see below)                           |
+| ADF Node Type | Markdown Output Type                                                                            |
+| ------------- | ----------------------------------------------------------------------------------------------- |
+| doc           | Document root (converts children, version preserved via HTML comments if present)               |
+| text          | Text with formatting marks (see text marks)                                                     |
+| paragraph     | Paragraph text                                                                                  |
+| heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`)                                |
+| bulletList    | Bullet list (`- ` prefix, with nesting)                                                         |
+| orderedList   | Ordered list (numbered items, with nesting)                                                     |
+| listItem      | List item (lines under `-`, `*`, or `1.`)                                                       |
+| hardBreak     | Line break (`  \n` at the end of line)                                                          |
+| rule          | Horizontal rule (`---`)                                                                         |
+| inlineCard    | Link (`[URL](URL)`)                                                                             |
+| date          | UTC timestamp (`YYYY-MM-DDTHH:MM:SSZ`) - Node type preserved via HTML comments (see below)      |
+| status        | Status text - Node type preserved via HTML comments (see below)                                 |
+| mention       | User mention - Node type preserved via HTML comments (see below)                                |
+| table         | Markdown table with pipe separators (`\|`) - Attributes preserved via HTML comments (see below) |
+| tableRow      | Markdown table row                                                                              |
+| tableCell     | Markdown table cell                                                                             |
+| tableHeader   | Markdown table header cell                                                                      |
 
 ### Text Marks
 
@@ -96,6 +100,19 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
   <!-- ADF:mention:id="FGHIJ-FGHIJ-FGHIJ-FGHIJ" -->@mention(FGHIJ-FGHIJ-FGHIJ-FGHIJ)<!-- /ADF:mention -->
   ```
 
+- Table node:
+
+  Tables are converted to Markdown table format with pipe separators. The first row automatically gets a separator row.
+
+  ```
+  <!-- ADF:table -->
+  | <!-- ADF:tableHeader -->Name<!-- /ADF:tableHeader --> | <!-- ADF:tableHeader -->Age<!-- /ADF:tableHeader --> |
+  | --- | --- | --- |
+  | <!-- ADF:tableCell -->Alice<!-- /ADF:tableCell --> | <!-- ADF:tableCell -->30<!-- /ADF:tableCell --> |
+  | <!-- ADF:tableCell -->Bob<!-- /ADF:tableCell --> | <!-- ADF:tableCell -->25<!-- /ADF:tableCell --> |
+  <!-- /ADF:table -->
+  ```
+
 ### Missing ADF Nodes
 
 - blockquote
@@ -107,10 +124,6 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
 - mediaSingle
 - nestedExpand
 - panel
-- table
-- tableCell
-- tableHeader
-- tableRow
 
 ## Markdown to ADF Conversion
 

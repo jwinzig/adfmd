@@ -23,6 +23,10 @@ from adfmd.nodes import (
     DocNode,
     StatusNode,
     MentionNode,
+    TableNode,
+    TableRowNode,
+    TableCellNode,
+    TableHeaderNode,
 )
 
 
@@ -165,6 +169,10 @@ class ADF2MDRegistry:
         registry.register("date", DateConverter())
         registry.register("status", StatusConverter())
         registry.register("mention", MentionConverter())
+        registry.register("table", TableConverter())
+        registry.register("tableRow", TableRowConverter())
+        registry.register("tableCell", TableCellConverter())
+        registry.register("tableHeader", TableHeaderConverter())
 
         return registry
 
@@ -485,3 +493,134 @@ class MentionConverter(ADF2MDBaseConverter):
         display_text = node.text if node.text else f"@mention({node.id})"
 
         return f"{start_marker}{display_text}{end_marker}"
+
+
+class TableConverter(ADF2MDBaseConverter):
+    """Converter for table nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a table node to Markdown."""
+        if not isinstance(node, TableNode):
+            raise ValueError(f"Expected TableNode, got {type(node)}")
+
+        # Generate HTML comments with table attributes
+        attrs_parts = []
+        if node.is_number_column_enabled is not None:
+            attrs_parts.append(
+                f'isNumberColumnEnabled="{str(node.is_number_column_enabled).lower()}"'
+            )
+        if node.width is not None and node.width != 760:  # Default: 760
+            attrs_parts.append(f'width="{node.width}"')
+        if node.layout and node.layout != "default":  # Default: "default"
+            attrs_parts.append(f'layout="{node.layout}"')
+        if node.display_mode and node.display_mode != "default":  # Default: "default"
+            attrs_parts.append(f'displayMode="{node.display_mode}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:table{':' + attrs_str if attrs_str else ''} -->"
+        end_marker = "<!-- /ADF:table -->"
+
+        rows = []
+        is_first_row = True
+        for row_node in [c for c in node.children if isinstance(c, TableRowNode)]:
+            row_markdown = self._convert_child(row_node)
+            rows.append(row_markdown)
+
+            # Add separator row after first row
+            if is_first_row:
+                cell_count = len(rows[0].split("|")) - 2  # remove empty strings at start and end
+                separator = "| " + " | ".join(["---"] * cell_count) + " |"
+                rows.append(separator)
+                is_first_row = False
+
+        # Join rows with newlines and add trailing newlines
+        table_markdown = "\n".join(rows) + "\n\n"
+        table_markdown.rstrip("\n")
+
+        return f"{start_marker}\n{table_markdown.rstrip('\n')}\n{end_marker}\n\n"
+
+
+class TableRowConverter(ADF2MDBaseConverter):
+    """Converter for table row nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a table row node to Markdown."""
+        if not isinstance(node, TableRowNode):
+            raise ValueError(f"Expected TableRowNode, got {type(node)}")
+
+        cells = []
+        for cell_node in [
+            c for c in node.children if isinstance(c, (TableCellNode, TableHeaderNode))
+        ]:
+            cells.append(self._convert_child(cell_node))
+
+        # Join cells with pipe separators
+        return "| " + " | ".join(cells) + " |"
+
+
+class TableCellConverter(ADF2MDBaseConverter):
+    """Converter for table cell nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a table cell node to Markdown."""
+        if not isinstance(node, TableCellNode):
+            raise ValueError(f"Expected TableCellNode, got {type(node)}")
+
+        # Generate HTML comments with tableCell attributes
+        attrs_parts = []
+        if node.background is not None:
+            attrs_parts.append(f'background="{node.background}"')
+        if node.colwidth is not None:
+            attrs_parts.append(f'colwidth="{",".join(map(str, node.colwidth))}"')
+        if node.colspan is not None and node.colspan != 1:  # Default: "1"
+            attrs_parts.append(f'colspan="{node.colspan}"')
+        if node.rowspan is not None and node.rowspan != 1:  # Default: "1"
+            attrs_parts.append(f'rowspan="{node.rowspan}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:tableCell{':' + attrs_str if attrs_str else ''} -->"
+        end_marker = "<!-- /ADF:tableCell -->"
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node, no_newlines=True))
+
+        # Join all content, strip extra whitespaces and replace newlines with <br/>
+        content = "".join(text_parts).strip()
+        content = content.replace("\n", "<br/>")
+
+        return f"{start_marker}{content}{end_marker}"
+
+
+class TableHeaderConverter(ADF2MDBaseConverter):
+    """Converter for table header nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a table header node to Markdown."""
+        if not isinstance(node, TableHeaderNode):
+            raise ValueError(f"Expected TableHeaderNode, got {type(node)}")
+
+        # Generate HTML comments with tableHeader attributes
+        attrs_parts = []
+        if node.background is not None:
+            attrs_parts.append(f'background="{node.background}"')
+        if node.colwidth is not None:
+            attrs_parts.append(f'colwidth="{",".join(map(str, node.colwidth))}"')
+        if node.colspan is not None and node.colspan != 1:  # Default: "1"
+            attrs_parts.append(f'colspan="{node.colspan}"')
+        if node.rowspan is not None and node.rowspan != 1:  # Default: "1"
+            attrs_parts.append(f'rowspan="{node.rowspan}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:tableHeader{':' + attrs_str if attrs_str else ''} -->"
+        end_marker = "<!-- /ADF:tableHeader -->"
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node, no_newlines=True))
+
+        # Join all content, strip extra whitespaces and replace newlines with <br/>
+        content = "".join(text_parts).strip()
+        content = content.replace("\n", "<br/>")
+
+        return f"{start_marker}{content}{end_marker}"
