@@ -5,7 +5,7 @@ Contains base class, registry, and all converters for converting ADF nodes to Ma
 
 from abc import ABC, abstractmethod
 from datetime import datetime, timezone
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, List, Tuple
 
 
 from adfmd.nodes import (
@@ -520,18 +520,34 @@ class TableConverter(ADF2MDBaseConverter):
         start_marker = f"<!-- ADF:table{':' + attrs_str if attrs_str else ''} -->"
         end_marker = "<!-- /ADF:table -->"
 
-        rows = []
-        is_first_row = True
-        for row_node in [c for c in node.children if isinstance(c, TableRowNode)]:
-            row_markdown = self._convert_child(row_node)
-            rows.append(row_markdown)
+        rows: List[str] = []
+        row_nodes: List[TableRowNode] = [c for c in node.children if isinstance(c, TableRowNode)]
+        is_first_row: bool = True
+        active_rowspans: List[Tuple[int, int, int]] = []  # (col_start, col_end, remaining_rows)
+
+        for row_node in row_nodes:
+            new_rowspans: List[Tuple[int, int, int]] = []  # (col_start, col_end, remaining_rows)
+            rows.append(
+                self._convert_child(
+                    row_node, active_rowspans=active_rowspans, new_rowspans=new_rowspans
+                )
+            )
 
             # Add separator row after first row
             if is_first_row:
-                cell_count = len(rows[0].split("|")) - 2  # remove empty strings at start and end
-                separator = "| " + " | ".join(["---"] * cell_count) + " |"
-                rows.append(separator)
+                cell_count = len(rows[0].split("|")) - 2  # remove empty strings before and after
+                rows.append("| " + " | ".join(["---"] * cell_count) + " |")
                 is_first_row = False
+
+            # Update active rowspans
+            active_rowspans = [
+                (col_start, col_end, remaining - 1)
+                for col_start, col_end, remaining in active_rowspans
+                if remaining > 1
+            ]
+
+            # Add new active rowspans
+            active_rowspans.extend(new_rowspans)
 
         # Join rows with newlines and add trailing newlines
         table_markdown = "\n".join(rows) + "\n\n"
@@ -548,14 +564,45 @@ class TableRowConverter(ADF2MDBaseConverter):
         if not isinstance(node, TableRowNode):
             raise ValueError(f"Expected TableRowNode, got {type(node)}")
 
-        cells = []
+        active_rowspans: List[Tuple[int, int, int]] = kwargs.get("active_rowspans", [])
+        new_rowspans: List[Tuple[int, int, int]] = kwargs.get("new_rowspans", [])
+
+        cells: List[str] = []
+        current_col: int = 0
+
         for cell_node in [
             c for c in node.children if isinstance(c, (TableCellNode, TableHeaderNode))
         ]:
-            cells.append(self._convert_child(cell_node))
+            # Add empty cells for active rowspans that cover columns before this cell
+            while any(
+                col_start <= current_col < col_end for col_start, col_end, _ in active_rowspans
+            ):
+                cells.append("")
+                current_col += 1
+
+            # Add the actual cell
+            cells.append(" " + self._convert_child(cell_node) + " ")
+            colspan = cell_node.colspan if cell_node.colspan else 1
+            rowspan = cell_node.rowspan if cell_node.rowspan else 1
+
+            # Add empty cells for colspan
+            if colspan > 1:
+                cells.extend(["" for _ in range(colspan - 1)])
+
+            # Track rowspan if it spans multiple rows
+            if rowspan > 1:
+                new_rowspans.append((current_col, current_col + colspan, rowspan - 1))
+
+            current_col += colspan
+
+        # Add empty cells for remaining active rowspans
+        max_col = max([col_end for _, col_end, _ in active_rowspans], default=current_col)
+        while current_col < max_col:
+            cells.append("")
+            current_col += 1
 
         # Join cells with pipe separators
-        return "| " + " | ".join(cells) + " |"
+        return "|" + "|".join(cells) + "|"
 
 
 class TableCellConverter(ADF2MDBaseConverter):

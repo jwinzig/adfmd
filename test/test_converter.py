@@ -50,6 +50,7 @@ from adfmd import ADFMD, to_markdown
         "mention_complex",
         "table_simple",
         "table_complex",
+        "table_multiple_col_row_span",
     ],
 )
 def test_adf_to_md(test_name):

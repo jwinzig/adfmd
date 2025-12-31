@@ -113,6 +113,18 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
   <!-- /ADF:table -->
   ```
 
+  With cells spanning multiple columns/rows:
+
+  ```
+  <!-- ADF:table -->
+  | <!-- ADF:tableHeader:colwidth="225.0" -->**Name**<!-- /ADF:tableHeader --> | <!-- ADF:tableHeader:colwidth="349.0" -->**Age**<!-- /ADF:tableHeader --> |
+  | --- | --- |
+  | <!-- ADF:tableCell:colwidth="225.0" -->Alice<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="349.0",rowspan="2" -->25<!-- /ADF:tableCell --> |
+  | <!-- ADF:tableCell:colwidth="225.0" -->Bob<!-- /ADF:tableCell --> ||
+  | <!-- ADF:tableCell:colwidth="225.0,349.0",colspan="2" -->Eve<!-- /ADF:tableCell --> ||
+  <!-- /ADF:table -->
+  ```
+
 ### Missing ADF Nodes
 
 - blockquote
