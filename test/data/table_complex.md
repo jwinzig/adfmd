@@ -45,3 +45,11 @@
 | <!-- ADF:tableCell:colwidth="171.0" -->This is a test text<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="469.0" -->This is a test text<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="118.0" -->This is a test text<!-- /ADF:tableCell --> |
 | <!-- ADF:tableCell:colwidth="171.0" -->-<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="469.0" -->-<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="118.0" -->-<!-- /ADF:tableCell --> |
 <!-- /ADF:table -->
+
+<!-- ADF:table -->
+| <!-- ADF:tableCell:colwidth="171.0" -->**Test 1**<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="469.0" -->**Test 2**<!-- /ADF:tableCell --> |
+| --- | --- |
+| <!-- ADF:tableCell:colwidth="171.0" -->This is a test text<br/><br/>This is a test text in a new paragraph<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="469.0" -->This is a test text<br/>This is a test text after a hard linebreak<!-- /ADF:tableCell --> |
+| <!-- ADF:tableCell:colwidth="171.0" -->This is a test text<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="469.0" -->This is a test text<!-- /ADF:tableCell --> |
+| <!-- ADF:tableCell:colwidth="171.0" -->-<!-- /ADF:tableCell --> | <!-- ADF:tableCell:colwidth="469.0" -->-<!-- /ADF:tableCell --> |
+<!-- /ADF:table -->

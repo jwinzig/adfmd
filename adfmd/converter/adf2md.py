@@ -583,11 +583,13 @@ class TableCellConverter(ADF2MDBaseConverter):
 
         text_parts = []
         for child_node in node.children:
-            text_parts.append(self._convert_child(child_node, no_newlines=True))
+            text_parts.append(
+                self._convert_child(child_node, no_newlines=(child_node is node.children[-1]))
+            )
 
         # Join all content, strip extra whitespaces and replace newlines with <br/>
         content = "".join(text_parts).strip()
-        content = content.replace("\n", "<br/>")
+        content = content.replace("  \n", "<br/>").replace("\n", "<br/>")
 
         return f"{start_marker}{content}{end_marker}"
 
@@ -617,10 +619,12 @@ class TableHeaderConverter(ADF2MDBaseConverter):
 
         text_parts = []
         for child_node in node.children:
-            text_parts.append(self._convert_child(child_node, no_newlines=True))
+            text_parts.append(
+                self._convert_child(child_node, no_newlines=(child_node is node.children[-1]))
+            )
 
         # Join all content, strip extra whitespaces and replace newlines with <br/>
         content = "".join(text_parts).strip()
-        content = content.replace("\n", "<br/>")
+        content = content.replace("  \n", "<br/>").replace("\n", "<br/>")
 
         return f"{start_marker}{content}{end_marker}"
