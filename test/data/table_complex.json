@@ -4,15 +4,11 @@
     "attrs": {
       "layout": "default",
       "width": 760.0,
-      "localId": "ee927ce1-fdca-4a2f-8c50-be824a37270e",
       "displayMode": "default"
     },
     "content": [
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "2ae652cf-94d3-4706-ba56-c980ce3d83f7"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -21,15 +17,11 @@
               "rowspan": 1,
               "colwidth": [
                 253.0
-              ],
-              "localId": "74266e53-6e0a-4bc4-9c22-90faa92528f5"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "b0ca7927-6bd4-4e56-add0-741e7ac391dd"
-                },
                 "content": [
                   {
                     "text": "Test 1",
@@ -51,15 +43,11 @@
               "rowspan": 1,
               "colwidth": [
                 256.0
-              ],
-              "localId": "a88144c7-157d-4f27-b76a-896beb8ed1d9"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "d96fca56-18e2-4601-9a4c-b7b7e6e45041"
-                },
                 "content": [
                   {
                     "text": "Test 2",
@@ -81,15 +69,11 @@
               "rowspan": 1,
               "colwidth": [
                 250.0
-              ],
-              "localId": "bb64f80a-52c6-42ce-b796-834b42f89bb6"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "2050365a-5932-4fb9-9583-4d50eaaa26cf"
-                },
                 "content": [
                   {
                     "text": "Test 3",
@@ -108,9 +92,6 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "e60e6cd4-2aed-4efa-ba95-5d3aecfd53a7"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -119,15 +100,11 @@
               "rowspan": 1,
               "colwidth": [
                 253.0
-              ],
-              "localId": "fdff25c2-5fa2-43ab-96a3-2373a07af9cb"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "9f6b55d3-6814-421d-9ea5-de06b0d42de9"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -144,15 +121,11 @@
               "rowspan": 1,
               "colwidth": [
                 256.0
-              ],
-              "localId": "08f09434-2b7e-4050-9ca5-78c65371d687"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "bb3b038c-aaae-4632-b5f3-6ae449f30236"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -169,15 +142,11 @@
               "rowspan": 1,
               "colwidth": [
                 250.0
-              ],
-              "localId": "0dfc6b3f-a32e-41d8-9984-7d2e1f26147b"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "c3bb1e2d-f903-403e-b098-fc968512194a"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -191,9 +160,6 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "8a5905c2-6e23-45c9-bdde-6ac6fc5b220b"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -202,15 +168,11 @@
               "rowspan": 1,
               "colwidth": [
                 253.0
-              ],
-              "localId": "5ba1908c-5145-4aaa-9e92-ab9fa5705a35"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "4891e9da-3290-474a-a034-d4879e9ada2f"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -227,15 +189,11 @@
               "rowspan": 1,
               "colwidth": [
                 256.0
-              ],
-              "localId": "041eff6b-5661-49cf-accc-7c8fa9675303"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "193e4c82-2377-4404-a02c-3b2baa33b8f1"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -252,15 +210,11 @@
               "rowspan": 1,
               "colwidth": [
                 250.0
-              ],
-              "localId": "26e09156-42a5-4a91-bb47-0028ccaeedc2"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "4f9b7053-981b-4846-a31a-b27a5e8a2c0e"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -274,9 +228,6 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "d35f2c99-753a-468f-8d5e-99e7ca82d3d9"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -285,15 +236,11 @@
               "rowspan": 1,
               "colwidth": [
                 253.0
-              ],
-              "localId": "86354f16-04e4-432e-b68c-0e347eeeb89b"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "17496b91-5849-4f4f-a777-f2b96468b829"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -310,15 +257,11 @@
               "rowspan": 1,
               "colwidth": [
                 256.0
-              ],
-              "localId": "6f7e85c3-da14-47af-8c7a-f5cda2f83c92"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "1db73705-730f-4a36-9506-3810add57970"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -335,15 +278,11 @@
               "rowspan": 1,
               "colwidth": [
                 250.0
-              ],
-              "localId": "f218a1cf-ab94-49cb-a0ff-4676df959d17"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "556708c2-e10e-409c-9f47-a4d7053d06fd"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -361,29 +300,21 @@
     "type": "table",
     "attrs": {
       "layout": "default",
-      "width": 760.0,
-      "localId": "a413cd97-fc30-43fa-86e4-f82bfc595b8a"
+      "width": 760.0
     },
     "content": [
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "cfdde90f-90fe-4eae-85bf-95ac718e9983"
-        },
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "3576c65f-ee1e-4e79-865c-8ff89b19d6b2"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "3fa96d3d-86c1-4d02-9cd2-9a189d372e98"
-                },
                 "content": [
                   {
                     "text": "Test 1",
@@ -402,15 +333,11 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "e6462549-97bc-4569-87db-df9b5a62102b"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "47df07f6-0b6b-4da1-a16b-e080ab21db24"
-                },
                 "content": [
                   {
                     "text": "Test 2",
@@ -429,15 +356,11 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "d56b2a15-b54b-4680-b8e7-ff7917b71391"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "9190bb8e-66e3-4d5b-836e-79c53a0e32e5"
-                },
                 "content": [
                   {
                     "text": "Test 3",
@@ -456,23 +379,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "d7158d78-a0df-427e-85f1-ea7fdc3416be"
-        },
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "fca8458b-bf9d-4f9d-aa76-8dd2c670c05d"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "1777cfac-5ca6-4fb4-94e9-5ac055c16a46"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -486,15 +402,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "9e243939-e683-493b-ac20-4c3cf4e82c73"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "361f850a-24fa-4b7e-be8e-2983988847dd"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -508,15 +420,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "cd597622-bdeb-4f50-8874-a5592c9bcbea"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "d7f0c4e0-2ead-4627-863f-66ce860bcb0e"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -530,23 +438,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "03f96b75-ea71-4336-9bc8-738e500d3675"
-        },
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "3bb09204-3bb6-46e1-ba53-9481f9720ff3"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "a1fa559f-accf-48d9-8fcc-1e0c7713f154"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -560,15 +461,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "ad0753a8-3cb7-4889-85c8-37282ea1800e"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "cb6019a1-8041-4d6a-8ec1-b2fbfecbe464"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -582,15 +479,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "db1fab94-51e7-4607-a00b-039dbca7a22e"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "83037ae1-caf0-42e4-8a56-41bc1b4fb523"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -604,23 +497,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "f5c6546b-32d4-4f4b-93c5-984803ffc5cf"
-        },
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "6e6dfdf2-d4a4-4de7-a74f-f1bf06a1630a"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "4c6c66ae-0328-4385-8076-a97f77d168f0"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -634,15 +520,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "bace5f8b-902a-4dd0-b097-a8cec57576a5"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "e1f575f6-ccc7-45ef-a25c-de7b12d6abd6"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -656,15 +538,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "6ab1f9d3-d1bf-4173-b5eb-58ff45152b61"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "9c695535-3f70-4c75-a2fc-68560e17699f"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -682,29 +560,21 @@
     "type": "table",
     "attrs": {
       "layout": "default",
-      "width": 760.0,
-      "localId": "0610e618-64bb-4165-8157-286520b400ea"
+      "width": 760.0
     },
     "content": [
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "d5fc3424-b2b0-4df0-952d-91ad537282be"
-        },
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "9390874d-c15e-492f-a370-2a8c0d3b7ec3"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "4bc10402-d3b6-47eb-b2cf-ef2d25bcb99b"
-                },
                 "content": [
                   {
                     "text": "Test 1",
@@ -723,15 +593,11 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "bc461065-834d-4a69-aed1-a39e55a4710c"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "07f08a95-76ba-4a74-9644-6f6667ab04be"
-                },
                 "content": [
                   {
                     "text": "Test 2",
@@ -750,15 +616,11 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "51f6cabf-f197-47f7-be67-ee27c45133ab"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "97eeb2ac-433c-40b0-9f9a-5f965aabf645"
-                },
                 "content": [
                   {
                     "text": "Test 3",
@@ -777,23 +639,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "17716ec6-9f29-4f53-8add-7f88f0f83857"
-        },
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "20aff0c5-4365-4c30-9954-068a3748b37c"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "7e80cf35-a469-489e-a29f-50fba0026381"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -807,15 +662,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "01402574-6271-4f1a-b902-07573844ced6"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "53cd7bc7-e95e-4608-87fe-52c0f600da91"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -829,15 +680,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "9edd64fa-13fd-429e-899c-f44cd06d17c8"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "da434386-5bf2-4590-bfc0-022760ab75e0"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -851,23 +698,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "762ef332-2ac2-41ec-bb16-3f90eafd8f5e"
-        },
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "750589d1-0130-4c70-a891-b941bcbf85a8"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "5a1374a1-9975-4993-9c28-dd8b4be36e2e"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -881,15 +721,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "0d3d7e6c-92df-4a1e-b3f4-70954f9b7364"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "756fb117-37e5-48bd-b0b4-2b750ae0038c"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -903,15 +739,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "de800055-7e2e-4a66-b98b-27076f3d31be"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "ef58ef63-d8d8-41c0-95d1-3520a616ad15"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -925,23 +757,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "3fe0b13c-2602-4e18-9451-c80cd279f917"
-        },
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "afa03daf-c824-4d67-817c-e619a0f6a29b"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "193ff1c1-077a-4418-9497-b1b8c169809e"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -955,15 +780,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "03ad7555-5d41-40cf-83c9-b1dfef9f26b5"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "86b6576c-2da3-478a-a5e6-7273ceb25833"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -977,15 +798,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "a8a7ddff-68fb-4734-b635-b7b92276dfc5"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "34e91ebd-78fa-4b55-a447-600bd21710a2"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -1004,29 +821,21 @@
     "attrs": {
       "layout": "default",
       "isNumberColumnEnabled": true,
-      "width": 760.0,
-      "localId": "07955637-c6e2-43f6-9c0c-79bef34855a0"
+      "width": 760.0
     },
     "content": [
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "8dae2f62-0d66-4fbf-8b39-bc041170f9ac"
-        },
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "81654f6c-7f22-4ed6-8455-3ad61f780a9f"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "7e85f5ed-2f03-4345-8250-4ceed09de53a"
-                },
                 "content": [
                   {
                     "text": "Test 1",
@@ -1045,15 +854,11 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "ccea0abb-074a-4f75-91bd-0d8fc33ed74e"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "d9c96dea-141e-4d01-83a1-c52b71718109"
-                },
                 "content": [
                   {
                     "text": "Test 2",
@@ -1072,23 +877,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "9e92995b-4bd0-4d27-8056-7dfe655a4d1b"
-        },
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "f9f9eac4-1060-48d5-840f-66cd719b8490"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "b04ea93d-712d-41f7-9e5a-ae44fb89be80"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1102,15 +900,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "bf1f25e0-0aa6-44ab-beb0-21713d451890"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "bd27e0e7-e866-4615-9fff-a9ce691cdbdf"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1124,23 +918,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "dbc73706-66a8-4135-bdbb-61cde9b8bf60"
-        },
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "e12222b0-7333-459e-8043-c3a5597e659a"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "b2e706a0-b7da-43e9-bf99-7f1fa4ebbea8"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1154,15 +941,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "86a8944d-a45b-40d7-8077-0f5423b7b866"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "70a85578-4f32-474f-ad90-c28f30b54431"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1176,23 +959,16 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "acd3b22e-3a2c-430f-81e3-5f5780bc1aee"
-        },
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "9f1cb452-93c2-4f29-b75f-f758e1dfc47d"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "dd4e0bad-bb11-4c43-9f60-5eb14b0f95bb"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -1206,15 +982,11 @@
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "localId": "ec1e20d5-7790-4e8d-9e2d-81b5601a7f85"
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "cc910de1-a550-4198-a3d5-ac041da09fe9"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -1233,15 +1005,11 @@
     "attrs": {
       "layout": "default",
       "isNumberColumnEnabled": true,
-      "width": 760.0,
-      "localId": "7d3d4690-5f60-47e6-92af-61b9f67cdfb4"
+      "width": 760.0
     },
     "content": [
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "8bed1fdc-7e4a-4059-92d7-836c4f1ea9ea"
-        },
         "content": [
           {
             "type": "tableHeader",
@@ -1250,15 +1018,11 @@
               "rowspan": 1,
               "colwidth": [
                 171.0
-              ],
-              "localId": "504cc02d-4e62-4ccb-b962-a026fe57bf69"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "cda750d5-9a8e-46be-ba1b-3e656d59d8f7"
-                },
                 "content": [
                   {
                     "text": "Test 1",
@@ -1280,15 +1044,11 @@
               "rowspan": 1,
               "colwidth": [
                 469.0
-              ],
-              "localId": "8e3bd3ac-9761-454b-8ef5-984a8b86ccb4"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "60bbdad9-4572-4717-930a-5446da1cec27"
-                },
                 "content": [
                   {
                     "text": "Test 2",
@@ -1310,15 +1070,11 @@
               "rowspan": 1,
               "colwidth": [
                 118.0
-              ],
-              "localId": "2883faa8-de49-44b5-a20a-56384ac2aa2d"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "9b2a5516-9c28-4d81-a9a0-b10328f585e9"
-                },
                 "content": [
                   {
                     "text": "Test 3",
@@ -1337,9 +1093,6 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "b8fabd1e-a34f-41c8-a667-26972b1a6624"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -1348,15 +1101,11 @@
               "rowspan": 1,
               "colwidth": [
                 171.0
-              ],
-              "localId": "c7ae28ab-8be1-4ab9-9bf9-73f82eb78f34"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "b608faf0-6500-4367-a31d-7e664439debe"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1373,15 +1122,11 @@
               "rowspan": 1,
               "colwidth": [
                 469.0
-              ],
-              "localId": "c57f01d3-1328-4316-9cd8-0a59528ed1be"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "7776090f-0f18-4cdf-bd18-81780840e69a"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1398,15 +1143,11 @@
               "rowspan": 1,
               "colwidth": [
                 118.0
-              ],
-              "localId": "e510c334-6426-426c-9f5c-55175166c718"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "f4a463aa-99f8-4960-b688-0bf55f776b07"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1420,9 +1161,6 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "cb805ee4-8cb4-4dbc-b890-1b05a536c89d"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -1431,15 +1169,11 @@
               "rowspan": 1,
               "colwidth": [
                 171.0
-              ],
-              "localId": "573ba75c-f95b-4aaf-8cbb-485fce51ff00"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "b96f2faa-1606-467a-968d-dd9772e931b7"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1456,15 +1190,11 @@
               "rowspan": 1,
               "colwidth": [
                 469.0
-              ],
-              "localId": "056622a4-754f-4fa6-ac5c-7a5c2cf46c14"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "54fa8f68-4c42-4cbe-8ecf-834f0b5c2cd5"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1481,15 +1211,11 @@
               "rowspan": 1,
               "colwidth": [
                 118.0
-              ],
-              "localId": "127221a1-5e78-4b5b-8335-328b21e9c077"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "61854765-c296-4657-a41c-a022f8a17886"
-                },
                 "content": [
                   {
                     "text": "This is a test text",
@@ -1503,9 +1229,6 @@
       },
       {
         "type": "tableRow",
-        "attrs": {
-          "localId": "ee83400b-0c8b-4d17-8698-e11c75dd3e26"
-        },
         "content": [
           {
             "type": "tableCell",
@@ -1514,15 +1237,11 @@
               "rowspan": 1,
               "colwidth": [
                 171.0
-              ],
-              "localId": "902e47ec-736a-4d1c-885f-606a957b2f30"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "bea90254-b145-41bd-a654-2dcc46ca10db"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -1539,15 +1258,11 @@
               "rowspan": 1,
               "colwidth": [
                 469.0
-              ],
-              "localId": "ce730d5c-aef9-4b92-80d5-6c7fecb9f35d"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "a230ab80-3e44-4eff-a814-e4daea3930b2"
-                },
                 "content": [
                   {
                     "text": "-",
@@ -1564,15 +1279,11 @@
               "rowspan": 1,
               "colwidth": [
                 118.0
-              ],
-              "localId": "af20f503-1fab-443e-9ad0-f479fa97a450"
+              ]
             },
             "content": [
               {
                 "type": "paragraph",
-                "attrs": {
-                  "localId": "113d088a-2a44-4f59-953c-ba4b28e2f8ca"
-                },
                 "content": [
                   {
                     "text": "-",

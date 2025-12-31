@@ -45,8 +45,7 @@
         "type": "status",
         "attrs": {
           "text": "Blocked",
-          "color": "red",
-          "localId": "status-123"
+          "color": "red"
         }
       },
       {
