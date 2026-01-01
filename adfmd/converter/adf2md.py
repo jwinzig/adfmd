@@ -440,7 +440,7 @@ class DocConverter(ADF2MDBaseConverter):
             start_marker = "<!-- ADF:doc -->"
         end_marker = "<!-- /ADF:doc -->"
 
-        return f"{start_marker}\n{content}\n{end_marker}"
+        return f"{start_marker}\n{content.rstrip()}\n{end_marker}"
 
 
 class StatusConverter(ADF2MDBaseConverter):
