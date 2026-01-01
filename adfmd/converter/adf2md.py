@@ -5,6 +5,7 @@ Contains base class, registry, and all converters for converting ADF nodes to Ma
 
 from abc import ABC, abstractmethod
 from datetime import datetime, timezone
+import json
 from typing import Any, Dict, Optional, List, Tuple
 
 
@@ -27,6 +28,7 @@ from adfmd.nodes import (
     TableRowNode,
     TableCellNode,
     TableHeaderNode,
+    ExtensionNode,
 )
 
 
@@ -82,6 +84,32 @@ class ADF2MDBaseConverter(ABC):
 
         return converter.convert(node, **kwargs)
 
+    def _convert_table_cell_or_header(self, node: ADFNode, marker_name: str, **kwargs: Any) -> str:
+        """Shared conversion logic for table cells and headers."""
+        attrs_parts = []
+        if node.background is not None:
+            attrs_parts.append(f'background="{node.background}"')
+        if node.colwidth is not None:
+            attrs_parts.append(f'colwidth="{",".join(map(str, node.colwidth))}"')
+        if node.colspan is not None and node.colspan != 1:  # Default: "1"
+            attrs_parts.append(f'colspan="{node.colspan}"')
+        if node.rowspan is not None and node.rowspan != 1:  # Default: "1"
+            attrs_parts.append(f'rowspan="{node.rowspan}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:{marker_name}{':' + attrs_str if attrs_str else ''} -->"
+        end_marker = f"<!-- /ADF:{marker_name} -->"
+
+        text_parts = []
+        for child_node in node.children:
+            kwargs["no_newlines"] = child_node is node.children[-1]
+            text_parts.append(self._convert_child(child_node, **kwargs))
+
+        content = "".join(text_parts)
+        content = content.replace("  \n", "<br/>").replace("\n", "<br/>")
+
+        return f"{start_marker}{content}{end_marker}"
+
 
 class ADF2MDRegistry:
     """Registry for managing ADF to Markdown converters."""
@@ -126,12 +154,13 @@ class ADF2MDRegistry:
         """
         return node_type in self.converters
 
-    def convert(self, node: ADFNode) -> str:
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
         """
         Convert an ADF node to Markdown using the appropriate converter.
 
         Args:
             node: The ADF node dataclass instance
+            **kwargs: Additional arguments to pass to converters
 
         Returns:
             Markdown string representation
@@ -143,7 +172,7 @@ class ADF2MDRegistry:
             raise ValueError(f"Unsupported node type: {node.type}")
 
         converter = self.get_converter(node.type)
-        return converter.convert(node)
+        return converter.convert(node, **kwargs)
 
     @classmethod
     def create_default(cls) -> "ADF2MDRegistry":
@@ -173,6 +202,7 @@ class ADF2MDRegistry:
         registry.register("tableRow", TableRowConverter())
         registry.register("tableCell", TableCellConverter())
         registry.register("tableHeader", TableHeaderConverter())
+        registry.register("extension", ExtensionConverter())
 
         return registry
 
@@ -503,6 +533,12 @@ class TableConverter(ADF2MDBaseConverter):
         if not isinstance(node, TableNode):
             raise ValueError(f"Expected TableNode, got {type(node)}")
 
+        kwargs.update({"inside_table": True})
+        nested_tables = kwargs.get("nested_tables")
+        if nested_tables is None:
+            nested_tables = []
+            kwargs.update({"nested_tables": nested_tables})
+
         # Generate HTML comments with table attributes
         attrs_parts = []
         if node.is_number_column_enabled is not None:
@@ -527,11 +563,8 @@ class TableConverter(ADF2MDBaseConverter):
 
         for row_node in row_nodes:
             new_rowspans: List[Tuple[int, int, int]] = []  # (col_start, col_end, remaining_rows)
-            rows.append(
-                self._convert_child(
-                    row_node, active_rowspans=active_rowspans, new_rowspans=new_rowspans
-                )
-            )
+            kwargs.update({"active_rowspans": active_rowspans, "new_rowspans": new_rowspans})
+            rows.append(self._convert_child(row_node, **kwargs))
 
             # Add separator row after first row
             if is_first_row:
@@ -549,11 +582,14 @@ class TableConverter(ADF2MDBaseConverter):
             # Add new active rowspans
             active_rowspans.extend(new_rowspans)
 
-        # Join rows with newlines and add trailing newlines
-        table_markdown = "\n".join(rows) + "\n\n"
-        table_markdown.rstrip("\n")
+        # Join rows with newlines
+        table_markdown = "\n".join(rows)
 
-        return f"{start_marker}\n{table_markdown.rstrip('\n')}\n{end_marker}\n\n"
+        nested_tables_markdown = ""
+        if nested_tables:
+            nested_tables_markdown = "\n" + "\n".join(nested_tables)
+
+        return f"{start_marker}\n{table_markdown}\n{end_marker}{nested_tables_markdown}\n\n"
 
 
 class TableRowConverter(ADF2MDBaseConverter):
@@ -580,8 +616,8 @@ class TableRowConverter(ADF2MDBaseConverter):
                 cells.append("")
                 current_col += 1
 
-            # Add the actual cell
-            cells.append(" " + self._convert_child(cell_node) + " ")
+            # Add the actual cell (pass through kwargs for nested tables)
+            cells.append(" " + self._convert_child(cell_node, **kwargs) + " ")
             colspan = cell_node.colspan if cell_node.colspan else 1
             rowspan = cell_node.rowspan if cell_node.rowspan else 1
 
@@ -613,32 +649,7 @@ class TableCellConverter(ADF2MDBaseConverter):
         if not isinstance(node, TableCellNode):
             raise ValueError(f"Expected TableCellNode, got {type(node)}")
 
-        # Generate HTML comments with tableCell attributes
-        attrs_parts = []
-        if node.background is not None:
-            attrs_parts.append(f'background="{node.background}"')
-        if node.colwidth is not None:
-            attrs_parts.append(f'colwidth="{",".join(map(str, node.colwidth))}"')
-        if node.colspan is not None and node.colspan != 1:  # Default: "1"
-            attrs_parts.append(f'colspan="{node.colspan}"')
-        if node.rowspan is not None and node.rowspan != 1:  # Default: "1"
-            attrs_parts.append(f'rowspan="{node.rowspan}"')
-
-        attrs_str = ",".join(attrs_parts)
-        start_marker = f"<!-- ADF:tableCell{':' + attrs_str if attrs_str else ''} -->"
-        end_marker = "<!-- /ADF:tableCell -->"
-
-        text_parts = []
-        for child_node in node.children:
-            text_parts.append(
-                self._convert_child(child_node, no_newlines=(child_node is node.children[-1]))
-            )
-
-        # Join all content, strip extra whitespaces and replace newlines with <br/>
-        content = "".join(text_parts).strip()
-        content = content.replace("  \n", "<br/>").replace("\n", "<br/>")
-
-        return f"{start_marker}{content}{end_marker}"
+        return self._convert_table_cell_or_header(node, "tableCell", **kwargs)
 
 
 class TableHeaderConverter(ADF2MDBaseConverter):
@@ -649,29 +660,73 @@ class TableHeaderConverter(ADF2MDBaseConverter):
         if not isinstance(node, TableHeaderNode):
             raise ValueError(f"Expected TableHeaderNode, got {type(node)}")
 
-        # Generate HTML comments with tableHeader attributes
-        attrs_parts = []
-        if node.background is not None:
-            attrs_parts.append(f'background="{node.background}"')
-        if node.colwidth is not None:
-            attrs_parts.append(f'colwidth="{",".join(map(str, node.colwidth))}"')
-        if node.colspan is not None and node.colspan != 1:  # Default: "1"
-            attrs_parts.append(f'colspan="{node.colspan}"')
-        if node.rowspan is not None and node.rowspan != 1:  # Default: "1"
-            attrs_parts.append(f'rowspan="{node.rowspan}"')
+        return self._convert_table_cell_or_header(node, "tableHeader", **kwargs)
 
-        attrs_str = ",".join(attrs_parts)
-        start_marker = f"<!-- ADF:tableHeader{':' + attrs_str if attrs_str else ''} -->"
-        end_marker = "<!-- /ADF:tableHeader -->"
 
-        text_parts = []
-        for child_node in node.children:
-            text_parts.append(
-                self._convert_child(child_node, no_newlines=(child_node is node.children[-1]))
-            )
+class ExtensionConverter(ADF2MDBaseConverter):
+    """Converter for extension nodes."""
 
-        # Join all content, strip extra whitespaces and replace newlines with <br/>
-        content = "".join(text_parts).strip()
-        content = content.replace("  \n", "<br/>").replace("\n", "<br/>")
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert an extension node to Markdown."""
+        if not isinstance(node, ExtensionNode):
+            raise ValueError(f"Expected ExtensionNode, got {type(node)}")
 
-        return f"{start_marker}{content}{end_marker}"
+        no_newlines = kwargs.get("no_newlines", False)
+
+        # Convert table extension node to markdown
+        if (
+            node.extension_type == "com.atlassian.confluence.migration"
+            and node.extension_key == "nested-table"
+            and node.parameters
+            and "adf" in node.parameters
+        ):
+            inside_table = kwargs.get("inside_table", False)
+            nested_tables = kwargs.get("nested_tables", [])
+            nested_table_counter = kwargs.get("nested_table_counter")
+            if nested_table_counter is None:
+                kwargs.update({"nested_table_counter": {"count": 0}})
+
+            nested_adf = json.loads(node.parameters["adf"])
+            nested_doc = DocNode.from_dict(nested_adf)
+
+            if inside_table:
+                nested_table_counter["count"] += 1
+                ref_id = f"nested-table-{nested_table_counter['count']}"
+
+                nested_kwargs = kwargs.copy()
+                nested_nested_tables = []
+                nested_kwargs["nested_tables"] = nested_nested_tables
+                nested_kwargs["nested_table_counter"] = nested_table_counter
+                doc_converter = self.registry.get_converter("doc")
+                nested_markdown = doc_converter.convert(nested_doc, **nested_kwargs)
+
+                nested_tables.append(
+                    f'<!-- ADF:nested-table:ref="{ref_id}" -->\n'
+                    f'<a name="{ref_id}">**{ref_id}**</a>\n'
+                    f"{nested_markdown.rstrip()}\n"
+                    f"<!-- /ADF:nested-table -->"
+                )
+
+                start_marker = f'<!-- ADF:extension:extensionType="com.atlassian.confluence.migration",extensionKey="nested-table",ref="{ref_id}" -->'
+                end_marker = "<!-- /ADF:extension -->"
+                markdown_content = f"[**{ref_id}**](#{ref_id})"
+            else:
+                start_marker = '<!-- ADF:extension:extensionType="com.atlassian.confluence.migration",extensionKey="nested-table" -->'
+                end_marker = "<!-- /ADF:extension -->"
+                markdown_content = "\n" + self.registry.convert(nested_doc) + "\n"
+            text = f"{start_marker}{markdown_content}{end_marker}"
+            text += "\n" if not no_newlines else ""
+
+        # Preserve unknown extension nodes as HTML comment
+        else:
+            attrs_parts = [f'extensionType="{node.extension_type}"']
+            attrs_parts.append(f'extensionKey="{node.extension_key}"')
+            if node.text:
+                attrs_parts.append(f'text="{node.text}"')
+
+            attrs_str = ",".join(attrs_parts)
+            start_marker = f"<!-- ADF:extension:{attrs_str} -->"
+            end_marker = "<!-- /ADF:extension -->"
+            text = f"{start_marker}{end_marker}"
+
+        return text

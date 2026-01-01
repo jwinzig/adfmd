@@ -47,8 +47,8 @@ class ADFMD:
         else:
             nodes = [ADFNode.from_dict(adf_data)]
 
-        markdown_parts = [self.registry_adf2md.convert(node) for node in nodes]
-
+        shared_kwargs = {"nested_table_counter": {"count": 0}}
+        markdown_parts = [self.registry_adf2md.convert(node, **shared_kwargs) for node in nodes]
         return "".join(markdown_parts).rstrip("\n")
 
     def to_markdown_file(

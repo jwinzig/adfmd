@@ -1,0 +1,510 @@
+[
+  {
+    "type": "table",
+    "attrs": {
+      "layout": "default",
+      "width": 760.0
+    },
+    "content": [
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableHeader",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "ID",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "strong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableHeader",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Test",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "strong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Nested 1",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"ee927ce1-fdca-4a2f-8c50-be824a37270e\"><tbody><tr ac:local-id=\"3f81ecc3-ca65-4824-bb02-c1a225cb0b31\"><td ac:local-id=\"2213381b-51fb-452b-8374-79fdc4d56818\"><p local-id=\"594584ea-a3eb-4215-a700-51c97a253252\"><strong>Test 1</strong></p></td><td ac:local-id=\"5687f8f2-3d81-4e5b-ac39-f05fb662acda\"><p local-id=\"412fd242-e25e-428f-96d1-378af9b91e4a\"><strong>Test 2</strong></p></td><td ac:local-id=\"2aaefe8f-ba24-451c-b4a9-50fec3b4a2e2\"><p local-id=\"c0077c37-aa4e-42f0-88fb-4b419e67d84f\"><strong>Test 3</strong></p></td></tr><tr ac:local-id=\"a1290db5-3ab6-4a95-9bdf-ca15ee4e5757\"><td ac:local-id=\"8551a60a-95c3-453e-80c6-5b6a09c8722d\"><p local-id=\"9308eab5-7c1a-47c3-8dd3-a5f575fe3f11\">This is a test text</p></td><td ac:local-id=\"17162889-1918-490b-92a1-9518c7b7588e\"><p local-id=\"9e0500e1-52d8-4686-aaf3-8a43312fd23a\">This is a test text</p></td><td ac:local-id=\"a5cbb0b1-e9ab-4db0-9fdb-1c2c7ac6da28\"><p local-id=\"100588e4-907c-4ff4-8e5a-c9c043507330\">This is a test text</p></td></tr><tr ac:local-id=\"2f7828a4-5a46-4f41-b5bc-015db253f1ea\"><td ac:local-id=\"91f5d8e2-0910-4c76-b90a-c4f5bbdeae8f\"><p local-id=\"cedce223-c4e8-44a0-9fbc-40a145577367\">This is a test text</p></td><td ac:local-id=\"7b1178a2-cd49-48b3-9d95-76648dcc2887\"><p local-id=\"64861bfb-33f8-499d-be14-d7809ba67b9a\">This is a test text</p></td><td ac:local-id=\"a959afe7-4315-4242-b3dd-0c9f7c0cf883\"><p local-id=\"94f7f4ad-3057-47d7-9c20-119c24d47852\">This is a test text</p></td></tr><tr ac:local-id=\"1fc2ef2b-b1b7-4f07-97aa-bd383f3a9845\"><td ac:local-id=\"3069ed12-b000-431a-b1d5-9cb6b60aa3e7\"><p local-id=\"42517dde-77a1-4cdd-83bb-ca32ee1b1161\">-</p></td><td ac:local-id=\"a8aea38e-b985-4152-8b60-968b27f7ade6\"><p local-id=\"25bb8897-f939-42a8-a0c1-33e6afb344aa\">-</p></td><td ac:local-id=\"e5ea0a45-7b8b-4a41-a31c-4b420c7227e1\"><p local-id=\"aa28e432-bb9b-4cf8-aa2c-ee6a12231ec3\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"ee927ce1-fdca-4a2f-8c50-be824a37270e\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"3f81ecc3-ca65-4824-bb02-c1a225cb0b31\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"2213381b-51fb-452b-8374-79fdc4d56818\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"594584ea-a3eb-4215-a700-51c97a253252\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"5687f8f2-3d81-4e5b-ac39-f05fb662acda\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"412fd242-e25e-428f-96d1-378af9b91e4a\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"2aaefe8f-ba24-451c-b4a9-50fec3b4a2e2\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c0077c37-aa4e-42f0-88fb-4b419e67d84f\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"a1290db5-3ab6-4a95-9bdf-ca15ee4e5757\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8551a60a-95c3-453e-80c6-5b6a09c8722d\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"9308eab5-7c1a-47c3-8dd3-a5f575fe3f11\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"17162889-1918-490b-92a1-9518c7b7588e\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"9e0500e1-52d8-4686-aaf3-8a43312fd23a\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"a5cbb0b1-e9ab-4db0-9fdb-1c2c7ac6da28\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"100588e4-907c-4ff4-8e5a-c9c043507330\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"2f7828a4-5a46-4f41-b5bc-015db253f1ea\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"91f5d8e2-0910-4c76-b90a-c4f5bbdeae8f\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"cedce223-c4e8-44a0-9fbc-40a145577367\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7b1178a2-cd49-48b3-9d95-76648dcc2887\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"64861bfb-33f8-499d-be14-d7809ba67b9a\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"a959afe7-4315-4242-b3dd-0c9f7c0cf883\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"94f7f4ad-3057-47d7-9c20-119c24d47852\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"1fc2ef2b-b1b7-4f07-97aa-bd383f3a9845\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"3069ed12-b000-431a-b1d5-9cb6b60aa3e7\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"42517dde-77a1-4cdd-83bb-ca32ee1b1161\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"a8aea38e-b985-4152-8b60-968b27f7ade6\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"25bb8897-f939-42a8-a0c1-33e6afb344aa\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"e5ea0a45-7b8b-4a41-a31c-4b420c7227e1\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"aa28e432-bb9b-4cf8-aa2c-ee6a12231ec3\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Nested 2",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"a413cd97-fc30-43fa-86e4-f82bfc595b8a\"><tbody><tr ac:local-id=\"8250a742-bf0a-479e-a56b-ceb7b5c100b6\"><th ac:local-id=\"4c1f58b0-d635-4176-8285-9974eb89f997\"><p local-id=\"06af296d-70cb-47de-bf1b-ddf0d5f571f6\"><strong>Test 1</strong></p></th><th ac:local-id=\"35db0795-dae4-4e87-9c92-ded96da9b6a2\"><p local-id=\"03b437d7-9730-4978-b884-c961d92ac8bc\"><strong>Test 2</strong></p></th><th ac:local-id=\"b938cc74-12dc-42e2-94ee-352d1ed9b157\"><p local-id=\"56d427b6-ae52-4d66-a6f3-8825999081a5\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"28c08b7f-23eb-44ce-a2c2-403dcf66051e\"><td ac:local-id=\"36ce8c2c-1fb9-4909-9884-136f4afa9660\"><p local-id=\"3cff10c3-5d37-4310-be90-76df00b576be\">This is a test text</p></td><td ac:local-id=\"70902c71-52ff-4a39-91d5-34190f886d76\"><p local-id=\"f2bd0e46-43b4-46ee-a28d-a585a1418989\">This is a test text</p></td><td ac:local-id=\"7bac210e-93dd-45d8-996f-1eb4a03594f0\"><p local-id=\"ec42424b-a74c-4f1d-9b0f-31a0d5fad094\">This is a test text</p></td></tr><tr ac:local-id=\"57becdbc-64eb-4dc1-91f1-cc3083b03ed5\"><td ac:local-id=\"f36c10eb-61cc-4229-a227-77ae1bb7f8b7\"><p local-id=\"c247806d-b232-4590-b1e1-99c55da8d4be\">This is a test text</p></td><td ac:local-id=\"e0677358-6012-4e40-9f12-a79d77960d65\"><p local-id=\"9e8cdca8-5db2-4eb5-a076-34afeb8479f1\">This is a test text</p></td><td ac:local-id=\"6595acc6-33bd-4e49-9598-3eb6637a96b4\"><p local-id=\"b67a7d3f-8fda-42e3-a835-c8d3b32226c7\">This is a test text</p></td></tr><tr ac:local-id=\"ce0a4e7d-239e-46fd-a6dc-c85ed1dc55d8\"><td ac:local-id=\"cffc5383-2c0b-4370-9d9c-23c516aa30d3\"><p local-id=\"bda7d75e-7975-42ca-b0df-815a85f48bd4\">-</p></td><td ac:local-id=\"c06a1415-f20f-49e4-995b-c03792700ef1\"><p local-id=\"6a56fdd9-d78d-403e-a28f-22ecb9f24d60\">-</p></td><td ac:local-id=\"3e874ac1-5249-4127-b9f6-aa0a2408bbff\"><p local-id=\"a735b456-c8c5-43ba-9f28-9a273f07e1f0\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"a413cd97-fc30-43fa-86e4-f82bfc595b8a\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"8250a742-bf0a-479e-a56b-ceb7b5c100b6\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"4c1f58b0-d635-4176-8285-9974eb89f997\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"06af296d-70cb-47de-bf1b-ddf0d5f571f6\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"35db0795-dae4-4e87-9c92-ded96da9b6a2\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"03b437d7-9730-4978-b884-c961d92ac8bc\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"b938cc74-12dc-42e2-94ee-352d1ed9b157\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"56d427b6-ae52-4d66-a6f3-8825999081a5\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"28c08b7f-23eb-44ce-a2c2-403dcf66051e\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"36ce8c2c-1fb9-4909-9884-136f4afa9660\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"3cff10c3-5d37-4310-be90-76df00b576be\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"70902c71-52ff-4a39-91d5-34190f886d76\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f2bd0e46-43b4-46ee-a28d-a585a1418989\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7bac210e-93dd-45d8-996f-1eb4a03594f0\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"ec42424b-a74c-4f1d-9b0f-31a0d5fad094\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"57becdbc-64eb-4dc1-91f1-cc3083b03ed5\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"f36c10eb-61cc-4229-a227-77ae1bb7f8b7\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c247806d-b232-4590-b1e1-99c55da8d4be\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"e0677358-6012-4e40-9f12-a79d77960d65\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"9e8cdca8-5db2-4eb5-a076-34afeb8479f1\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"6595acc6-33bd-4e49-9598-3eb6637a96b4\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b67a7d3f-8fda-42e3-a835-c8d3b32226c7\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"ce0a4e7d-239e-46fd-a6dc-c85ed1dc55d8\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"cffc5383-2c0b-4370-9d9c-23c516aa30d3\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"bda7d75e-7975-42ca-b0df-815a85f48bd4\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"c06a1415-f20f-49e4-995b-c03792700ef1\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"6a56fdd9-d78d-403e-a28f-22ecb9f24d60\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"3e874ac1-5249-4127-b9f6-aa0a2408bbff\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"a735b456-c8c5-43ba-9f28-9a273f07e1f0\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Nested 3",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"0610e618-64bb-4165-8157-286520b400ea\"><tbody><tr ac:local-id=\"c94aed22-0eb0-4b0e-8985-ef26b7f760fe\"><th ac:local-id=\"bdbcb552-1e9a-4553-976a-234fdf41b66b\"><p local-id=\"00025a3f-f236-4000-b5db-180a6d63ca0f\"><strong>Test 1</strong></p></th><th ac:local-id=\"4e32dabb-ecf8-4939-9c05-eb17a80281b9\"><p local-id=\"d90aeb40-e8ee-4edb-8f1c-d6ef4f490e1a\"><strong>Test 2</strong></p></th><th ac:local-id=\"5e57e750-de8a-4faf-b8e0-7e1bd2fcabf9\"><p local-id=\"2e51090a-c2e4-4fbc-983d-ffd0c72bed6b\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"3f400790-8560-4a8c-890c-682189f4f93b\"><th ac:local-id=\"7540a76f-64b0-42e2-bb70-f62a28306c8a\"><p local-id=\"f895a7b2-8e2a-42c4-9879-4cacad40ee83\">This is a test text</p></th><td ac:local-id=\"1b0bfb02-c78d-428d-82f0-857a7c57037c\"><p local-id=\"c4bd3618-2573-4d7a-82a1-5286aaba8456\">This is a test text</p></td><td ac:local-id=\"ae3044e7-5a0e-4cc4-8af3-bc657cbeaaae\"><p local-id=\"1a254de3-d5b9-4dcd-b800-90f997c979d4\">This is a test text</p></td></tr><tr ac:local-id=\"17ba66d5-217a-4078-bd1b-7ca93bdd9009\"><th ac:local-id=\"864cf211-5d79-4d67-aaef-90bfcd358bdd\"><p local-id=\"1eae9688-a6f6-41b7-b54c-d36ab11d0353\">This is a test text</p></th><td ac:local-id=\"892bbc6a-71c6-4a53-a161-5c45ff4bc7b7\"><p local-id=\"ef45be21-8e71-4606-846e-712059702063\">This is a test text</p></td><td ac:local-id=\"aa3f3fe0-a415-4c3a-9055-7139a567d2b8\"><p local-id=\"9aee3925-8583-4a60-8782-aec7571a4f03\">This is a test text</p></td></tr><tr ac:local-id=\"c659d6b1-144a-42d9-99fc-642ec61e138c\"><th ac:local-id=\"28cac7fb-de7d-4b21-81c3-3979621e8d0e\"><p local-id=\"50c8fd92-7bd0-453c-b322-da3007ee1f3e\">-</p></th><td ac:local-id=\"e528cb46-137a-4238-a85c-eb6048091ccf\"><p local-id=\"bed4b3ec-55c9-4cf5-ac59-02fdb32e9e78\">-</p></td><td ac:local-id=\"81af86b5-8d2c-4af4-a4f7-f06122bf4d20\"><p local-id=\"9deca09f-353d-44e3-8bcf-134396eed918\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"0610e618-64bb-4165-8157-286520b400ea\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c94aed22-0eb0-4b0e-8985-ef26b7f760fe\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"bdbcb552-1e9a-4553-976a-234fdf41b66b\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"00025a3f-f236-4000-b5db-180a6d63ca0f\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"4e32dabb-ecf8-4939-9c05-eb17a80281b9\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"d90aeb40-e8ee-4edb-8f1c-d6ef4f490e1a\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"5e57e750-de8a-4faf-b8e0-7e1bd2fcabf9\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"2e51090a-c2e4-4fbc-983d-ffd0c72bed6b\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"3f400790-8560-4a8c-890c-682189f4f93b\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7540a76f-64b0-42e2-bb70-f62a28306c8a\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f895a7b2-8e2a-42c4-9879-4cacad40ee83\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"1b0bfb02-c78d-428d-82f0-857a7c57037c\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c4bd3618-2573-4d7a-82a1-5286aaba8456\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"ae3044e7-5a0e-4cc4-8af3-bc657cbeaaae\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"1a254de3-d5b9-4dcd-b800-90f997c979d4\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"17ba66d5-217a-4078-bd1b-7ca93bdd9009\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"864cf211-5d79-4d67-aaef-90bfcd358bdd\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"1eae9688-a6f6-41b7-b54c-d36ab11d0353\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"892bbc6a-71c6-4a53-a161-5c45ff4bc7b7\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"ef45be21-8e71-4606-846e-712059702063\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"aa3f3fe0-a415-4c3a-9055-7139a567d2b8\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"9aee3925-8583-4a60-8782-aec7571a4f03\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c659d6b1-144a-42d9-99fc-642ec61e138c\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"28cac7fb-de7d-4b21-81c3-3979621e8d0e\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"50c8fd92-7bd0-453c-b322-da3007ee1f3e\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"e528cb46-137a-4238-a85c-eb6048091ccf\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"bed4b3ec-55c9-4cf5-ac59-02fdb32e9e78\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"81af86b5-8d2c-4af4-a4f7-f06122bf4d20\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"9deca09f-353d-44e3-8bcf-134396eed918\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Nested 4",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"07955637-c6e2-43f6-9c0c-79bef34855a0\"><colgroup><col /></colgroup><tbody><tr ac:local-id=\"1d58c4d0-6d71-4433-9fe8-31b6f3f8e485\"><th class=\"numberingColumn\" /><th ac:local-id=\"9d9d93f3-ea17-4e66-9644-614d2f75ab82\"><p local-id=\"3cc54e0e-a253-422a-8a17-5778e6cf1dc8\"><strong>Test 2</strong></p></th><th ac:local-id=\"f4cdc7b3-b9cf-45db-bb99-90bac7354f88\"><p local-id=\"6cde186e-adf7-404d-9460-5e1548457fae\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"b898d230-2a4f-4fcb-a8da-1fba3453b17e\"><td class=\"numberingColumn\">1</td><td ac:local-id=\"bd33b334-33f5-4ae4-a770-dc2449d15599\"><p local-id=\"1cd7e4ef-6299-4d87-b712-a55bf44e8f7a\">This is a test text</p></td><td ac:local-id=\"01088c51-ff3e-4163-a524-df5ec5473518\"><p local-id=\"68dd5164-90cc-4fde-b301-3d6c320a53eb\">This is a test text</p></td></tr><tr ac:local-id=\"d02d5233-ef85-4298-b13f-1a86a77a5683\"><td class=\"numberingColumn\">2</td><td ac:local-id=\"63cdf3b0-b56d-4490-8959-379470448944\"><p local-id=\"84b9f1ba-0b3d-44d0-91d6-a9bd64ef05b7\">This is a test text</p></td><td ac:local-id=\"cc6e260a-f11c-46ae-a1e6-7c2a30349a4f\"><p local-id=\"8d1b063c-9719-4432-9d40-e194edbe6bc6\">This is a test text</p></td></tr><tr ac:local-id=\"4deecbb8-183d-404f-9e00-2b60dfa2b255\"><td class=\"numberingColumn\">3</td><td ac:local-id=\"8ebe8840-1e4b-454c-aa99-06d4c8f4c27a\"><p local-id=\"84fb2510-cc52-4a5f-ac63-9429de3fdc8f\">-</p></td><td ac:local-id=\"947d61d5-095e-46b1-9c04-f6753c4c369b\"><p local-id=\"92983d4c-2e98-415b-9eeb-bfd0419a99bb\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"isNumberColumnEnabled\":true,\"width\":760.0,\"localId\":\"07955637-c6e2-43f6-9c0c-79bef34855a0\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"1d58c4d0-6d71-4433-9fe8-31b6f3f8e485\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"9d9d93f3-ea17-4e66-9644-614d2f75ab82\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"3cc54e0e-a253-422a-8a17-5778e6cf1dc8\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"f4cdc7b3-b9cf-45db-bb99-90bac7354f88\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"6cde186e-adf7-404d-9460-5e1548457fae\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"b898d230-2a4f-4fcb-a8da-1fba3453b17e\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"bd33b334-33f5-4ae4-a770-dc2449d15599\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"1cd7e4ef-6299-4d87-b712-a55bf44e8f7a\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"01088c51-ff3e-4163-a524-df5ec5473518\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"68dd5164-90cc-4fde-b301-3d6c320a53eb\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"d02d5233-ef85-4298-b13f-1a86a77a5683\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"63cdf3b0-b56d-4490-8959-379470448944\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"84b9f1ba-0b3d-44d0-91d6-a9bd64ef05b7\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"cc6e260a-f11c-46ae-a1e6-7c2a30349a4f\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"8d1b063c-9719-4432-9d40-e194edbe6bc6\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"4deecbb8-183d-404f-9e00-2b60dfa2b255\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8ebe8840-1e4b-454c-aa99-06d4c8f4c27a\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"84fb2510-cc52-4a5f-ac63-9429de3fdc8f\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"947d61d5-095e-46b1-9c04-f6753c4c369b\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"92983d4c-2e98-415b-9eeb-bfd0419a99bb\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Nested 5",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"e2769a64-2cef-4ddb-9979-6dc3aa6127be\"><tbody><tr ac:local-id=\"c2579614-12cb-4c73-8859-04ba3f07b52f\"><td ac:local-id=\"e794b00f-cba6-4a4d-a364-e0b515f528e1\"><p local-id=\"dd3ae9cf-96ea-4176-bdbe-4ea566fc9bbc\"><strong>Test 1</strong></p></td><td ac:local-id=\"8a6b5dfe-5f35-4c43-bd75-9f064e301e16\"><p local-id=\"f69978cd-82c2-452c-9374-0e9f5132e516\"><strong>Test 2</strong></p></td><td ac:local-id=\"743489fb-8d1a-40bc-b9e9-ebe73d5dad84\"><p local-id=\"b1b3c698-3aa6-4e3e-8d66-895536868abf\"><strong>Test 3</strong></p></td></tr><tr ac:local-id=\"2e0a950f-177d-408b-b77c-0039d799be69\"><td ac:local-id=\"0f3cd264-696b-4c36-bd64-0a7741e85b07\"><p local-id=\"83db2c45-e278-4a35-be80-094c937cd168\">This is a test text</p></td><td ac:local-id=\"f4faf5e9-77b8-46ba-b255-d4f89e6d2abe\"><p local-id=\"15c00d3d-f608-475f-b1a8-ce4e65293913\">This is a test text</p></td><td ac:local-id=\"3662b91b-40de-4589-a530-f5f54ac1b07c\"><p local-id=\"bb40cd17-5b44-4305-8756-31a74333ee65\">This is a test text</p></td></tr><tr ac:local-id=\"70bb3f6c-4720-45ad-9f0f-550313018017\"><td ac:local-id=\"40549623-ac2c-494b-ae03-11e2b3e22a63\"><p local-id=\"fe658c7f-4196-46e4-bcd1-19a8b6d4b65f\">This is a test text</p></td><td ac:local-id=\"8d4fe16a-09e3-4a8b-bfaf-517214a134b9\"><p local-id=\"f99f3c63-1f96-4eb7-9ad1-0b64be7e15c7\">This is a test text</p></td><td ac:local-id=\"8711dcf1-17e6-4a1d-b5d8-e844072ea8f4\"><p local-id=\"0d1812bd-873d-4354-a009-065d42bcc037\">This is a test text</p></td></tr><tr ac:local-id=\"67007534-b687-4a69-af2c-90e06d3f5d79\"><td ac:local-id=\"61ec0825-6b7c-47b1-b77d-e09c92fdcf47\"><p local-id=\"c47124d5-c907-40db-ab69-881f39d94b10\">-</p></td><td ac:local-id=\"26b8bf0e-83a1-49e9-b9c5-4dc0774a3bad\"><p local-id=\"cb9fc27f-6cb8-4b79-8296-c430b6458502\">-</p></td><td ac:local-id=\"d535632d-0b1e-4f69-aa77-3ba37d1bca92\"><p local-id=\"d11119c5-0bd7-4309-98d3-51a41962265b\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"e2769a64-2cef-4ddb-9979-6dc3aa6127be\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c2579614-12cb-4c73-8859-04ba3f07b52f\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"e794b00f-cba6-4a4d-a364-e0b515f528e1\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"dd3ae9cf-96ea-4176-bdbe-4ea566fc9bbc\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8a6b5dfe-5f35-4c43-bd75-9f064e301e16\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f69978cd-82c2-452c-9374-0e9f5132e516\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"743489fb-8d1a-40bc-b9e9-ebe73d5dad84\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b1b3c698-3aa6-4e3e-8d66-895536868abf\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"2e0a950f-177d-408b-b77c-0039d799be69\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"0f3cd264-696b-4c36-bd64-0a7741e85b07\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"83db2c45-e278-4a35-be80-094c937cd168\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"f4faf5e9-77b8-46ba-b255-d4f89e6d2abe\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"15c00d3d-f608-475f-b1a8-ce4e65293913\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"3662b91b-40de-4589-a530-f5f54ac1b07c\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"bb40cd17-5b44-4305-8756-31a74333ee65\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"70bb3f6c-4720-45ad-9f0f-550313018017\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"40549623-ac2c-494b-ae03-11e2b3e22a63\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"fe658c7f-4196-46e4-bcd1-19a8b6d4b65f\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8d4fe16a-09e3-4a8b-bfaf-517214a134b9\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f99f3c63-1f96-4eb7-9ad1-0b64be7e15c7\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8711dcf1-17e6-4a1d-b5d8-e844072ea8f4\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"0d1812bd-873d-4354-a009-065d42bcc037\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"67007534-b687-4a69-af2c-90e06d3f5d79\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"61ec0825-6b7c-47b1-b77d-e09c92fdcf47\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c47124d5-c907-40db-ab69-881f39d94b10\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"26b8bf0e-83a1-49e9-b9c5-4dc0774a3bad\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"cb9fc27f-6cb8-4b79-8296-c430b6458502\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"d535632d-0b1e-4f69-aa77-3ba37d1bca92\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"d11119c5-0bd7-4309-98d3-51a41962265b\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              },
+              {
+                "type": "paragraph"
+              },
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"7365497b-42c2-4c7e-92c3-72e9d002e16a\"><tbody><tr ac:local-id=\"6992785c-6b77-4f06-a088-694a0a812627\"><th ac:local-id=\"15b48c2a-e19c-4333-9b47-5be0ece249fb\"><p local-id=\"988db1f9-2a9f-4736-8b78-cd0e0e50d255\"><strong>Test 1</strong></p></th><th ac:local-id=\"95d7bb9d-15ec-4060-926c-85bf4106fdfa\"><p local-id=\"c9c90359-7feb-4f4c-8782-4f414a60979b\"><strong>Test 2</strong></p></th><th ac:local-id=\"edd462a4-7f31-4d2f-ba18-8b0b751a748e\"><p local-id=\"cb9f6bfe-728d-41a6-9a47-4f7d72781cca\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"c3363f2f-eecc-49fc-93f2-8f76dbcf7b57\"><td ac:local-id=\"942ad677-dad3-46d3-a27a-cd9d8169ad28\"><p local-id=\"5ad48842-4985-4b86-81a4-17661c9a7494\">This is a test text</p></td><td ac:local-id=\"48c5116c-406d-4169-94a5-8c692147cba7\"><p local-id=\"236915c0-59b2-43d9-8eb1-bf6bc1cb7f9e\">This is a test text</p></td><td ac:local-id=\"b623b54a-504e-4090-bbcf-1fd43ae27552\"><p local-id=\"10b90bc5-6e41-4b53-97d0-fd22a28f5376\">This is a test text</p></td></tr><tr ac:local-id=\"d8ec8bd7-4254-4d95-a140-82ed77baf748\"><td ac:local-id=\"7d64ce83-b802-40d9-8483-97fa39790646\"><p local-id=\"9edb99a9-d72e-4ee9-9f4b-1f093959491f\">This is a test text</p></td><td ac:local-id=\"236ae72c-1416-4fae-9a42-48dbc589baff\"><p local-id=\"0d2449ca-2a18-43a8-a233-81b99541b452\">This is a test text</p></td><td ac:local-id=\"f276a2d4-99c5-4388-8998-1ca2d97ce5f5\"><p local-id=\"580c6001-744f-40a5-9e5c-c4e78f1e1937\">This is a test text</p></td></tr><tr ac:local-id=\"e6baeaee-3b81-4a74-9283-7bfbf47e12c1\"><td ac:local-id=\"7146d604-a2c1-4e0c-b695-081009285de6\"><p local-id=\"e8fe288e-7224-4e68-be34-3afaf176cc5e\">-</p></td><td ac:local-id=\"c03e862c-7f99-4b0a-81db-abbe2ea21263\"><p local-id=\"b53c1be1-111b-4a39-906b-d708e5b02189\">-</p></td><td ac:local-id=\"db52720b-ecaf-4322-8182-cf1630f175bd\"><p local-id=\"ce59c2da-8af0-4be9-bac1-6294a1cd3be3\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"7365497b-42c2-4c7e-92c3-72e9d002e16a\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"6992785c-6b77-4f06-a088-694a0a812627\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"15b48c2a-e19c-4333-9b47-5be0ece249fb\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"988db1f9-2a9f-4736-8b78-cd0e0e50d255\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"95d7bb9d-15ec-4060-926c-85bf4106fdfa\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c9c90359-7feb-4f4c-8782-4f414a60979b\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"edd462a4-7f31-4d2f-ba18-8b0b751a748e\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"cb9f6bfe-728d-41a6-9a47-4f7d72781cca\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c3363f2f-eecc-49fc-93f2-8f76dbcf7b57\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"942ad677-dad3-46d3-a27a-cd9d8169ad28\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"5ad48842-4985-4b86-81a4-17661c9a7494\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"48c5116c-406d-4169-94a5-8c692147cba7\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"236915c0-59b2-43d9-8eb1-bf6bc1cb7f9e\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"b623b54a-504e-4090-bbcf-1fd43ae27552\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"10b90bc5-6e41-4b53-97d0-fd22a28f5376\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"d8ec8bd7-4254-4d95-a140-82ed77baf748\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7d64ce83-b802-40d9-8483-97fa39790646\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"9edb99a9-d72e-4ee9-9f4b-1f093959491f\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"236ae72c-1416-4fae-9a42-48dbc589baff\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"0d2449ca-2a18-43a8-a233-81b99541b452\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"f276a2d4-99c5-4388-8998-1ca2d97ce5f5\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"580c6001-744f-40a5-9e5c-c4e78f1e1937\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"e6baeaee-3b81-4a74-9283-7bfbf47e12c1\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7146d604-a2c1-4e0c-b695-081009285de6\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"e8fe288e-7224-4e68-be34-3afaf176cc5e\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"c03e862c-7f99-4b0a-81db-abbe2ea21263\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b53c1be1-111b-4a39-906b-d708e5b02189\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"db52720b-ecaf-4322-8182-cf1630f175bd\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"ce59c2da-8af0-4be9-bac1-6294a1cd3be3\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              },
+              {
+                "type": "paragraph"
+              },
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"d13ba915-7971-482e-916e-bc5a894a47c7\"><tbody><tr ac:local-id=\"cb6f291b-82e0-47d3-b528-660fa26fc262\"><th ac:local-id=\"820a37e3-7ba5-4a67-a515-ee9665640351\"><p local-id=\"f8e03a9d-5744-434b-946b-f26e20ec1015\"><strong>Test 1</strong></p></th><th ac:local-id=\"047a5eea-2365-4a50-9899-6e9d501f2c65\"><p local-id=\"58be2d65-64f1-4022-8d56-af4456c7d4d1\"><strong>Test 2</strong></p></th><th ac:local-id=\"a1d7eea2-e0b5-43a4-b8a3-bd0f2f95fdb6\"><p local-id=\"a0be5b36-f3c9-41e4-a5fd-6e289f34666a\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"91342563-0f01-4c48-b7f6-24a845582a63\"><th ac:local-id=\"7b3cefec-fe62-47c9-8b68-f3bc079a54bb\"><p local-id=\"b0e4a049-135b-4ee4-afef-8b0e6fcfba45\">This is a test text</p></th><td ac:local-id=\"9711a6d7-f9c0-46a4-8b19-c8442cd4e058\"><p local-id=\"1b960e89-d4b4-4beb-8f7e-f9847a00ee35\">This is a test text</p></td><td ac:local-id=\"e3b6ea53-d894-4974-9ad4-9abbdc16a9c0\"><p local-id=\"a966ba9f-3a83-4e7b-848b-0c705de8838a\">This is a test text</p></td></tr><tr ac:local-id=\"9601c91f-0176-4c3c-8429-1956181c0ae8\"><th ac:local-id=\"b1dbbd2e-6a4c-4a1c-a7fd-6b00fc8ad9f9\"><p local-id=\"2ea549d5-1720-49f9-9bdd-e272f35cda6b\">This is a test text</p></th><td ac:local-id=\"f223aef2-71a0-46a1-a382-7d36d5ad14c8\"><p local-id=\"094ea803-84d9-4eb8-9b00-04a1b04024d2\">This is a test text</p></td><td ac:local-id=\"48d261fc-6a26-43b7-9eea-e871a860024a\"><p local-id=\"076037f6-00e7-46d0-b48b-ff0dc68a6e6a\">This is a test text</p></td></tr><tr ac:local-id=\"1ab9673f-d8c3-49ab-8aa4-b5c1cc7dda7b\"><th ac:local-id=\"34b8151c-5156-4ce6-bdca-aec069c3c2e3\"><p local-id=\"f2ec159f-4cf1-4836-bf0a-b12ed1215b46\">-</p></th><td ac:local-id=\"093e69af-d3de-40bc-bfca-15b0a76627fd\"><p local-id=\"f82b3254-794d-4396-9030-a9f080903581\">-</p></td><td ac:local-id=\"52042dcb-a9fe-47b2-8f3a-2de762633f89\"><p local-id=\"cbd6c031-dacc-4463-95ce-a9878952de63\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"d13ba915-7971-482e-916e-bc5a894a47c7\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"cb6f291b-82e0-47d3-b528-660fa26fc262\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"820a37e3-7ba5-4a67-a515-ee9665640351\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f8e03a9d-5744-434b-946b-f26e20ec1015\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"047a5eea-2365-4a50-9899-6e9d501f2c65\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"58be2d65-64f1-4022-8d56-af4456c7d4d1\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"a1d7eea2-e0b5-43a4-b8a3-bd0f2f95fdb6\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"a0be5b36-f3c9-41e4-a5fd-6e289f34666a\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"91342563-0f01-4c48-b7f6-24a845582a63\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7b3cefec-fe62-47c9-8b68-f3bc079a54bb\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b0e4a049-135b-4ee4-afef-8b0e6fcfba45\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"9711a6d7-f9c0-46a4-8b19-c8442cd4e058\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"1b960e89-d4b4-4beb-8f7e-f9847a00ee35\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"e3b6ea53-d894-4974-9ad4-9abbdc16a9c0\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"a966ba9f-3a83-4e7b-848b-0c705de8838a\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"9601c91f-0176-4c3c-8429-1956181c0ae8\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"b1dbbd2e-6a4c-4a1c-a7fd-6b00fc8ad9f9\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"2ea549d5-1720-49f9-9bdd-e272f35cda6b\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"f223aef2-71a0-46a1-a382-7d36d5ad14c8\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"094ea803-84d9-4eb8-9b00-04a1b04024d2\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"48d261fc-6a26-43b7-9eea-e871a860024a\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"076037f6-00e7-46d0-b48b-ff0dc68a6e6a\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"1ab9673f-d8c3-49ab-8aa4-b5c1cc7dda7b\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"34b8151c-5156-4ce6-bdca-aec069c3c2e3\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f2ec159f-4cf1-4836-bf0a-b12ed1215b46\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"093e69af-d3de-40bc-bfca-15b0a76627fd\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f82b3254-794d-4396-9030-a9f080903581\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"52042dcb-a9fe-47b2-8f3a-2de762633f89\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"cbd6c031-dacc-4463-95ce-a9878952de63\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              },
+              {
+                "type": "paragraph"
+              },
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"cbcdf19f-719e-46b5-87c9-f3d40f03ca7e\"><colgroup><col /></colgroup><tbody><tr ac:local-id=\"fd2fbf85-9f9f-4301-b424-8d18e71ad54b\"><th class=\"numberingColumn\" /><th ac:local-id=\"c6c789eb-891b-4248-a819-0ee87d5fc9cf\"><p local-id=\"7cbeb20e-ed9b-4922-833b-3ce97ea54de5\"><strong>Test 2</strong></p></th><th ac:local-id=\"63531740-1f81-4d5c-8edb-23593f36e377\"><p local-id=\"499ed68d-ad2e-41a0-bfb6-a9924ce69c76\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"c52f3fa4-680c-4eec-b36b-1b16d0a257f4\"><td class=\"numberingColumn\">1</td><td ac:local-id=\"7c39f978-36c5-4192-b4af-3e319d2a7b24\"><p local-id=\"c0908778-3da9-41ce-93af-a415cc2ccb95\">This is a test text</p></td><td ac:local-id=\"8a3c5998-e4ea-4cbd-b90a-d27df497fc58\"><p local-id=\"87051129-87d0-49f7-9608-c7ea901434c6\">This is a test text</p></td></tr><tr ac:local-id=\"d337c525-67b9-4842-9718-9d00d5f321ae\"><td class=\"numberingColumn\">2</td><td ac:local-id=\"0de756b9-703d-4251-8eea-0b092d110b20\"><p local-id=\"b8ccf268-210f-4814-abd9-5670e60098f1\">This is a test text</p></td><td ac:local-id=\"02a631e9-7d42-4704-8758-174c15701f3f\"><p local-id=\"587931cd-6829-44fc-8414-36ce49d92b95\">This is a test text</p></td></tr><tr ac:local-id=\"7a11a1cd-276c-4028-b38d-75a6d5ffb49b\"><td class=\"numberingColumn\">3</td><td ac:local-id=\"2fb0f2fe-5fd5-41aa-87b2-f6e21562a82a\"><p local-id=\"0b4a74aa-dc4e-43d3-85e3-57b7f3d39640\">-</p></td><td ac:local-id=\"60c9b11d-614c-45d0-ba12-3b38c3d4147c\"><p local-id=\"36c52ba1-f6c9-4df6-8288-a774e9e2ca19\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"isNumberColumnEnabled\":true,\"width\":760.0,\"localId\":\"cbcdf19f-719e-46b5-87c9-f3d40f03ca7e\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"fd2fbf85-9f9f-4301-b424-8d18e71ad54b\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"c6c789eb-891b-4248-a819-0ee87d5fc9cf\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"7cbeb20e-ed9b-4922-833b-3ce97ea54de5\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"63531740-1f81-4d5c-8edb-23593f36e377\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"499ed68d-ad2e-41a0-bfb6-a9924ce69c76\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c52f3fa4-680c-4eec-b36b-1b16d0a257f4\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"7c39f978-36c5-4192-b4af-3e319d2a7b24\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c0908778-3da9-41ce-93af-a415cc2ccb95\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8a3c5998-e4ea-4cbd-b90a-d27df497fc58\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"87051129-87d0-49f7-9608-c7ea901434c6\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"d337c525-67b9-4842-9718-9d00d5f321ae\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"0de756b9-703d-4251-8eea-0b092d110b20\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b8ccf268-210f-4814-abd9-5670e60098f1\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"02a631e9-7d42-4704-8758-174c15701f3f\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"587931cd-6829-44fc-8414-36ce49d92b95\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"7a11a1cd-276c-4028-b38d-75a6d5ffb49b\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"2fb0f2fe-5fd5-41aa-87b2-f6e21562a82a\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"0b4a74aa-dc4e-43d3-85e3-57b7f3d39640\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"60c9b11d-614c-45d0-ba12-3b38c3d4147c\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"36c52ba1-f6c9-4df6-8288-a774e9e2ca19\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              },
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"f12c643e-c747-4a8d-a018-49b8b80ed103\"><colgroup><col /></colgroup><tbody><tr ac:local-id=\"b5f31132-732e-41e4-a65c-829b6b41b0bd\"><th class=\"numberingColumn\" /><th ac:local-id=\"76bdfe0c-a9f5-4a9b-9ec3-cf7aceb9c22f\"><p local-id=\"bd3d0b8a-4d38-4eef-aa36-dfc9ead8c3dc\"><strong>Test 2</strong></p></th><th ac:local-id=\"a39605dd-bc89-4bea-bd88-d1140c898017\"><p local-id=\"544e1dce-efdb-4df5-869d-384a46077015\"><strong>Test 3</strong></p></th></tr><tr ac:local-id=\"335cbfb0-fe20-4496-b923-9ddf267e8a61\"><td class=\"numberingColumn\">1</td><td ac:local-id=\"d382babb-454c-4623-a913-36ad9a10806a\"><p local-id=\"fc194ada-e2c4-4660-a227-3b1ca4ad63ee\">This is a test text</p></td><td ac:local-id=\"581068e8-3ed5-45f3-9e7f-be06e6ea8d95\"><p local-id=\"331d564f-5cbe-446e-886b-482e1a5c0119\">This is a test text</p></td></tr><tr ac:local-id=\"5471ec77-9020-494f-9b14-e9453e854507\"><td class=\"numberingColumn\">2</td><td ac:local-id=\"05172d41-b10a-4651-86dc-7bd82054e10a\"><p local-id=\"a03ea827-3f31-4109-9fb4-9ee6f7be9a10\">This is a test text</p></td><td ac:local-id=\"de81892f-772c-48bf-b777-04d9d9791815\"><p local-id=\"3ad10229-7e8b-44fd-87a2-87ad809054b8\">This is a test text</p></td></tr><tr ac:local-id=\"c15622af-1fbc-4bab-bfc6-375342363b29\"><td class=\"numberingColumn\">3</td><td ac:local-id=\"29f8a4d3-5633-40bf-8e82-61de7f370ec2\"><p local-id=\"f5b3b237-3e08-4b8b-bae5-c86465d7b6f7\">-</p></td><td ac:local-id=\"586ab206-0490-4f05-b8e1-12135f9eb89d\"><p local-id=\"d7860634-1626-4d86-9e18-db3e2a7709d1\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"isNumberColumnEnabled\":true,\"width\":760.0,\"localId\":\"f12c643e-c747-4a8d-a018-49b8b80ed103\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"b5f31132-732e-41e4-a65c-829b6b41b0bd\"},\"content\":[{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"76bdfe0c-a9f5-4a9b-9ec3-cf7aceb9c22f\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"bd3d0b8a-4d38-4eef-aa36-dfc9ead8c3dc\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableHeader\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"a39605dd-bc89-4bea-bd88-d1140c898017\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"544e1dce-efdb-4df5-869d-384a46077015\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"335cbfb0-fe20-4496-b923-9ddf267e8a61\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"d382babb-454c-4623-a913-36ad9a10806a\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"fc194ada-e2c4-4660-a227-3b1ca4ad63ee\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"581068e8-3ed5-45f3-9e7f-be06e6ea8d95\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"331d564f-5cbe-446e-886b-482e1a5c0119\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"5471ec77-9020-494f-9b14-e9453e854507\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"05172d41-b10a-4651-86dc-7bd82054e10a\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"a03ea827-3f31-4109-9fb4-9ee6f7be9a10\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"de81892f-772c-48bf-b777-04d9d9791815\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"3ad10229-7e8b-44fd-87a2-87ad809054b8\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c15622af-1fbc-4bab-bfc6-375342363b29\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"29f8a4d3-5633-40bf-8e82-61de7f370ec2\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f5b3b237-3e08-4b8b-bae5-c86465d7b6f7\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"586ab206-0490-4f05-b8e1-12135f9eb89d\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"d7860634-1626-4d86-9e18-db3e2a7709d1\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              },
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph"
+  },
+  {
+    "type": "table",
+    "attrs": {
+      "layout": "default",
+      "width": 760.0
+    },
+    "content": [
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableHeader",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "ID",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "strong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableHeader",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Test",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "strong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                154.0
+              ]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Nested 1",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [
+                605.0
+              ]
+            },
+            "content": [
+              {
+                "type": "extension",
+                "attrs": {
+                  "extensionType": "com.atlassian.confluence.migration",
+                  "extensionKey": "nested-table",
+                  "text": "",
+                  "parameters": {
+                    "reason": "A table in a table cell can't be created or edited in the new editor.",
+                    "cxhtml": "<table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"ae9a08fe-27ec-48e6-877e-a4bde9b5e734\"><tbody><tr ac:local-id=\"c2000f11-5321-4189-8068-37973083fe78\"><td ac:local-id=\"67cd3a2e-a248-4669-8ae9-748b11060549\"><p local-id=\"1fc211ed-1a9f-40b4-8b7d-ac887e1d825d\"><strong>Test 1</strong></p></td><td ac:local-id=\"79a48c49-8d76-4ba3-b785-e92de75cab46\"><p local-id=\"2aa3b9de-eebc-4460-8b2a-759301ff1686\"><strong>Test 2</strong></p></td><td ac:local-id=\"d9be4093-91da-4338-b0e1-997da2d4a09f\"><p local-id=\"7dd6f1a0-57a9-4778-87f2-f5d7f6f7e295\"><strong>Test 3</strong></p></td></tr><tr ac:local-id=\"e3abc5ae-1b5d-4256-80ee-e0d67dcf194f\"><td ac:local-id=\"f531a8bb-6f9a-4374-abea-9cbff4525444\"><p local-id=\"c40c63d5-1eea-433e-8d96-aa8b65fb8a1d\">This is a test text</p></td><td ac:local-id=\"8006078a-1bbf-4039-b517-9839f5c3e67b\"><p local-id=\"b448e700-ced9-4a71-a006-958786b94545\">This is a test text</p></td><td ac:local-id=\"8eb7413c-449c-4659-b199-bc44e7fa34bf\"><p local-id=\"3cfd4186-a50c-4202-a616-844ded26fbca\">This is a test text</p></td></tr><tr ac:local-id=\"f2ddf958-e75f-4269-bf05-188ee6e95edd\"><td ac:local-id=\"c1e18d72-5aef-435d-b3a9-c36b8e26990c\"><p local-id=\"7fd14653-53d1-4488-88c7-c1add406d314\">This is a test text</p></td><td ac:local-id=\"36e5b3d8-a4ca-4f75-8480-9f9d52831959\"><p local-id=\"f2ea3530-8b0d-4d36-a563-7b890ba76cc6\">This is a test text</p></td><td ac:local-id=\"ef5fa13a-4c28-41f4-95ba-2a9b19f2005b\"><p local-id=\"c07a6c6b-6375-4801-bf1a-5e7632d84deb\">This is a test text</p></td></tr><tr ac:local-id=\"4f33d746-4f1a-4499-a910-0fa5b2554d01\"><td ac:local-id=\"2c6b0baf-3331-41c9-a679-914d2a1443c8\"><p local-id=\"dacdbf00-1052-4306-bcb7-d4c538424bae\">-</p></td><td ac:local-id=\"5e2475c9-1dd2-4111-89df-a7be6504dbd3\"><p local-id=\"3d79f0f6-cf62-47ea-a796-837af5d875aa\">-</p></td><td ac:local-id=\"776e420b-37af-4f2b-9f65-811d4df5c42e\"><p local-id=\"b6b81e3f-bff2-4810-bcdd-7fbe79cf646f\">-</p></td></tr></tbody></table>",
+                    "adf": "{\"type\":\"doc\",\"content\":[{\"type\":\"table\",\"attrs\":{\"layout\":\"default\",\"width\":760.0,\"localId\":\"ae9a08fe-27ec-48e6-877e-a4bde9b5e734\"},\"content\":[{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"c2000f11-5321-4189-8068-37973083fe78\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"67cd3a2e-a248-4669-8ae9-748b11060549\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"1fc211ed-1a9f-40b4-8b7d-ac887e1d825d\"},\"content\":[{\"text\":\"Test 1\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"79a48c49-8d76-4ba3-b785-e92de75cab46\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"2aa3b9de-eebc-4460-8b2a-759301ff1686\"},\"content\":[{\"text\":\"Test 2\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"d9be4093-91da-4338-b0e1-997da2d4a09f\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"7dd6f1a0-57a9-4778-87f2-f5d7f6f7e295\"},\"content\":[{\"text\":\"Test 3\",\"type\":\"text\",\"marks\":[{\"type\":\"strong\"}]}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"e3abc5ae-1b5d-4256-80ee-e0d67dcf194f\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"f531a8bb-6f9a-4374-abea-9cbff4525444\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c40c63d5-1eea-433e-8d96-aa8b65fb8a1d\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8006078a-1bbf-4039-b517-9839f5c3e67b\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b448e700-ced9-4a71-a006-958786b94545\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"8eb7413c-449c-4659-b199-bc44e7fa34bf\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"3cfd4186-a50c-4202-a616-844ded26fbca\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"f2ddf958-e75f-4269-bf05-188ee6e95edd\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"c1e18d72-5aef-435d-b3a9-c36b8e26990c\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"7fd14653-53d1-4488-88c7-c1add406d314\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"36e5b3d8-a4ca-4f75-8480-9f9d52831959\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"f2ea3530-8b0d-4d36-a563-7b890ba76cc6\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"ef5fa13a-4c28-41f4-95ba-2a9b19f2005b\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"c07a6c6b-6375-4801-bf1a-5e7632d84deb\"},\"content\":[{\"text\":\"This is a test text\",\"type\":\"text\"}]}]}]},{\"type\":\"tableRow\",\"attrs\":{\"localId\":\"4f33d746-4f1a-4499-a910-0fa5b2554d01\"},\"content\":[{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"2c6b0baf-3331-41c9-a679-914d2a1443c8\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"dacdbf00-1052-4306-bcb7-d4c538424bae\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"5e2475c9-1dd2-4111-89df-a7be6504dbd3\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"3d79f0f6-cf62-47ea-a796-837af5d875aa\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]},{\"type\":\"tableCell\",\"attrs\":{\"colspan\":1,\"rowspan\":1,\"localId\":\"776e420b-37af-4f2b-9f65-811d4df5c42e\"},\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"localId\":\"b6b81e3f-bff2-4810-bcdd-7fbe79cf646f\"},\"content\":[{\"text\":\"-\",\"type\":\"text\"}]}]}]}]}],\"version\":1}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph"
+  }
+]

@@ -62,6 +62,8 @@ class ADFNode:
             return TableCellNode.from_dict(data)
         elif node_type == "tableHeader":
             return TableHeaderNode.from_dict(data)
+        elif node_type == "extension":
+            return ExtensionNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -442,4 +444,37 @@ class TableHeaderNode(ADFNode):
             colwidth=attrs.get("colwidth"),
             colspan=attrs.get("colspan"),
             rowspan=attrs.get("rowspan"),
+        )
+
+
+@dataclass
+class ExtensionNode(ADFNode):
+    """Represents an extension node in ADF."""
+
+    type: str = field(default="extension", init=False)
+    extension_type: str
+    extension_key: str
+    text: Optional[str] = None
+    parameters: Optional[Dict[str, Any]] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "ExtensionNode":
+        """Create an ExtensionNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        extension_type = attrs.get("extensionType")
+        if extension_type is None:
+            raise ValueError("extensionType is required for extension nodes")
+
+        extension_key = attrs.get("extensionKey")
+        if extension_key is None:
+            raise ValueError("extensionKey is required for extension nodes")
+
+        return cls(
+            extension_type=extension_type,
+            extension_key=extension_key,
+            text=attrs.get("text"),
+            parameters=attrs.get("parameters"),
         )
