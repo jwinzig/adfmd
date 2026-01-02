@@ -68,6 +68,8 @@ class ADFNode:
             return BlockquoteNode.from_dict(data)
         elif node_type == "codeBlock":
             return CodeBlockNode.from_dict(data)
+        elif node_type == "emoji":
+            return EmojiNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -172,6 +174,29 @@ class CodeBlockNode(ADFNode):
         text: str = "\n".join(text_parts)
 
         return cls(language=language, text=text)
+
+
+@dataclass
+class EmojiNode(ADFNode):
+    """Represents an emoji node in ADF."""
+
+    type: str = field(default="emoji", init=False)
+    short_name: Optional[str] = None
+    id: Optional[str] = None
+    text: Optional[str] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "EmojiNode":
+        """Create an EmojiNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        short_name = attrs.get("shortName")
+        id = attrs.get("id")
+        text = attrs.get("text")
+
+        return cls(short_name=short_name, id=id, text=text)
 
 
 @dataclass

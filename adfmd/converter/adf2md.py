@@ -31,6 +31,7 @@ from adfmd.nodes import (
     ExtensionNode,
     BlockquoteNode,
     CodeBlockNode,
+    EmojiNode,
 )
 
 
@@ -207,6 +208,7 @@ class ADF2MDRegistry:
         registry.register("extension", ExtensionConverter())
         registry.register("blockquote", BlockquoteConverter())
         registry.register("codeBlock", CodeBlockConverter())
+        registry.register("emoji", EmojiConverter())
 
         return registry
 
@@ -316,6 +318,33 @@ class CodeBlockConverter(ADF2MDBaseConverter):
         text = node.text if node.text.strip() else ""
 
         return f"```{language}\n" + (text + "\n" if text else "") + "```\n\n"
+
+
+class EmojiConverter(ADF2MDBaseConverter):
+    """Converter for emoji nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert an emoji node to Markdown."""
+        if not isinstance(node, EmojiNode):
+            raise ValueError(f"Expected EmojiNode, got {type(node)}")
+
+        text = ""
+        if node.text.strip():
+            text = node.text
+        elif node.short_name:
+            text = node.short_name
+
+        start_marker = "<!-- ADF:emoji:"
+        if node.short_name:
+            start_marker += f'shortName="{node.short_name}"'
+        if node.id:
+            start_marker += f'id="{node.id}"'
+        if node.text:
+            start_marker += f'text="{node.text}"'
+        start_marker += " -->"
+        end_marker = "<!-- /ADF:emoji -->"
+
+        return f"{start_marker}{text}{end_marker}"
 
 
 class HeadingConverter(ADF2MDBaseConverter):

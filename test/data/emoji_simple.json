@@ -1,0 +1,52 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "text",
+        "text": "Hello ",
+        "marks": [ ]
+      },
+      {
+        "type": "emoji",
+        "attrs": {
+          "shortName": ":grinning:",
+          "id": "1f600",
+          "text": "😀"
+        }
+      },
+      {
+        "type": "text",
+        "text": " world!",
+        "marks": [ ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "emoji",
+        "attrs": {
+          "shortName": ":smile:",
+          "id": "1f604",
+          "text": "😄"
+        }
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "type": "emoji",
+        "attrs": {
+          "shortName": ":thumbsup:",
+          "id": "1f44d",
+          "text": "👍"
+        }
+      }
+    ]
+  }
+]
+

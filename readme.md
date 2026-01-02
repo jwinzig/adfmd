@@ -14,7 +14,8 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 | text          | Text with formatting marks (see text marks)                                                     |
 | paragraph     | Paragraph text                                                                                  |
 | blockquote    | Blockquote (`> ` prefix on each line)                                                           |
-| codeBlock     | Code block (```language\ncode\n```)                                                             |
+| codeBlock     | Code block (`language\ncode\n`)                                                                 |
+| emoji         | Emoji (Unicode character or shortName as fallback)                                              |
 | heading       | Headings (`#` through `######`) incl. trailing newlines (`\n\n`)                                |
 | bulletList    | Bullet list (`- ` prefix, with nesting)                                                         |
 | orderedList   | Ordered list (numbered items, with nesting)                                                     |
@@ -129,7 +130,6 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
 
 ### Missing ADF Nodes
 
-- emoji
 - expand
 - media
 - mediaGroup
