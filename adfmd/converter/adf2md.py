@@ -317,7 +317,7 @@ class CodeBlockConverter(ADF2MDBaseConverter):
             raise ValueError(f"Expected CodeBlockNode, got {type(node)}")
 
         language = node.language if node.language else ""
-        text = node.text if node.text.strip() else ""
+        text = node.text if node.text and node.text.strip() else ""
 
         return f"```{language}\n" + (text + "\n" if text else "") + "```\n\n"
 
@@ -331,7 +331,7 @@ class EmojiConverter(ADF2MDBaseConverter):
             raise ValueError(f"Expected EmojiNode, got {type(node)}")
 
         text = ""
-        if node.text.strip():
+        if node.text and node.text.strip():
             text = node.text
         elif node.short_name:
             text = node.short_name
