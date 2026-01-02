@@ -29,6 +29,7 @@ from adfmd.nodes import (
     TableCellNode,
     TableHeaderNode,
     ExtensionNode,
+    BlockquoteNode,
 )
 
 
@@ -203,6 +204,7 @@ class ADF2MDRegistry:
         registry.register("tableCell", TableCellConverter())
         registry.register("tableHeader", TableHeaderConverter())
         registry.register("extension", ExtensionConverter())
+        registry.register("blockquote", BlockquoteConverter())
 
         return registry
 
@@ -278,6 +280,26 @@ class ParagraphConverter(ADF2MDBaseConverter):
         text = "".join(text_parts)
         text += "\n\n" if not no_newlines else ""
         return text
+
+
+class BlockquoteConverter(ADF2MDBaseConverter):
+    """Converter for blockquote nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a blockquote node to Markdown."""
+        if not isinstance(node, BlockquoteNode):
+            raise ValueError(f"Expected BlockquoteNode, got {type(node)}")
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node))
+
+        quoted_lines: List[str] = []
+        for line in "".join(text_parts).rstrip().split("\n"):
+            quoted_lines.append(">")
+            quoted_lines[-1] += f" {line}" if line.strip() else ""
+
+        return "\n".join(quoted_lines) + "\n\n"
 
 
 class HeadingConverter(ADF2MDBaseConverter):

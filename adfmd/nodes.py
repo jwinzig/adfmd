@@ -64,6 +64,8 @@ class ADFNode:
             return TableHeaderNode.from_dict(data)
         elif node_type == "extension":
             return ExtensionNode.from_dict(data)
+        elif node_type == "blockquote":
+            return BlockquoteNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -121,6 +123,22 @@ class ParagraphNode(ADFNode):
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "ParagraphNode":
         """Create a ParagraphNode from a dictionary."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(children=children)
+
+
+@dataclass
+class BlockquoteNode(ADFNode):
+    """Represents a blockquote node in ADF."""
+
+    type: str = field(default="blockquote", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "BlockquoteNode":
+        """Create a BlockquoteNode from a dictionary."""
         children = []
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
