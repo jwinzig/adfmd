@@ -32,6 +32,7 @@ from adfmd.nodes import (
     BlockquoteNode,
     CodeBlockNode,
     EmojiNode,
+    PanelNode,
 )
 
 
@@ -209,6 +210,7 @@ class ADF2MDRegistry:
         registry.register("blockquote", BlockquoteConverter())
         registry.register("codeBlock", CodeBlockConverter())
         registry.register("emoji", EmojiConverter())
+        registry.register("panel", PanelConverter())
 
         return registry
 
@@ -345,6 +347,40 @@ class EmojiConverter(ADF2MDBaseConverter):
         end_marker = "<!-- /ADF:emoji -->"
 
         return f"{start_marker}{text}{end_marker}"
+
+
+class PanelConverter(ADF2MDBaseConverter):
+    """Converter for panel nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a panel node to Markdown."""
+        if not isinstance(node, PanelNode):
+            raise ValueError(f"Expected PanelNode, got {type(node)}")
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node))
+
+        quoted_lines: List[str] = []
+        if node.panel_type:
+            label = node.panel_type.upper()
+            quoted_lines.append(f"> **{label}**  ")
+        for line in "".join(text_parts).rstrip().split("\n"):
+            quoted_lines.append(">")
+            quoted_lines[-1] += f" {line}" if line.strip() else ""
+
+        attrs_parts = []
+        if node.panel_type:
+            attrs_parts.append(f'panelType="{node.panel_type}"')
+
+        if attrs_parts:
+            attrs_str = ",".join(attrs_parts)
+            start_marker = f"<!-- ADF:panel:{attrs_str} -->"
+        else:
+            start_marker = "<!-- ADF:panel -->"
+        end_marker = "<!-- /ADF:panel -->"
+
+        return f"{start_marker}\n{'\n'.join(quoted_lines)}\n{end_marker}\n\n"
 
 
 class HeadingConverter(ADF2MDBaseConverter):

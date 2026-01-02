@@ -70,6 +70,8 @@ class ADFNode:
             return CodeBlockNode.from_dict(data)
         elif node_type == "emoji":
             return EmojiNode.from_dict(data)
+        elif node_type == "panel":
+            return PanelNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -197,6 +199,30 @@ class EmojiNode(ADFNode):
         text = attrs.get("text")
 
         return cls(short_name=short_name, id=id, text=text)
+
+
+@dataclass
+class PanelNode(ADFNode):
+    """Represents a panel node in ADF."""
+
+    type: str = field(default="panel", init=False)
+    panel_type: Optional[str] = None
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "PanelNode":
+        """Create a PanelNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        panel_type = attrs.get("panelType")
+
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        return cls(panel_type=panel_type, children=children)
 
 
 @dataclass

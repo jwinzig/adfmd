@@ -56,6 +56,8 @@ from adfmd import ADFMD, to_markdown
         "blockquote_simple",
         "code_block_simple",
         "emoji_simple",
+        "panel_simple",
+        "panel_complex",
     ],
 )
 def test_adf_to_md(test_name):
