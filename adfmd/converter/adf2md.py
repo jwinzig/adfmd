@@ -382,7 +382,7 @@ class BulletListConverter(ADF2MDBaseConverter):
 
         indent_level = kwargs.get("indent_level", 0)
         lines = []
-        indent = "  " * indent_level
+        indent = "    " * indent_level
 
         for list_item in node.children:
             if not isinstance(list_item, ListItemNode):
@@ -421,7 +421,7 @@ class OrderedListConverter(ADF2MDBaseConverter):
 
         indent_level = kwargs.get("indent_level", 0)
         lines = []
-        indent = "  " * indent_level
+        indent = "    " * indent_level
         item_number = 1
 
         for list_item in node.children:
