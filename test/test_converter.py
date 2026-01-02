@@ -54,6 +54,7 @@ from adfmd import ADFMD, to_markdown
         "table_nested_single",
         "table_nested",
         "blockquote_simple",
+        "code_block_simple",
     ],
 )
 def test_adf_to_md(test_name):

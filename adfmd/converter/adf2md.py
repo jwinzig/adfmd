@@ -30,6 +30,7 @@ from adfmd.nodes import (
     TableHeaderNode,
     ExtensionNode,
     BlockquoteNode,
+    CodeBlockNode,
 )
 
 
@@ -205,6 +206,7 @@ class ADF2MDRegistry:
         registry.register("tableHeader", TableHeaderConverter())
         registry.register("extension", ExtensionConverter())
         registry.register("blockquote", BlockquoteConverter())
+        registry.register("codeBlock", CodeBlockConverter())
 
         return registry
 
@@ -300,6 +302,20 @@ class BlockquoteConverter(ADF2MDBaseConverter):
             quoted_lines[-1] += f" {line}" if line.strip() else ""
 
         return "\n".join(quoted_lines) + "\n\n"
+
+
+class CodeBlockConverter(ADF2MDBaseConverter):
+    """Converter for codeBlock nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a codeBlock node to Markdown."""
+        if not isinstance(node, CodeBlockNode):
+            raise ValueError(f"Expected CodeBlockNode, got {type(node)}")
+
+        language = node.language if node.language else ""
+        text = node.text if node.text.strip() else ""
+
+        return f"```{language}\n" + (text + "\n" if text else "") + "```\n\n"
 
 
 class HeadingConverter(ADF2MDBaseConverter):

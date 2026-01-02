@@ -66,6 +66,8 @@ class ADFNode:
             return ExtensionNode.from_dict(data)
         elif node_type == "blockquote":
             return BlockquoteNode.from_dict(data)
+        elif node_type == "codeBlock":
+            return CodeBlockNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -143,6 +145,33 @@ class BlockquoteNode(ADFNode):
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
         return cls(children=children)
+
+
+@dataclass
+class CodeBlockNode(ADFNode):
+    """Represents a codeBlock node in ADF."""
+
+    type: str = field(default="codeBlock", init=False)
+    language: Optional[str] = None
+    text: str = ""
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "CodeBlockNode":
+        """Create a CodeBlockNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        language = attrs.get("language")
+
+        # codeBlock nodes contain one or more plain text nodes without marks
+        text_parts: List[str] = []
+        for item in data.get("content", []):
+            if item.get("type") == "text":
+                text_parts.append(item.get("text", ""))
+        text: str = "\n".join(text_parts)
+
+        return cls(language=language, text=text)
 
 
 @dataclass

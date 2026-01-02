@@ -1,0 +1,43 @@
+[
+  {
+    "type": "codeBlock",
+    "content": [
+      {
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "content": [
+      {
+        "type": "text",
+        "text": "var foo = {};\nvar bar = [];"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "javascript"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "var foo = {};\nvar bar = [];"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "python"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "def hello():\n    print('Hello, World!')\n    return True"
+      }
+    ]
+  }
+]
