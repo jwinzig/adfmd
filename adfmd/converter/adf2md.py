@@ -408,7 +408,7 @@ class BulletListConverter(ADF2MDBaseConverter):
                 if nested_lines:
                     lines.append(nested_lines)
 
-        return "\n".join(lines)
+        return "\n".join(lines) + ("\n\n" if indent_level == 0 else "")
 
 
 class OrderedListConverter(ADF2MDBaseConverter):
@@ -449,7 +449,7 @@ class OrderedListConverter(ADF2MDBaseConverter):
                 if nested_lines:
                     lines.append(nested_lines)
 
-        return "\n".join(lines)
+        return "\n".join(lines) + ("\n\n" if indent_level == 0 else "")
 
 
 class HardBreakConverter(ADF2MDBaseConverter):
