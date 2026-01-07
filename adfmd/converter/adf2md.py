@@ -33,6 +33,11 @@ from adfmd.nodes import (
     CodeBlockNode,
     EmojiNode,
     PanelNode,
+    MediaNode,
+    MediaSingleNode,
+    MediaGroupNode,
+    CaptionNode,
+    MediaInlineNode,
 )
 
 
@@ -211,6 +216,11 @@ class ADF2MDRegistry:
         registry.register("codeBlock", CodeBlockConverter())
         registry.register("emoji", EmojiConverter())
         registry.register("panel", PanelConverter())
+        registry.register("mediaSingle", MediaSingleConverter())
+        registry.register("mediaGroup", MediaGroupConverter())
+        registry.register("media", MediaConverter())
+        registry.register("mediaInline", MediaInlineConverter())
+        registry.register("caption", CaptionConverter())
 
         return registry
 
@@ -833,3 +843,161 @@ class ExtensionConverter(ADF2MDBaseConverter):
             text = f"{start_marker}{end_marker}"
 
         return text
+
+
+class MediaSingleConverter(ADF2MDBaseConverter):
+    """Converter for mediaSingle nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a mediaSingle node to Markdown."""
+        if not isinstance(node, MediaSingleNode):
+            raise ValueError(f"Expected MediaSingleNode, got {type(node)}")
+
+        # Extract media and caption from children
+        media_node = None
+        caption_node = None
+        for child in node.children:
+            if isinstance(child, MediaNode):
+                if media_node:
+                    raise ValueError("mediaSingle node content must contain only one media node")
+                media_node = child
+            elif isinstance(child, CaptionNode):
+                if caption_node:
+                    raise ValueError("mediaSingle node content must contain only one caption node")
+                caption_node = child
+            else:
+                raise ValueError(
+                    f"Unsupported child node type for mediaSingle node content: {type(child)}. "
+                    "Expected media node or caption node."
+                )
+
+        if not media_node:
+            raise ValueError("mediaSingle node content must contain a media node")
+
+        media_markdown = self._convert_child(media_node)
+        caption_markdown = "\n" + self._convert_child(caption_node) if caption_node else ""
+
+        attrs_parts = []
+        if node.layout:
+            attrs_parts.append(f'layout="{node.layout}"')
+        if node.width is not None:
+            attrs_parts.append(f'width="{node.width}"')
+        if node.width_type:
+            attrs_parts.append(f'widthType="{node.width_type}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:mediaSingle{':' + attrs_str if attrs_str else ''} -->"
+        end_marker = "<!-- /ADF:mediaSingle -->"
+
+        return f"{start_marker}\n{media_markdown}{caption_markdown}\n{end_marker}\n\n"
+
+
+class MediaGroupConverter(ADF2MDBaseConverter):
+    """Converter for mediaGroup nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a mediaGroup node to Markdown."""
+        if not isinstance(node, MediaGroupNode):
+            raise ValueError(f"Expected MediaGroupNode, got {type(node)}")
+
+        media_nodes = []
+        for child in node.children:
+            if isinstance(child, MediaNode):
+                media_markdown = self._convert_child(child)
+                media_nodes.append(media_markdown)
+
+        if not media_nodes:
+            raise ValueError("mediaGroup node content must contain one or more media nodes")
+
+        media_content = "\n".join(media_nodes)
+        start_marker = "<!-- ADF:mediaGroup -->"
+        end_marker = "<!-- /ADF:mediaGroup -->"
+
+        return f"{start_marker}\n{media_content}\n{end_marker}\n\n"
+
+
+class MediaConverter(ADF2MDBaseConverter):
+    """Converter for media nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a media node to Markdown."""
+        if not isinstance(node, MediaNode):
+            raise ValueError(f"Expected MediaNode, got {type(node)}")
+
+        attrs_parts = [f'id="{node.id}"']
+        attrs_parts.append(f'collection="{node.collection}"')
+        attrs_parts.append(f'type="{node.media_type}"')
+        if node.width is not None:
+            attrs_parts.append(f'width="{node.width}"')
+        if node.height is not None:
+            attrs_parts.append(f'height="{node.height}"')
+        if node.alt:
+            attrs_parts.append(f'alt="{node.alt}"')
+        if node.border_size is not None:
+            attrs_parts.append(f'borderSize="{node.border_size}"')
+        if node.border_color:
+            attrs_parts.append(f'borderColor="{node.border_color}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:media:{attrs_str} -->"
+        end_marker = "<!-- /ADF:media -->"
+
+        display_text = node.alt if node.alt else f"media:{node.id}"
+        media_link = f"[{display_text}](fileId:{node.id})"
+
+        return f"{start_marker}\n{media_link}\n{end_marker}"
+
+
+class MediaInlineConverter(ADF2MDBaseConverter):
+    """Converter for mediaInline nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a mediaInline node to Markdown."""
+        if not isinstance(node, MediaInlineNode):
+            raise ValueError(f"Expected MediaInlineNode, got {type(node)}")
+
+        attrs_parts = [f'id="{node.id}"']
+        attrs_parts.append(f'collection="{node.collection}"')
+        attrs_parts.append(f'type="{node.media_type}"')
+        if node.width is not None:
+            attrs_parts.append(f'width="{node.width}"')
+        if node.height is not None:
+            attrs_parts.append(f'height="{node.height}"')
+        if node.alt:
+            attrs_parts.append(f'alt="{node.alt}"')
+        if node.border_size is not None:
+            attrs_parts.append(f'borderSize="{node.border_size}"')
+        if node.border_color:
+            attrs_parts.append(f'borderColor="{node.border_color}"')
+
+        attrs_str = ",".join(attrs_parts)
+        start_marker = f"<!-- ADF:mediaInline:{attrs_str} -->"
+        end_marker = "<!-- /ADF:mediaInline -->"
+
+        display_text = node.alt if node.alt else f"Media: {node.id}"
+        media_link = f"[{display_text}](fileId:{node.id})"
+
+        return f"{start_marker}{media_link}{end_marker}"
+
+
+class CaptionConverter(ADF2MDBaseConverter):
+    """Converter for caption nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a caption node to Markdown."""
+        if not isinstance(node, CaptionNode):
+            raise ValueError(f"Expected CaptionNode, got {type(node)}")
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node))
+
+        caption_text = "".join(text_parts).strip()
+
+        if caption_text and not (caption_text.startswith("*") and caption_text.endswith("*")):
+            caption_text = f"*{caption_text}*"
+
+        start_marker = "<!-- ADF:caption -->"
+        end_marker = "<!-- /ADF:caption -->"
+
+        return f"{start_marker}\n{caption_text}\n{end_marker}"

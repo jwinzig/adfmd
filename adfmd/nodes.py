@@ -72,6 +72,16 @@ class ADFNode:
             return EmojiNode.from_dict(data)
         elif node_type == "panel":
             return PanelNode.from_dict(data)
+        elif node_type == "mediaSingle":
+            return MediaSingleNode.from_dict(data)
+        elif node_type == "mediaGroup":
+            return MediaGroupNode.from_dict(data)
+        elif node_type == "media":
+            return MediaNode.from_dict(data)
+        elif node_type == "mediaInline":
+            return MediaInlineNode.from_dict(data)
+        elif node_type == "caption":
+            return CaptionNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -576,3 +586,170 @@ class ExtensionNode(ADFNode):
             text=attrs.get("text"),
             parameters=attrs.get("parameters"),
         )
+
+
+@dataclass
+class MediaSingleNode(ADFNode):
+    """Represents a mediaSingle node in ADF."""
+
+    type: str = field(default="mediaSingle", init=False)
+    layout: Optional[str] = None
+    width: Optional[int] = None
+    width_type: Optional[str] = None
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "MediaSingleNode":
+        """Create a MediaSingleNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        return cls(
+            layout=attrs.get("layout"),
+            width=attrs.get("width"),
+            width_type=attrs.get("widthType"),
+            children=children,
+        )
+
+
+@dataclass
+class MediaGroupNode(ADFNode):
+    """Represents a mediaGroup node in ADF."""
+
+    type: str = field(default="mediaGroup", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "MediaGroupNode":
+        """Create a MediaGroupNode from a dictionary."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(children=children)
+
+
+@dataclass
+class MediaNode(ADFNode):
+    """Represents a media node in ADF."""
+
+    type: str = field(default="media", init=False)
+    id: str
+    collection: str
+    media_type: str
+    width: Optional[int] = None
+    height: Optional[int] = None
+    alt: Optional[str] = None
+    border_size: Optional[int] = None
+    border_color: Optional[str] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "MediaNode":
+        """Create a MediaNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        id = attrs.get("id")
+        if id is None:
+            raise ValueError("ID is required for media nodes")
+
+        collection = attrs.get("collection")
+        if collection is None:
+            raise ValueError("Collection is required for media nodes")
+
+        media_type = attrs.get("type")
+        if media_type is None:
+            raise ValueError("Type is required for media nodes")
+
+        border_size = None
+        border_color = None
+        for mark in data.get("marks", []):
+            if mark.get("type") == "border":
+                border_attrs = mark.get("attrs", {})
+                border_size = border_attrs.get("size")
+                border_color = border_attrs.get("color")
+
+        return cls(
+            id=id,
+            collection=collection,
+            media_type=media_type,
+            width=attrs.get("width"),
+            height=attrs.get("height"),
+            alt=attrs.get("alt"),
+            border_size=border_size,
+            border_color=border_color,
+        )
+
+
+@dataclass
+class MediaInlineNode(ADFNode):
+    """Represents a mediaInline node in ADF."""
+
+    type: str = field(default="mediaInline", init=False)
+    id: str
+    collection: str
+    media_type: str
+    width: Optional[int] = None
+    height: Optional[int] = None
+    alt: Optional[str] = None
+    border_size: Optional[int] = None
+    border_color: Optional[str] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "MediaInlineNode":
+        """Create a MediaInlineNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        id = attrs.get("id")
+        if id is None:
+            raise ValueError("ID is required for mediaInline nodes")
+
+        collection = attrs.get("collection")
+        if collection is None:
+            raise ValueError("Collection is required for mediaInline nodes")
+
+        media_type = attrs.get("type")
+        if media_type is None:
+            raise ValueError("Type is required for mediaInline nodes")
+
+        border_size = None
+        border_color = None
+        for mark in data.get("marks", []):
+            if mark.get("type") == "border":
+                border_attrs = mark.get("attrs", {})
+                border_size = border_attrs.get("size")
+                border_color = border_attrs.get("color")
+
+        return cls(
+            id=id,
+            collection=collection,
+            media_type=media_type,
+            width=attrs.get("width"),
+            height=attrs.get("height"),
+            alt=attrs.get("alt"),
+            border_size=border_size,
+            border_color=border_color,
+        )
+
+
+@dataclass
+class CaptionNode(ADFNode):
+    """Represents a caption node in ADF."""
+
+    type: str = field(default="caption", init=False)
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "CaptionNode":
+        """Create a CaptionNode from a dictionary."""
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+        return cls(children=children)

@@ -1,0 +1,35 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Test Image 9 - inline: ",
+        "type": "text"
+      },
+      {
+        "type": "mediaInline",
+        "attrs": {
+          "width": 607,
+          "alt": "image-20260102-192615.png",
+          "id": "9fb88070-5936-4e79-b61d-f08ddf05e408",
+          "collection": "contentId-4784129",
+          "type": "image",
+          "height": 426
+        },
+        "marks": [
+          {
+            "type": "border",
+            "attrs": {
+              "size": 3,
+              "color": "#091e4224"
+            }
+          }
+        ]
+      },
+      {
+        "text": " ",
+        "type": "text"
+      }
+    ]
+  }
+]

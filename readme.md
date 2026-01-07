@@ -31,6 +31,10 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 | tableRow      | Markdown table row                                                                              |
 | tableCell     | Markdown table cell                                                                             |
 | tableHeader   | Markdown table header cell                                                                      |
+| media         | Media link (`[alt-text](fileId:id)`) - Node type preserved via HTML comments (see below)        |
+| mediaSingle   | Single media item with layout - Node type preserved via HTML comments (see below)               |
+| mediaGroup    | Group of media items - Node type preserved via HTML comments (see below)                        |
+| mediaInline   | Inline media item - Node type preserved via HTML comments (see below)                           |
 
 ### Text Marks
 
@@ -138,12 +142,80 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
   <!-- /ADF:panel -->
   ```
 
+- Media nodes:
+
+  Media nodes are converted to greppable markdown links with the format `[alt-text](fileId:id)` to enable easy replacement with local file paths.
+
+  **mediaSingle node:**
+
+  ```
+  <!-- ADF:mediaSingle:layout="center",width="584",widthType="pixel" -->
+  <!-- ADF:media:id="9aa8ffab-ed40-49b8-995b-29726c305374",collection="contentId-2719746",type="file",width="607",height="426",alt="image.png" -->
+  [image.png](fileId:9aa8ffab-ed40-49b8-995b-29726c305374)
+  <!-- /ADF:media -->
+  <!-- ADF:caption -->
+  *Image caption*
+  <!-- /ADF:caption -->
+  <!-- /ADF:mediaSingle -->
+  ```
+
+  **mediaGroup node:**
+
+  ```
+  <!-- ADF:mediaGroup -->
+  <!-- ADF:media:id="file-id-1",collection="contentId-2719746",type="file",alt="image1.png" -->
+  [image1.png](fileId:file-id-1)
+  <!-- /ADF:media -->
+  <!-- ADF:media:id="file-id-2",collection="contentId-2719746",type="file",alt="image2.png" -->
+  [image2.png](fileId:file-id-2)
+  <!-- /ADF:media -->
+  <!-- /ADF:mediaGroup -->
+  ```
+
+  **mediaInline node:**
+
+  ```
+  Text before <!-- ADF:mediaInline:id="9aa8ffab-ed40-49b8-995b-29726c305374",collection="contentId-2719746",type="image",width="607",height="426",alt="image.png" -->[image.png](fileId:9aa8ffab-ed40-49b8-995b-29726c305374)<!-- /ADF:mediaInline --> text after
+  ```
+
+  **Retrieving and Replacing Media Files:**
+
+  Media files are referenced using `fileId:<id>` links in the markdown output.
+  These identifiers can be used to retrieve the media files and replace the links with their local
+  filepath.
+
+  Example:
+
+  ```bash
+  #!/bin/bash
+  DOMAIN="your-domain"
+  EMAIL="your-email"
+  API_TOKEN="your-api-token"
+  FILE_ID="your-file-id"
+  MD_FILE="your-md-file.md"
+
+  # Get download URL
+  download_path=$(curl \
+    -X GET \
+    "https://$DOMAIN.atlassian.net/wiki/api/v2/attachments" \
+    -u "$EMAIL:$API_TOKEN" \
+    -H 'Accept: application/json' | \
+    jq ".results[] | select(.fileId == \"$FILE_ID\") | ._links.download")
+  download_url="https://$DOMAIN.atlassian.net/wiki${download_path//\"}"
+
+  # Download the file
+  curl -L -X GET \
+    "$download_url" \
+    -u "$EMAIL:$API_TOKEN" \
+    -o "media/$FILE_ID.png"
+
+  # Replace the media link with the local file path
+  sed -i "s|fileId:$FILE_ID|media/$FILE_ID.png|g" "$MD_FILE"
+  ```
+
 ### Missing ADF Nodes
 
 - expand
-- media
-- mediaGroup
-- mediaSingle
 - nestedExpand
 
 ## Markdown to ADF Conversion

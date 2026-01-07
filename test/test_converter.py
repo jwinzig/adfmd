@@ -58,6 +58,9 @@ from adfmd import ADFMD, to_markdown
         "emoji_simple",
         "panel_simple",
         "panel_complex",
+        "media_single",
+        "media_group",
+        "media_inline",
     ],
 )
 def test_adf_to_md(test_name):

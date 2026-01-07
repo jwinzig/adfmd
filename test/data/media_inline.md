@@ -1,0 +1,1 @@
+Test Image 9 - inline: <!-- ADF:mediaInline:id="9fb88070-5936-4e79-b61d-f08ddf05e408",collection="contentId-4784129",type="image",width="607",height="426",alt="image-20260102-192615.png",borderSize="3",borderColor="#091e4224" -->[image-20260102-192615.png](fileId:9fb88070-5936-4e79-b61d-f08ddf05e408)<!-- /ADF:mediaInline -->
