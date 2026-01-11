@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "adfmd"
-version = "0.1.0"
+version = "v0.1.0"
 description = "Bidirectional converter between Atlassian Document Format (ADF) and Markdown"
 readme = "readme.md"
 authors = [
