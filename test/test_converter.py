@@ -61,6 +61,8 @@ from adfmd import ADFMD, to_markdown
         "media_single",
         "media_group",
         "media_inline",
+        "expand",
+        "nested_expand",
     ],
 )
 def test_adf_to_md(test_name):

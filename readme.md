@@ -35,6 +35,8 @@ Supported Atlassian Document Format (ADF) elements for conversion to Markdown:
 | mediaSingle   | Single media item with layout - Node type preserved via HTML comments (see below)               |
 | mediaGroup    | Group of media items - Node type preserved via HTML comments (see below)                        |
 | mediaInline   | Inline media item - Node type preserved via HTML comments (see below)                           |
+| expand        | Expandable section with title - Node type preserved via HTML comments (see below)                |
+| nestedExpand  | Nested expandable section with title - Node type preserved via HTML comments (see below)         |
 
 ### Text Marks
 
@@ -178,6 +180,26 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
   Text before <!-- ADF:mediaInline:id="9aa8ffab-ed40-49b8-995b-29726c305374",collection="contentId-2719746",type="image",width="607",height="426",alt="image.png" -->[image.png](fileId:9aa8ffab-ed40-49b8-995b-29726c305374)<!-- /ADF:mediaInline --> text after
   ```
 
+  **expand node:**
+  
+  ```
+  <!-- ADF:expand:title="Click to expand" -->
+  **Click to expand**
+  
+  This is the content inside the expand section.
+  <!-- /ADF:expand -->
+  ```
+
+  **nestedExpand node:**
+  
+  ```
+  <!-- ADF:nestedExpand:title="Nested Section" -->
+  **Nested Section**
+  
+  This is the content inside the nested expand section.
+  <!-- /ADF:nestedExpand -->
+  ```
+
   **Retrieving and Replacing Media Files:**
 
   Media files are referenced using `fileId:<id>` links in the markdown output.
@@ -215,8 +237,7 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
 
 ### Missing ADF Nodes
 
-- expand
-- nestedExpand
+\-
 
 ## Markdown to ADF Conversion
 

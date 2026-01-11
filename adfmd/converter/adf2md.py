@@ -38,6 +38,8 @@ from adfmd.nodes import (
     MediaGroupNode,
     CaptionNode,
     MediaInlineNode,
+    ExpandNode,
+    NestedExpandNode,
 )
 
 
@@ -221,6 +223,8 @@ class ADF2MDRegistry:
         registry.register("media", MediaConverter())
         registry.register("mediaInline", MediaInlineConverter())
         registry.register("caption", CaptionConverter())
+        registry.register("expand", ExpandConverter())
+        registry.register("nestedExpand", NestedExpandConverter())
 
         return registry
 
@@ -1001,3 +1005,68 @@ class CaptionConverter(ADF2MDBaseConverter):
         end_marker = "<!-- /ADF:caption -->"
 
         return f"{start_marker}\n{caption_text}\n{end_marker}"
+
+
+class ExpandConverter(ADF2MDBaseConverter):
+    """Converter for expand nodes."""
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert an expand node to Markdown."""
+        if not isinstance(node, ExpandNode):
+            raise ValueError(f"Expected ExpandNode, got {type(node)}")
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node))
+
+        content = "".join(text_parts).rstrip()
+
+        attrs_parts = []
+        if node.title:
+            attrs_parts.append(f'title="{node.title}"')
+
+        if attrs_parts:
+            attrs_str = ",".join(attrs_parts)
+            start_marker = f"<!-- ADF:expand:{attrs_str} -->"
+        else:
+            start_marker = "<!-- ADF:expand -->"
+        end_marker = "<!-- /ADF:expand -->"
+
+        title = node.title if node.title else "Expand"
+        content = f"**{title}**\n\n{content}" if content else f"**{title}**"
+
+        return f"{start_marker}\n{content}\n{end_marker}\n\n"
+
+
+class NestedExpandConverter(ADF2MDBaseConverter):
+    """Converter for nestedExpand nodes.
+
+    Essentially the same as the expand node. Content restrictions are not verified for now.
+    """
+
+    def convert(self, node: ADFNode, **kwargs: Any) -> str:
+        """Convert a nestedExpand node to Markdown."""
+        if not isinstance(node, NestedExpandNode):
+            raise ValueError(f"Expected NestedExpandNode, got {type(node)}")
+
+        text_parts = []
+        for child_node in node.children:
+            text_parts.append(self._convert_child(child_node))
+
+        content = "".join(text_parts).rstrip()
+
+        attrs_parts = []
+        if node.title:
+            attrs_parts.append(f'title="{node.title}"')
+
+        if attrs_parts:
+            attrs_str = ",".join(attrs_parts)
+            start_marker = f"<!-- ADF:nestedExpand:{attrs_str} -->"
+        else:
+            start_marker = "<!-- ADF:nestedExpand -->"
+        end_marker = "<!-- /ADF:nestedExpand -->"
+
+        title = node.title if node.title else "Nested Expand"
+        content = f"**{title}**\n\n{content}" if content else f"**{title}**"
+
+        return f"{start_marker}\n{content}\n{end_marker}\n\n"

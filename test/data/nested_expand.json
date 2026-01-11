@@ -1,0 +1,84 @@
+[
+  {
+    "type": "nestedExpand",
+    "attrs": {
+      "title": "Nested Section"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is the content inside the nested expand section.",
+            "marks": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "nestedExpand",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is a nested expand section without a title.",
+            "marks": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "expand",
+    "attrs": {
+      "title": "Expand with Nested Expand"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "This expand contains a nested expand inside it.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "type": "nestedExpand",
+        "attrs": {
+          "title": "Nested Expand Inside Expand"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This is a nested expand inside an expand.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "A heading inside nested expand",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

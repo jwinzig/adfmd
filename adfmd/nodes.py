@@ -82,6 +82,10 @@ class ADFNode:
             return MediaInlineNode.from_dict(data)
         elif node_type == "caption":
             return CaptionNode.from_dict(data)
+        elif node_type == "expand":
+            return ExpandNode.from_dict(data)
+        elif node_type == "nestedExpand":
+            return NestedExpandNode.from_dict(data)
         else:
             raise ValueError(f"Unsupported node type: {node_type}")
 
@@ -753,3 +757,51 @@ class CaptionNode(ADFNode):
         for item in data.get("content", []):
             children.append(ADFNode.from_dict(item))
         return cls(children=children)
+
+
+@dataclass
+class ExpandNode(ADFNode):
+    """Represents an expand node in ADF."""
+
+    type: str = field(default="expand", init=False)
+    title: Optional[str] = None
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "ExpandNode":
+        """Create an ExpandNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        title = attrs.get("title")
+
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        return cls(title=title, children=children)
+
+
+@dataclass
+class NestedExpandNode(ADFNode):
+    """Represents a nestedExpand node in ADF."""
+
+    type: str = field(default="nestedExpand", init=False)
+    title: Optional[str] = None
+    children: List[ADFNode] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "NestedExpandNode":
+        """Create a NestedExpandNode from a dictionary."""
+        attrs = data.get("attrs", {})
+        if attrs is None:
+            attrs = {}
+
+        title = attrs.get("title")
+
+        children = []
+        for item in data.get("content", []):
+            children.append(ADFNode.from_dict(item))
+
+        return cls(title=title, children=children)
