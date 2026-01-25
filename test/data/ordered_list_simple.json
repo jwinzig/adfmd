@@ -9,7 +9,8 @@
           "content": [
             {
               "type": "text",
-              "text": "Item 1"
+              "text": "Item 1",
+              "marks": []
             }
           ]
         }
@@ -23,7 +24,8 @@
           "content": [
             {
               "type": "text",
-              "text": "Item 2"
+              "text": "Item 2",
+              "marks": []
             }
           ]
         }
@@ -37,7 +39,8 @@
           "content": [
             {
               "type": "text",
-              "text": "Item 3"
+              "text": "Item 3",
+              "marks": []
             }
           ]
         }
@@ -45,4 +48,3 @@
     }
   ]
 }
-

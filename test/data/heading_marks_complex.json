@@ -8,42 +8,42 @@
       {
         "type": "text",
         "text": "Heading with ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "bold",
-        "marks": [ { "type": "strong" } ]
+        "marks": [{"type": "strong"}]
       },
       {
         "type": "text",
         "text": ", ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "italic",
-        "marks": [ { "type": "em" } ]
+        "marks": [{"type": "em"}]
       },
       {
         "type": "text",
         "text": ", ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "code",
-        "marks": [ { "type": "code" } ]
+        "marks": [{"type": "code"}]
       },
       {
         "type": "text",
         "text": ", and ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "strikethrough",
-        "marks": [ { "type": "strike" } ]
+        "marks": [{"type": "strike"}]
       }
     ]
   },
@@ -56,11 +56,12 @@
       {
         "type": "text",
         "text": "Bold Italic",
-        "marks": [ { "type": "strong" }, { "type": "em" } ]
+        "marks": [{"type": "strong"}, {"type": "em"}]
       },
       {
         "type": "text",
-        "text": " Text"
+        "text": " Text",
+        "marks": []
       }
     ]
   },
@@ -73,11 +74,12 @@
       {
         "type": "text",
         "text": "Bold Code",
-        "marks": [ { "type": "strong" }, { "type": "code" } ]
+        "marks": [{"type": "strong"}, {"type": "code"}]
       },
       {
         "type": "text",
-        "text": " Text"
+        "text": " Text",
+        "marks": []
       }
     ]
   },
@@ -90,11 +92,12 @@
       {
         "type": "text",
         "text": "Italic Code",
-        "marks": [ { "type": "em" }, { "type": "code" } ]
+        "marks": [{"type": "em"}, {"type": "code"}]
       },
       {
         "type": "text",
-        "text": " Text"
+        "text": " Text",
+        "marks": []
       }
     ]
   },
@@ -107,11 +110,12 @@
       {
         "type": "text",
         "text": "Bold Strikethrough",
-        "marks": [ { "type": "strong" }, { "type": "strike" } ]
+        "marks": [{"type": "strong"}, {"type": "strike"}]
       },
       {
         "type": "text",
-        "text": " Text"
+        "text": " Text",
+        "marks": []
       }
     ]
   },
@@ -124,11 +128,12 @@
       {
         "type": "text",
         "text": "Italic Strikethrough",
-        "marks": [ { "type": "em" }, { "type": "strike" } ]
+        "marks": [{"type": "em"}, {"type": "strike"}]
       },
       {
         "type": "text",
-        "text": " Text"
+        "text": " Text",
+        "marks": []
       }
     ]
   },
@@ -141,11 +146,12 @@
       {
         "type": "text",
         "text": "Bold Italic Code",
-        "marks": [ { "type": "strong" }, { "type": "em" }, { "type": "code" } ]
+        "marks": [{"type": "strong"}, {"type": "em"}, {"type": "code"}]
       },
       {
         "type": "text",
-        "text": " Text"
+        "text": " Text",
+        "marks": []
       }
     ]
   },
@@ -158,18 +164,18 @@
       {
         "type": "text",
         "text": "Underline ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "Text",
-        "marks": [ { "type": "underline" } ]
+        "marks": [{"type": "underline"}]
       },
       {
         "type": "text",
-        "text": " (no markdown)"
+        "text": " (no markdown)",
+        "marks": []
       }
     ]
   }
 ]
-

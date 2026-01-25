@@ -11,7 +11,7 @@
           {
             "type": "text",
             "text": "This is an informational panel.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
@@ -29,7 +29,7 @@
           {
             "type": "text",
             "text": "This is a note panel.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
@@ -47,7 +47,7 @@
           {
             "type": "text",
             "text": "This is a warning panel.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
@@ -65,7 +65,7 @@
           {
             "type": "text",
             "text": "This is a success panel.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
@@ -83,7 +83,7 @@
           {
             "type": "text",
             "text": "This is an error panel.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
@@ -98,11 +98,10 @@
           {
             "type": "text",
             "text": "This is a panel without panelType.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
     ]
   }
 ]
-

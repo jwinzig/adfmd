@@ -14,17 +14,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "ID",
                     "type": "text",
+                    "text": "ID",
                     "marks": [
                       {
                         "type": "strong"
@@ -40,17 +38,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test",
                     "type": "text",
+                    "text": "Test",
                     "marks": [
                       {
                         "type": "strong"
@@ -71,17 +67,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Nested 1",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -92,9 +87,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
@@ -122,17 +115,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Nested 2",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -143,9 +135,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
@@ -173,17 +163,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Nested 3",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -194,9 +183,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
@@ -224,17 +211,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Nested 4",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -245,9 +231,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
@@ -275,17 +259,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Nested 5",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -296,9 +279,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
@@ -402,17 +383,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "ID",
                     "type": "text",
+                    "text": "ID",
                     "marks": [
                       {
                         "type": "strong"
@@ -428,17 +407,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test",
                     "type": "text",
+                    "text": "Test",
                     "marks": [
                       {
                         "type": "strong"
@@ -459,17 +436,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                154.0
-              ]
+              "colwidth": [154.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Nested 1",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -480,9 +456,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                605.0
-              ]
+              "colwidth": [605.0]
             },
             "content": [
               {

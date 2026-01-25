@@ -4,7 +4,7 @@
     {
       "type": "text",
       "text": "Check out ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "inlineCard",
@@ -15,7 +15,7 @@
     {
       "type": "text",
       "text": " and ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "inlineCard",
@@ -26,7 +26,7 @@
     {
       "type": "text",
       "text": " and ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "inlineCard",
@@ -37,7 +37,7 @@
     {
       "type": "text",
       "text": " and ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "inlineCard",
@@ -48,8 +48,7 @@
     {
       "type": "text",
       "text": ".",
-      "marks": [ ]
+      "marks": []
     }
   ]
 }
-

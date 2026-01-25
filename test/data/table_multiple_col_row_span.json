@@ -9,25 +9,21 @@
     "content": [
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -43,9 +39,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                256.0
-              ]
+              "colwidth": [256.0]
             },
             "content": [
               {
@@ -53,8 +47,8 @@
 
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -70,18 +64,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -96,26 +87,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 2,
               "rowspan": 1,
-              "colwidth": [
-                253.0,
-                256.0
-              ]
+              "colwidth": [253.0, 256.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -126,9 +113,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
@@ -136,8 +121,9 @@
 
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -147,25 +133,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -176,18 +159,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                256.0
-              ]
+              "colwidth": [256.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -198,18 +179,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -219,25 +198,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -248,19 +224,16 @@
             "attrs": {
               "colspan": 2,
               "rowspan": 2,
-              "colwidth": [
-                256.0,
-                250.0
-              ]
+              "colwidth": [256.0, 250.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -270,25 +243,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -307,25 +277,21 @@
     "content": [
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                225.0
-              ]
+              "colwidth": [225.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -341,9 +307,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                141.0
-              ]
+              "colwidth": [141.0]
             },
             "content": [
               {
@@ -351,8 +315,8 @@
 
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -368,9 +332,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                390.0
-              ]
+              "colwidth": [390.0]
             },
             "content": [
               {
@@ -378,8 +340,8 @@
 
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -394,27 +356,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 3,
               "rowspan": 1,
-              "colwidth": [
-                225.0,
-                141.0,
-                390.0
-              ]
+              "colwidth": [225.0, 141.0, 390.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "One large cell",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -424,25 +381,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 2,
-              "colwidth": [
-                225.0
-              ]
+              "colwidth": [225.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -453,10 +407,7 @@
             "attrs": {
               "colspan": 2,
               "rowspan": 1,
-              "colwidth": [
-                141.0,
-                390.0
-              ]
+              "colwidth": [141.0, 390.0]
             },
             "content": [
               {
@@ -464,8 +415,9 @@
 
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -475,25 +427,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                141.0
-              ]
+              "colwidth": [141.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -504,9 +453,7 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                390.0
-              ]
+              "colwidth": [390.0]
             },
             "content": [
               {
@@ -514,8 +461,9 @@
 
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -534,26 +482,21 @@
     "content": [
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 2,
               "rowspan": 1,
-              "colwidth": [
-                225.0,
-                183.0
-              ]
+              "colwidth": [225.0, 183.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "Merged Header Cell",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -569,18 +512,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                349.0
-              ]
+              "colwidth": [349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -595,26 +535,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 2,
               "rowspan": 1,
-              "colwidth": [
-                225.0,
-                183.0
-              ]
+              "colwidth": [225.0, 183.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -625,18 +561,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                349.0
-              ]
+              "colwidth": [349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -646,25 +580,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                225.0
-              ]
+              "colwidth": [225.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -675,19 +606,16 @@
             "attrs": {
               "colspan": 2,
               "rowspan": 2,
-              "colwidth": [
-                183.0,
-                349.0
-              ]
+              "colwidth": [183.0, 349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -697,16 +625,13 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                225.0
-              ]
+              "colwidth": [225.0]
             },
             "content": [
               {
@@ -714,8 +639,9 @@
 
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -734,16 +660,13 @@
     "content": [
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
               "rowspan": 4,
-              "colwidth": [
-                204.0
-              ]
+              "colwidth": [204.0]
             },
             "content": [
               {
@@ -751,8 +674,8 @@
 
                 "content": [
                   {
-                    "text": "Merged Header Cell",
                     "type": "text",
+                    "text": "Merged Header Cell",
                     "marks": [
                       {
                         "type": "strong"
@@ -768,18 +691,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                349.0
-              ]
+              "colwidth": [349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -801,18 +721,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                349.0
-              ]
+              "colwidth": [349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -829,18 +747,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                349.0
-              ]
+              "colwidth": [349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -850,25 +766,22 @@
       },
       {
         "type": "tableRow",
-
         "content": [
           {
             "type": "tableCell",
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                349.0
-              ]
+              "colwidth": [349.0]
             },
             "content": [
               {
                 "type": "paragraph",
-
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
