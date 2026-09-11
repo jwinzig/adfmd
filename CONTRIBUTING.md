@@ -73,25 +73,11 @@ That setting is local to your clone; it is not required.
 
 ## Development
 
-Install the package (editable is fine) and run the test suite from the repository root.
-
-**Current `main`:**
-
-```bash
-pip install -e .
-pip install pytest   # or: pip install -r requirements.txt
-pytest
-```
-
-The tests import `adfmd` from the source tree. `requirements.txt` currently pins pytest and its build-related dependencies.
-
-**After [PR #1](https://github.com/jwinzig/adfmd/pull/1) lands** (`[dev]` extra and GitHub Actions for pytest):
-
 ```bash
 pip install -e ".[dev]"
 pytest
 ```
 
-Python 3.10+ is a reasonable baseline; see `pyproject.toml` for the published version.
+The `[dev]` extra installs pytest plus the tools used to build and check the package. `requirements.txt` is a shortcut for the same extra. Python 3.10+ is required; see `pyproject.toml`.
 
 Please add or update fixtures under `test/data/` when you change conversion behavior.
