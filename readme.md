@@ -2,6 +2,31 @@
 
 Bidirectional converter between Atlassian Document Format (ADF) and Markdown.
 
+## Installation
+
+Requires Python 3.10 or newer. There are no third-party runtime dependencies.
+
+```bash
+pip install .
+```
+
+This installs the `adfmd` library and the `adfmd` command-line tool:
+
+```bash
+adfmd input.json
+adfmd input.json -o output.md
+adfmd --version
+```
+
+### Development
+
+```bash
+pip install -e ".[dev]"
+pytest
+```
+
+The `[dev]` extra installs pytest plus the tools used to build and check the package. `requirements.txt` installs the same extra for convenience.
+
 ## ADF to Markdown Conversion
 
 Supported Atlassian Document Format (ADF) elements for conversion to Markdown:

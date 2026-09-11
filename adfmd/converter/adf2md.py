@@ -394,7 +394,8 @@ class PanelConverter(ADF2MDBaseConverter):
             start_marker = "<!-- ADF:panel -->"
         end_marker = "<!-- /ADF:panel -->"
 
-        return f"{start_marker}\n{'\n'.join(quoted_lines)}\n{end_marker}\n\n"
+        quoted = "\n".join(quoted_lines)
+        return f"{start_marker}\n{quoted}\n{end_marker}\n\n"
 
 
 class HeadingConverter(ADF2MDBaseConverter):

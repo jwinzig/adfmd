@@ -3,14 +3,11 @@
 Pytest tests for adfmd - ADF to Markdown conversion.
 """
 
-import sys
+import json
 from pathlib import Path
 
-# Add parent directory to path to import adfmd
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
 import pytest
-import json
+
 from adfmd import ADFMD, to_markdown
 
 
