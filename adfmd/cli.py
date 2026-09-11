@@ -7,13 +7,18 @@ import argparse
 import sys
 from pathlib import Path
 
-from adfmd import ADFMD
+from adfmd import ADFMD, __version__
 
 
 def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
         description="Convert Atlassian Document Format (ADF) JSON to Markdown"
+    )
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"adfmd {__version__}",
     )
     parser.add_argument(
         "input",

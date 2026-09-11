@@ -2,13 +2,12 @@
 adfmd - Convert between Atlassian Document Format (ADF) and Markdown.
 """
 
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Union
 
 from adfmd.adfmd import ADFMD
-from adfmd.converter import ADF2MDRegistry
 
 __all__ = ["ADFMD", "to_markdown", "from_markdown"]
-__version__ = "v0.1.0"
+__version__ = "0.1.0"
 
 
 def to_markdown(

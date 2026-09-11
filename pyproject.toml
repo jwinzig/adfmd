@@ -1,17 +1,51 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=77.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "adfmd"
-version = "v0.1.0"
+version = "0.1.0"
 description = "Bidirectional converter between Atlassian Document Format (ADF) and Markdown"
-readme = "readme.md"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     {name = "Jonathan Winzig"}
 ]
+requires-python = ">=3.10"
+keywords = [
+    "adf",
+    "atlassian",
+    "atlassian-document-format",
+    "confluence",
+    "converter",
+    "jira",
+    "markdown",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing :: Markup",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "build>=1.2",
+    "twine>=5.0",
+]
 
 [project.urls]
+Homepage = "https://github.com/jwinzig/adfmd"
 Repository = "https://github.com/jwinzig/adfmd"
 Issues = "https://github.com/jwinzig/adfmd/issues"
 
@@ -21,3 +55,7 @@ adfmd = "adfmd.cli:main"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["adfmd*"]
+exclude = ["test*"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]

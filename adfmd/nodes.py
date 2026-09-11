@@ -276,7 +276,7 @@ class HeadingNode(ADFNode):
     """Represents a heading node in ADF."""
 
     type: str = field(default="heading", init=False)
-    level: int = field(default=int)
+    level: int
     children: List[ADFNode] = field(default_factory=list)
 
     @classmethod
