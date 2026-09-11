@@ -1,13 +1,14 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=77.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "adfmd"
 version = "0.1.0"
 description = "Bidirectional converter between Atlassian Document Format (ADF) and Markdown"
-readme = "readme.md"
-license = {file = "LICENSE"}
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     {name = "Jonathan Winzig"}
 ]
@@ -24,7 +25,6 @@ keywords = [
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
