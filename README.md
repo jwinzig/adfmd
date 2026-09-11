@@ -268,6 +268,10 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
 
 To be implemented.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for commit message style (Conventional Commits), pull request titles, and how to run tests.
+
 ## References
 
 - [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
