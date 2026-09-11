@@ -67,6 +67,7 @@ That setting is local to your clone; it is not required.
 ## Pull requests
 
 - **PR title** must follow the same Conventional Commits format as commits. CI checks the title on `opened`, `edited`, `reopened`, and `synchronize`.
+- Squash-merging with the PR title is a convenient way to land a Conventional Commit on `main` even if the branch has several commits.
 - Keep the change set focused. Packaging/CI work and feature work belong in separate PRs when they are not tightly coupled.
 - Describe *what* changed and *why*. Mention overlapping files if another open PR is likely to conflict.
 
