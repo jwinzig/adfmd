@@ -3,22 +3,24 @@
   "content": [
     {
       "type": "text",
-      "text": "First line"
+      "text": "First line",
+      "marks": []
     },
     {
       "type": "hardBreak"
     },
     {
       "type": "text",
-      "text": "Second line"
+      "text": "Second line",
+      "marks": []
     },
     {
       "type": "hardBreak"
     },
     {
       "type": "text",
-      "text": "Third line"
+      "text": "Third line",
+      "marks": []
     }
   ]
 }
-

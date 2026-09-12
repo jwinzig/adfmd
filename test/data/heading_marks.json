@@ -7,7 +7,7 @@
     {
       "type": "text",
       "text": "Bold and ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "text",
@@ -24,47 +24,69 @@
     {
       "type": "text",
       "text": ", ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "text",
       "text": "Code",
-      "marks": [ { "type": "code" } ]
+      "marks": [
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
       "text": ", ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "text",
       "text": "Bold Code",
-      "marks": [ { "type": "strong" }, { "type": "code" } ]
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
       "text": ", ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "text",
       "text": "Italic Code",
-      "marks": [ { "type": "em" }, { "type": "code" } ]
+      "marks": [
+        {
+          "type": "em"
+        },
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
       "text": ", ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "text",
       "text": "Strikethrough",
-      "marks": [ { "type": "strike" } ]
+      "marks": [
+        {
+          "type": "strike"
+        }
+      ]
     },
     {
       "type": "text",
-      "text": " Heading"
+      "text": " Heading",
+      "marks": []
     }
   ]
 }
-

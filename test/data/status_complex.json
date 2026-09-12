@@ -5,7 +5,7 @@
       {
         "type": "text",
         "text": "Task status: ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "status",
@@ -17,7 +17,7 @@
       {
         "type": "text",
         "text": " → ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "status",
@@ -29,7 +29,7 @@
       {
         "type": "text",
         "text": ".",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -39,7 +39,7 @@
       {
         "type": "text",
         "text": "Current status: ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "status",
@@ -51,7 +51,7 @@
       {
         "type": "text",
         "text": " (needs review)",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -61,7 +61,7 @@
       {
         "type": "text",
         "text": "Status without color: ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "status",
@@ -73,9 +73,8 @@
       {
         "type": "text",
         "text": ".",
-        "marks": [ ]
+        "marks": []
       }
     ]
   }
 ]
-

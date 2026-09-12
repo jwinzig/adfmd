@@ -39,7 +39,11 @@
     {
       "type": "text",
       "text": "this bold italic link",
-      "marks": [{"type": "strong"}, {"type": "em"}, {"type": "link", "attrs": {"href": "https://example.com/bold-italic"}}]
+      "marks": [
+        {"type": "strong"},
+        {"type": "em"},
+        {"type": "link", "attrs": {"href": "https://example.com/bold-italic"}}
+      ]
     },
     {
       "type": "text",
@@ -48,4 +52,3 @@
     }
   ]
 }
-
