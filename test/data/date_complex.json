@@ -5,7 +5,7 @@
       {
         "type": "text",
         "text": "Project timeline: Start ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "date",
@@ -16,7 +16,7 @@
       {
         "type": "text",
         "text": ", End ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "date",
@@ -27,7 +27,7 @@
       {
         "type": "text",
         "text": ".",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -37,7 +37,7 @@
       {
         "type": "text",
         "text": "Morning: ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "date",
@@ -48,7 +48,7 @@
       {
         "type": "text",
         "text": ", Afternoon: ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "date",
@@ -59,7 +59,7 @@
       {
         "type": "text",
         "text": ", Evening: ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "date",
@@ -70,7 +70,7 @@
       {
         "type": "text",
         "text": ".",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -89,7 +89,7 @@
       {
         "type": "text",
         "text": " ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "date",
@@ -100,7 +100,7 @@
       {
         "type": "text",
         "text": " (no extensions)",
-        "marks": [ ]
+        "marks": []
       }
     ]
   }

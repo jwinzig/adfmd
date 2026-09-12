@@ -266,7 +266,96 @@ ADF elements (nodes and marks) that are not supported by Markdown are marked wit
 
 ## Markdown to ADF Conversion
 
-To be implemented.
+The converter supports bidirectional conversion, enabling lossless round-trip conversion between Markdown and ADF formats. All ADF node types and marks that are preserved via HTML comments in the Markdown output can be converted back to their original ADF structure.
+
+### Supported Markdown Elements
+
+All standard Markdown elements are supported for conversion to ADF:
+
+- **Headings** (`#` through `######`) - Converted to ADF heading nodes with appropriate level
+- **Paragraphs** - Converted to ADF paragraph nodes
+- **Bold** (`**text**`) - Converted to strong mark
+- **Italic** (`*text*`) - Converted to em mark  
+- **Inline code** (`` `code` ``) - Converted to code mark
+- **Strikethrough** (`~~text~~`) - Converted to strike mark
+- **Links** (`[text](url)`) - Converted to link mark or inlineCard node
+- **Bullet lists** (`-` prefix) - Converted to bulletList with listItem nodes
+- **Ordered lists** (numbered items) - Converted to orderedList with listItem nodes
+- **Blockquotes** (`>` prefix) - Converted to blockquote nodes
+- **Code blocks** (triple backticks) - Converted to codeBlock nodes
+- **Horizontal rules** (`---`) - Converted to rule nodes
+- **Hard breaks** (two spaces at line end) - Converted to hardBreak nodes
+
+### HTML Comment Preservation
+
+All ADF-specific elements that were preserved via HTML comments during ADF to Markdown conversion are fully restored during Markdown to ADF conversion:
+
+- **Date nodes** - Restored with timestamp attribute
+- **Status nodes** - Restored with text and color attributes
+- **Mention nodes** - Restored with id, text, userType, and accessLevel attributes
+- **Emoji nodes** - Restored with shortName, id, and text attributes
+- **Panel nodes** - Restored with panelType attribute
+- **Table attributes** - Column widths, colspan, rowspan, and other table attributes
+- **Media nodes** - Media, mediaSingle, mediaGroup, and mediaInline with all attributes
+- **Expand nodes** - Expand and nestedExpand sections with titles
+- **Extension nodes** - Including nested tables
+- **Text marks** - Underline, textColor, backgroundColor, and subsup marks
+- **Doc nodes** - Document root with version information
+
+### Usage Example
+
+```python
+from adfmd import ADFMD, from_markdown, to_markdown
+
+# Convert Markdown to ADF
+converter = ADFMD()
+markdown_text = """
+# Hello World
+
+This is a **bold** paragraph with *italic* text.
+
+- Item 1
+- Item 2
+"""
+
+adf_json = converter.from_markdown(markdown_text)
+
+# Or use the convenience function
+adf_json = from_markdown(markdown_text)
+
+# Convert back to Markdown
+markdown_output = to_markdown(adf_json)
+```
+
+### Round-Trip Conversion
+
+The converter is designed for lossless round-trip conversion. When you convert from ADF to Markdown and back to ADF, all information is preserved:
+
+```python
+from adfmd import to_markdown, from_markdown
+
+# Original ADF document
+original_adf = {
+    "type": "doc",
+    "version": 1,
+    "content": [
+        {
+            "type": "paragraph",
+            "content": [
+                {"type": "text", "text": "Hello ", "marks": []},
+                {"type": "text", "text": "World", "marks": [{"type": "strong"}]}
+            ]
+        }
+    ]
+}
+
+# Convert to Markdown and back
+markdown = to_markdown(original_adf)
+restored_adf = from_markdown(markdown)
+
+# restored_adf matches original_adf
+assert restored_adf == original_adf
+```
 
 ## References
 

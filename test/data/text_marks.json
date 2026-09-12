@@ -4,7 +4,11 @@
     {
       "type": "text",
       "text": "Bold text",
-      "marks": [{"type": "strong"}]
+      "marks": [
+        {
+          "type": "strong"
+        }
+      ]
     },
     {
       "type": "text",
@@ -14,7 +18,11 @@
     {
       "type": "text",
       "text": "italic text",
-      "marks": [{"type": "em"}]
+      "marks": [
+        {
+          "type": "em"
+        }
+      ]
     },
     {
       "type": "text",
@@ -24,7 +32,11 @@
     {
       "type": "text",
       "text": "code text",
-      "marks": [{"type": "code"}]
+      "marks": [
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
@@ -34,7 +46,11 @@
     {
       "type": "text",
       "text": "strikethrough text",
-      "marks": [{"type": "strike"}]
+      "marks": [
+        {
+          "type": "strike"
+        }
+      ]
     },
     {
       "type": "text",
@@ -44,7 +60,14 @@
     {
       "type": "text",
       "text": "bold italic",
-      "marks": [{"type": "strong"}, {"type": "em"}]
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "em"
+        }
+      ]
     },
     {
       "type": "text",
@@ -54,7 +77,14 @@
     {
       "type": "text",
       "text": "bold code",
-      "marks": [{"type": "strong"}, {"type": "code"}]
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
@@ -64,7 +94,14 @@
     {
       "type": "text",
       "text": "italic code",
-      "marks": [{"type": "em"}, {"type": "code"}]
+      "marks": [
+        {
+          "type": "em"
+        },
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
@@ -74,7 +111,14 @@
     {
       "type": "text",
       "text": "bold strikethrough",
-      "marks": [{"type": "strong"}, {"type": "strike"}]
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "strike"
+        }
+      ]
     },
     {
       "type": "text",
@@ -84,7 +128,14 @@
     {
       "type": "text",
       "text": "italic strikethrough",
-      "marks": [{"type": "em"}, {"type": "strike"}]
+      "marks": [
+        {
+          "type": "em"
+        },
+        {
+          "type": "strike"
+        }
+      ]
     },
     {
       "type": "text",
@@ -94,7 +145,17 @@
     {
       "type": "text",
       "text": "bold italic code",
-      "marks": [{"type": "strong"}, {"type": "em"}, {"type": "code"}]
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "em"
+        },
+        {
+          "type": "code"
+        }
+      ]
     },
     {
       "type": "text",
@@ -104,7 +165,11 @@
     {
       "type": "text",
       "text": "underline",
-      "marks": [{"type": "underline"}]
+      "marks": [
+        {
+          "type": "underline"
+        }
+      ]
     },
     {
       "type": "text",
@@ -114,7 +179,14 @@
     {
       "type": "text",
       "text": "red text",
-      "marks": [{"type": "textColor", "attrs": {"color": "#FF0000"}}]
+      "marks": [
+        {
+          "type": "textColor",
+          "attrs": {
+            "color": "#FF0000"
+          }
+        }
+      ]
     },
     {
       "type": "text",
@@ -124,7 +196,14 @@
     {
       "type": "text",
       "text": "yellow background",
-      "marks": [{"type": "backgroundColor", "attrs": {"color": "#FFFF00"}}]
+      "marks": [
+        {
+          "type": "backgroundColor",
+          "attrs": {
+            "color": "#FFFF00"
+          }
+        }
+      ]
     },
     {
       "type": "text",
@@ -134,7 +213,14 @@
     {
       "type": "text",
       "text": "superscript",
-      "marks": [{"type": "subsup", "attrs": {"type": "sup"}}]
+      "marks": [
+        {
+          "type": "subsup",
+          "attrs": {
+            "type": "sup"
+          }
+        }
+      ]
     },
     {
       "type": "text",
@@ -144,7 +230,14 @@
     {
       "type": "text",
       "text": "subscript",
-      "marks": [{"type": "subsup", "attrs": {"type": "sub"}}]
+      "marks": [
+        {
+          "type": "subsup",
+          "attrs": {
+            "type": "sub"
+          }
+        }
+      ]
     },
     {
       "type": "text",
@@ -154,7 +247,17 @@
     {
       "type": "text",
       "text": "underline with color",
-      "marks": [{"type": "underline"}, {"type": "textColor", "attrs": {"color": "#0000FF"}}]
+      "marks": [
+        {
+          "type": "underline"
+        },
+        {
+          "type": "textColor",
+          "attrs": {
+            "color": "#0000FF"
+          }
+        }
+      ]
     },
     {
       "type": "text",
@@ -164,8 +267,17 @@
     {
       "type": "text",
       "text": "bold with background",
-      "marks": [{"type": "strong"}, {"type": "backgroundColor", "attrs": {"color": "#00FF00"}}]
+      "marks": [
+        {
+          "type": "strong"
+        },
+        {
+          "type": "backgroundColor",
+          "attrs": {
+            "color": "#00FF00"
+          }
+        }
+      ]
     }
   ]
 }
-

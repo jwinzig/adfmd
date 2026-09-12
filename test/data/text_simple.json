@@ -1,4 +1,10 @@
 {
-  "type": "text",
-  "text": "Simple test text."
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "text",
+      "text": "Simple test text.",
+      "marks": []
+    }
+  ]
 }

@@ -1,15 +1,12 @@
-[
-  {
-    "type": "paragraph",
-    "content": [
-      {
-        "type": "status",
-        "attrs": {
-          "text": "In Progress",
-          "color": "blue"
-        }
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "status",
+      "attrs": {
+        "text": "In Progress",
+        "color": "blue"
       }
-    ]
-  }
-]
-
+    }
+  ]
+}
