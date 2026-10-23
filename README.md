@@ -270,7 +270,7 @@ To be implemented.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for commit message style (Conventional Commits), pull request titles, and how to run tests.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## References
 
