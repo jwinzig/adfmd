@@ -48,7 +48,7 @@ feat(adf2md): add support for media nodes
 fix(adf2md): preserve linebreaks in table cell content
 feat(md2adf): convert headings to ADF heading nodes
 docs: document conventional commit style
-ci: validate pull request titles
+ci: add a test workflow
 chore(packaging): bump version to 0.2.0
 ```
 
@@ -66,8 +66,9 @@ That setting is local to your clone; it is not required.
 
 ## Pull requests
 
-- **PR title** must follow the same Conventional Commits format as commits. CI checks the title on `opened`, `edited`, `reopened`, and `synchronize`.
-- Squash-merging with the PR title is a convenient way to land a Conventional Commit on `main` even if the branch has several commits.
+- **PR title** must follow the same Conventional Commits format as commits.
+- **Each commit** should follow the same format.
+- Squash-merging with the PR title is a convenient way to land a Conventional Commit on `main` even if the branch has several commits. Delete any `Co-authored-by:` lines GitHub adds in that dialog if you do not want them.
 - Keep the change set focused. Packaging/CI work and feature work belong in separate PRs when they are not tightly coupled.
 - Describe *what* changed and *why*. Mention overlapping files if another open PR is likely to conflict.
 
