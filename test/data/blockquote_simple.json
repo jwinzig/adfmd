@@ -1,4 +1,5 @@
-[ {
+[
+  {
     "type": "blockquote",
     "content": [
       {
@@ -7,13 +8,14 @@
           {
             "type": "text",
             "text": "This is a simple blockquote with plain text.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
     ]
   },
-  { "type": "blockquote",
+  {
+    "type": "blockquote",
     "content": [
       {
         "type": "paragraph",
@@ -21,7 +23,7 @@
           {
             "type": "text",
             "text": "First paragraph in blockquote.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       },
@@ -31,12 +33,10 @@
           {
             "type": "text",
             "text": "Second paragraph in blockquote.",
-            "marks": [ ]
+            "marks": []
           }
         ]
       }
-
     ]
   }
 ]
-

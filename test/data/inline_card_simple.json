@@ -4,7 +4,7 @@
     {
       "type": "text",
       "text": "See ",
-      "marks": [ ]
+      "marks": []
     },
     {
       "type": "inlineCard",
@@ -15,8 +15,7 @@
     {
       "type": "text",
       "text": " for details.",
-      "marks": [ ]
+      "marks": []
     }
   ]
 }
-

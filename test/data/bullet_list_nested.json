@@ -9,7 +9,8 @@
           "content": [
             {
               "type": "text",
-              "text": "Level 1 - Item 1"
+              "text": "Level 1 - Item 1",
+              "marks": []
             }
           ]
         },
@@ -24,7 +25,8 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Level 2 - Item 1.1"
+                      "text": "Level 2 - Item 1.1",
+                      "marks": []
                     }
                   ]
                 },
@@ -39,7 +41,8 @@
                           "content": [
                             {
                               "type": "text",
-                              "text": "Level 3 - Item 1.1.1"
+                              "text": "Level 3 - Item 1.1.1",
+                              "marks": []
                             }
                           ]
                         },
@@ -54,7 +57,8 @@
                                   "content": [
                                     {
                                       "type": "text",
-                                      "text": "Level 4 - Item 1.1.1.1"
+                                      "text": "Level 4 - Item 1.1.1.1",
+                                      "marks": []
                                     }
                                   ]
                                 }
@@ -68,7 +72,8 @@
                                   "content": [
                                     {
                                       "type": "text",
-                                      "text": "Level 4 - Item 1.1.1.2"
+                                      "text": "Level 4 - Item 1.1.1.2",
+                                      "marks": []
                                     }
                                   ]
                                 }
@@ -86,7 +91,8 @@
                           "content": [
                             {
                               "type": "text",
-                              "text": "Level 3 - Item 1.1.2"
+                              "text": "Level 3 - Item 1.1.2",
+                              "marks": []
                             }
                           ]
                         }
@@ -104,7 +110,8 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Level 2 - Item 1.2"
+                      "text": "Level 2 - Item 1.2",
+                      "marks": []
                     }
                   ]
                 }
@@ -122,7 +129,8 @@
           "content": [
             {
               "type": "text",
-              "text": "Level 1 - Item 2"
+              "text": "Level 1 - Item 2",
+              "marks": []
             }
           ]
         },
@@ -137,7 +145,8 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Level 2 - Item 2.1"
+                      "text": "Level 2 - Item 2.1",
+                      "marks": []
                     }
                   ]
                 }
@@ -151,7 +160,8 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Level 2 - Item 2.2"
+                      "text": "Level 2 - Item 2.2",
+                      "marks": []
                     }
                   ]
                 },
@@ -166,7 +176,8 @@
                           "content": [
                             {
                               "type": "text",
-                              "text": "Level 3 - Item 2.2.1"
+                              "text": "Level 3 - Item 2.2.1",
+                              "marks": []
                             }
                           ]
                         }
@@ -188,7 +199,8 @@
           "content": [
             {
               "type": "text",
-              "text": "Level 1 - Item 3"
+              "text": "Level 1 - Item 3",
+              "marks": []
             }
           ]
         }
@@ -196,4 +208,3 @@
     }
   ]
 }
-

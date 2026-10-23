@@ -1,15 +1,12 @@
-[
-  {
-    "type": "paragraph",
-    "content": [
-      {
-        "type": "mention",
-        "attrs": {
-          "id": "ABCDE-ABCDE-ABCDE-ABCDE",
-          "text": "@Bradley Ayers"
-        }
+{
+  "type": "paragraph",
+  "content": [
+    {
+      "type": "mention",
+      "attrs": {
+        "id": "ABCDE-ABCDE-ABCDE-ABCDE",
+        "text": "@Bradley Ayers"
       }
-    ]
-  }
-]
-
+    }
+  ]
+}
