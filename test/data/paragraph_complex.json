@@ -5,57 +5,57 @@
       {
         "type": "text",
         "text": "Complex paragraph with ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "bold",
-        "marks": [ { "type": "strong" } ]
+        "marks": [{"type": "strong"}]
       },
       {
         "type": "text",
         "text": ", ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "italic",
-        "marks": [ { "type": "em" } ]
+        "marks": [{"type": "em"}]
       },
       {
         "type": "text",
         "text": ", ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "code",
-        "marks": [ { "type": "code" } ]
+        "marks": [{"type": "code"}]
       },
       {
         "type": "text",
         "text": ", ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "strikethrough",
-        "marks": [ { "type": "strike" } ]
+        "marks": [{"type": "strike"}]
       },
       {
         "type": "text",
         "text": ", and ",
-        "marks": [ ]
+        "marks": []
       },
       {
         "type": "text",
         "text": "bold italic",
-        "marks": [ { "type": "strong" }, { "type": "em" } ]
+        "marks": [{"type": "strong"}, {"type": "em"}]
       },
       {
         "type": "text",
         "text": " combined.",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -65,7 +65,7 @@
       {
         "type": "text",
         "text": "Second paragraph.",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -75,9 +75,8 @@
       {
         "type": "text",
         "text": "Third paragraph.",
-        "marks": [ ]
+        "marks": []
       }
     ]
   }
 ]
-

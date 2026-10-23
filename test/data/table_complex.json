@@ -15,17 +15,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -41,17 +39,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                256.0
-              ]
+              "colwidth": [256.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -67,17 +63,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 3",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -98,17 +92,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -119,17 +112,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                256.0
-              ]
+              "colwidth": [256.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -140,17 +132,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -166,17 +157,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -187,17 +177,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                256.0
-              ]
+              "colwidth": [256.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -208,17 +197,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -234,17 +222,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                253.0
-              ]
+              "colwidth": [253.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -255,17 +242,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                256.0
-              ]
+              "colwidth": [256.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -276,17 +262,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                250.0
-              ]
+              "colwidth": [250.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -317,8 +302,8 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -340,8 +325,8 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -363,8 +348,8 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -391,8 +376,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -409,8 +395,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -427,8 +414,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -450,8 +438,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -468,8 +457,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -486,8 +476,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -509,8 +500,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -527,8 +519,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -545,8 +538,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -577,8 +571,8 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -600,8 +594,8 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -623,8 +617,8 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 3",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -651,205 +645,57 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "tableRow",
-        "content": [
-          {
-            "type": "tableHeader",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "tableRow",
-        "content": [
-          {
-            "type": "tableHeader",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "-",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "-",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "-",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "table",
-    "attrs": {
-      "layout": "default",
-      "isNumberColumnEnabled": true,
-      "width": 760.0
-    },
-    "content": [
-      {
-        "type": "tableRow",
-        "content": [
-          {
-            "type": "tableHeader",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "Test 1",
                     "type": "text",
-                    "marks": [
-                      {
-                        "type": "strong"
-                      }
-                    ]
+                    "text": "This is a test text",
+                    "marks": []
                   }
                 ]
               }
             ]
           },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This is a test text",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This is a test text",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
           {
             "type": "tableHeader",
             "attrs": {
@@ -861,36 +707,9 @@
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test 2",
                     "type": "text",
-                    "marks": [
-                      {
-                        "type": "strong"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "tableRow",
-        "content": [
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -907,31 +726,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "tableRow",
-        "content": [
-          {
-            "type": "tableCell",
-            "attrs": {
-              "colspan": 1,
-              "rowspan": 1
-            },
-            "content": [
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -948,8 +745,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -961,7 +759,7 @@
         "type": "tableRow",
         "content": [
           {
-            "type": "tableCell",
+            "type": "tableHeader",
             "attrs": {
               "colspan": 1,
               "rowspan": 1
@@ -971,8 +769,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -989,8 +788,28 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "-",
+                    "marks": []
                   }
                 ]
               }
@@ -1015,18 +834,15 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -1041,18 +857,183 @@
             "type": "tableHeader",
             "attrs": {
               "colspan": 1,
-              "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "rowspan": 1
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
+                    "marks": [
+                      {
+                        "type": "strong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
                     "type": "text",
+                    "text": "This is a test text",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This is a test text",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This is a test text",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This is a test text",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "-",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableCell",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "-",
+                    "marks": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "attrs": {
+      "layout": "default",
+      "isNumberColumnEnabled": true,
+      "width": 760.0
+    },
+    "content": [
+      {
+        "type": "tableRow",
+        "content": [
+          {
+            "type": "tableHeader",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [171.0]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Test 1",
                     "marks": [
                       {
                         "type": "strong"
@@ -1068,17 +1049,39 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 2",
+                    "marks": [
+                      {
+                        "type": "strong"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableHeader",
+            "attrs": {
+              "colspan": 1,
+              "rowspan": 1,
+              "colwidth": [118.0]
+            },
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -1099,17 +1102,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1120,17 +1122,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1141,17 +1142,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1167,17 +1167,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1188,17 +1187,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1209,17 +1207,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1235,17 +1232,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1256,17 +1252,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1277,17 +1272,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1314,17 +1308,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 1",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -1340,17 +1332,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "Test 2",
-                    "type": "text",
                     "marks": [
                       {
                         "type": "strong"
@@ -1366,17 +1356,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test 3",
                     "type": "text",
+                    "text": "Test 3",
                     "marks": [
                       {
                         "type": "strong"
@@ -1397,16 +1385,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
-                "type": "paragraph", "content": [
+                "type": "paragraph",
+                "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1417,17 +1405,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1438,17 +1425,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1464,17 +1450,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1485,17 +1470,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1506,17 +1490,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1532,17 +1515,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1553,17 +1535,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1574,17 +1555,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                118.0
-              ]
+              "colwidth": [118.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1609,17 +1589,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test 1",
                     "type": "text",
+                    "text": "Test 1",
                     "marks": [
                       {
                         "type": "strong"
@@ -1635,17 +1613,15 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
-                    "text": "Test 2",
                     "type": "text",
+                    "text": "Test 2",
                     "marks": [
                       {
                         "type": "strong"
@@ -1666,17 +1642,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               },
@@ -1684,8 +1659,9 @@
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text in a new paragraph",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1696,24 +1672,24 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   },
                   {
                     "type": "hardBreak"
                   },
                   {
+                    "type": "text",
                     "text": "This is a test text after a hard linebreak",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1729,17 +1705,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1750,17 +1725,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "This is a test text",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1776,17 +1750,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                171.0
-              ]
+              "colwidth": [171.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }
@@ -1797,17 +1770,16 @@
             "attrs": {
               "colspan": 1,
               "rowspan": 1,
-              "colwidth": [
-                469.0
-              ]
+              "colwidth": [469.0]
             },
             "content": [
               {
                 "type": "paragraph",
                 "content": [
                   {
+                    "type": "text",
                     "text": "-",
-                    "type": "text"
+                    "marks": []
                   }
                 ]
               }

@@ -5,7 +5,7 @@
       {
         "type": "text",
         "text": "Text before rule",
-        "marks": [ ]
+        "marks": []
       }
     ]
   },
@@ -18,9 +18,8 @@
       {
         "type": "text",
         "text": "Text after rule",
-        "marks": [ ]
+        "marks": []
       }
     ]
   }
 ]
-
