@@ -1,5 +1,10 @@
 # adfmd
 
+[![CI](https://github.com/jwinzig/adfmd/actions/workflows/ci.yml/badge.svg)](https://github.com/jwinzig/adfmd/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/jwinzig/adfmd?include_prereleases)](https://github.com/jwinzig/adfmd/releases)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/github/license/jwinzig/adfmd)](LICENSE)
+
 `adfmd` is a Python library and command-line tool for bidirectional conversion
 between [Atlassian Document Format (ADF)][adf] and [Markdown][markdown]. It
 converts common Markdown structures directly and uses HTML comments to preserve
