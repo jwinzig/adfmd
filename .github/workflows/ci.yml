@@ -65,10 +65,23 @@ jobs:
                   "| Metric | Covered | Total | Coverage | Requirement |\n"
                   "| --- | ---: | ---: | ---: | ---: |\n"
                   f"| Lines | {totals['covered_lines']} | {totals['num_statements']} | "
-                  f"{line_coverage:.2f}% | Report only |\n"
+                  f"{line_coverage:.2f}% | ≥ 90.00% |\n"
                   f"| Branches | {totals['covered_branches']} | {totals['num_branches']} | "
                   f"{branch_coverage:.2f}% | Report only |\n\n"
               )
+          PY
+
+      - name: Enforce line coverage
+        if: matrix.python-version == '3.10'
+        run: |
+          python - <<'PY'
+          import json
+
+          with open("coverage.json", encoding="utf-8") as report:
+              line_coverage = json.load(report)["totals"]["percent_statements_covered"]
+
+          if line_coverage < 90:
+              raise SystemExit(f"Line coverage {line_coverage:.2f}% is below 90.00%")
           PY
 
       - name: Enforce patch coverage
