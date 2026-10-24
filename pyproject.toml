@@ -40,6 +40,8 @@ dependencies = []
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
+    "pytest-cov>=7.0",
+    "diff-cover>=10.0",
     "build>=1.2",
     "twine>=5.0",
 ]
@@ -59,3 +61,11 @@ exclude = ["test*"]
 
 [tool.pytest.ini_options]
 testpaths = ["test"]
+
+[tool.coverage.run]
+source = ["adfmd"]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
