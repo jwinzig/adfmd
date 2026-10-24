@@ -1,4 +1,4 @@
-# Same types as the PR-title step in
+# Same types as the PR title job in
 # .github/workflows/conventional-commits.yml.
 # Lint merge commits too (commitlint skips them by default).
 defaultIgnores: false
