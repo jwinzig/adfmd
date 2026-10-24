@@ -1,9 +1,9 @@
 # adfmd
 
 `adfmd` is a Python library and command-line tool for bidirectional conversion
-between [Atlassian Document Format (ADF)][adf] and Markdown. It converts common
-Markdown structures directly and uses HTML comments to preserve ADF-specific
-metadata for round trips.
+between [Atlassian Document Format (ADF)][adf] and [Markdown][markdown]. It
+converts common Markdown structures directly and uses HTML comments to preserve
+ADF-specific metadata for round trips.
 
 Requires Python 3.10 or newer and has no third-party runtime dependencies.
 
@@ -59,8 +59,11 @@ converter.from_markdown_file("input.md", "output.json")
   behavior, round-trip metadata, and examples for ADF-specific content.
 - [Contributing guide](CONTRIBUTING.md) explains how to submit changes and the
   commit conventions used by the project.
-- [Atlassian Document Format][adf] is the upstream ADF reference.
-- [Markdown basic syntax][markdown] covers the Markdown constructs used here.
+
+## References
+
+- [Atlassian Document Format][adf]
+- [Markdown basic syntax][markdown]
 
 ## Development
 
