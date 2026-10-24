@@ -4,13 +4,14 @@ on:
   pull_request:
     types:
       - opened
+      - edited
       - reopened
       - synchronize
   push:
     branches: [main]
 
 concurrency:
-  group: conventional-commits-${{ github.event.pull_request.number || github.ref }}
+  group: conventional-commits-${{ github.event.pull_request.number || github.ref }}-${{ github.event.action || github.event_name }}
   cancel-in-progress: true
 
 permissions:
@@ -41,11 +42,13 @@ jobs:
           requireScope: false
 
       - name: Checkout
+        if: github.event_name != 'pull_request' || github.event.action != 'edited'
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Lint commits
+        if: github.event_name != 'pull_request' || github.event.action != 'edited'
         uses: wagoid/commitlint-github-action@v6
         with:
           configFile: .commitlintrc.yaml
