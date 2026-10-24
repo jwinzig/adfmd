@@ -1,7 +1,7 @@
-# Match the types allowed by the PR-title job in
+# Same types as the PR-title job in
 # .github/workflows/conventional-commits.yml.
-# Do not extend @commitlint/config-conventional: its subject-case and
-# header-max-length rules are stricter than the PR-title action.
+# Lint merge commits too (commitlint skips them by default).
+defaultIgnores: false
 rules:
   type-empty: [2, never]
   subject-empty: [2, never]
