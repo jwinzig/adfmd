@@ -357,6 +357,10 @@ restored_adf = from_markdown(markdown)
 assert restored_adf == original_adf
 ```
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## References
 
 - [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
