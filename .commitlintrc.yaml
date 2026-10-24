@@ -1,0 +1,19 @@
+# Same types as the PR title job in
+# .github/workflows/conventional-commits.yml.
+# Lint merge commits too (commitlint skips them by default).
+defaultIgnores: false
+rules:
+  type-empty: [2, never]
+  subject-empty: [2, never]
+  type-enum:
+    - 2
+    - always
+    - - feat
+      - fix
+      - docs
+      - test
+      - refactor
+      - perf
+      - build
+      - ci
+      - chore
