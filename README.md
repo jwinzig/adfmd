@@ -5,7 +5,10 @@ between [Atlassian Document Format (ADF)][adf] and [Markdown][markdown]. It
 converts common Markdown structures directly and uses HTML comments to preserve
 ADF-specific metadata for round trips.
 
-Requires Python 3.10 or newer and has no third-party runtime dependencies.
+## Dependencies
+
+- Python 3.10 or newer
+- No third-party runtime dependencies
 
 ## Getting started
 
