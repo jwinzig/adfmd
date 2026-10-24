@@ -4,7 +4,6 @@ on:
   pull_request:
     types:
       - opened
-      - edited
       - reopened
       - synchronize
   push:
@@ -42,13 +41,11 @@ jobs:
           requireScope: false
 
       - name: Checkout
-        if: github.event_name != 'pull_request' || github.event.action != 'edited'
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Lint commits
-        if: github.event_name != 'pull_request' || github.event.action != 'edited'
         uses: wagoid/commitlint-github-action@v6
         with:
           configFile: .commitlintrc.yaml
