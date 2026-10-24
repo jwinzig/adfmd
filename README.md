@@ -61,6 +61,13 @@ converter.to_markdown_file("input.json", "output.md")
 converter.from_markdown_file("input.md", "output.json")
 ```
 
+## Documentation
+
+- [Supported nodes and marks](docs/supported-nodes/README.md) lists conversion
+  behavior, round-trip metadata, and examples for ADF-specific content.
+- [Contributing guide](CONTRIBUTING.md) explains how to submit changes and the
+  commit conventions used by the project.
+
 ## Development
 
 ```bash
@@ -69,13 +76,6 @@ pytest
 ```
 
 The `dev` extra installs the test, build, and package-checking tools.
-
-## Documentation
-
-- [Supported nodes and marks](docs/supported-nodes/README.md) lists conversion
-  behavior, round-trip metadata, and examples for ADF-specific content.
-- [Contributing guide](CONTRIBUTING.md) explains how to submit changes and the
-  commit conventions used by the project.
 
 ## References
 
