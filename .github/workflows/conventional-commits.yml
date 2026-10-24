@@ -41,7 +41,7 @@ jobs:
           requireScope: false
 
   commits:
-    name: Commit messages
+    name: Commit message
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
