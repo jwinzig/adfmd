@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -34,7 +36,61 @@ jobs:
           pip install -e ".[dev]"
 
       - name: Run tests
+        if: matrix.python-version != '3.10'
         run: pytest
+
+      - name: Measure line and branch coverage
+        if: matrix.python-version == '3.10'
+        run: pytest --cov --cov-report=term-missing --cov-report=xml --cov-report=json --cov-report=html
+
+      - name: Summarize coverage
+        if: matrix.python-version == '3.10'
+        run: |
+          python - <<'PY'
+          import json
+          import os
+
+          with open("coverage.json", encoding="utf-8") as report:
+              totals = json.load(report)["totals"]
+
+          line_coverage = totals["percent_statements_covered"]
+          branch_coverage = totals["percent_branches_covered"]
+
+          print(f"Line coverage: {line_coverage:.2f}%")
+          print(f"Branch coverage: {branch_coverage:.2f}%")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write(
+                  "## Coverage analysis\n\n"
+                  "| Metric | Covered | Total | Coverage | Requirement |\n"
+                  "| --- | ---: | ---: | ---: | ---: |\n"
+                  f"| Lines | {totals['covered_lines']} | {totals['num_statements']} | "
+                  f"{line_coverage:.2f}% | Report only |\n"
+                  f"| Branches | {totals['covered_branches']} | {totals['num_branches']} | "
+                  f"{branch_coverage:.2f}% | Report only |\n\n"
+              )
+          PY
+
+      - name: Enforce patch coverage
+        if: matrix.python-version == '3.10' && github.event_name == 'pull_request'
+        run: |
+          diff-cover coverage.xml \
+            --compare-branch="origin/${{ github.base_ref }}" \
+            --format markdown:patch-coverage.md \
+            --fail-under=90
+          cat patch-coverage.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload coverage artifact
+        if: ${{ !cancelled() && matrix.python-version == '3.10' && hashFiles('coverage.xml') != '' }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report-python-3.10
+          path: |
+            coverage.xml
+            coverage.json
+            patch-coverage.md
+            htmlcov/
+          retention-days: 14
 
   build:
     name: Build package
