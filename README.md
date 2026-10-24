@@ -53,6 +53,15 @@ converter.to_markdown_file("input.json", "output.md")
 converter.from_markdown_file("input.md", "output.json")
 ```
 
+## Development
+
+```bash
+pip install -e ".[dev]"
+pytest
+```
+
+The `dev` extra installs the test, build, and package-checking tools.
+
 ## Documentation
 
 - [Supported nodes and marks](docs/supported-nodes/README.md) lists conversion
@@ -63,16 +72,7 @@ converter.from_markdown_file("input.md", "output.json")
 ## References
 
 - [Atlassian Document Format][adf]
-- [Markdown basic syntax][markdown]
-
-## Development
-
-```bash
-pip install -e ".[dev]"
-pytest
-```
-
-The `dev` extra installs the test, build, and package-checking tools.
+- [Markdown syntax][markdown]
 
 [adf]: https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/
-[markdown]: https://www.markdownguide.org/basic-syntax/
+[markdown]: https://daringfireball.net/projects/markdown/syntax
